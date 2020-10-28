@@ -1,0 +1,93 @@
+{
+    "name": "guanguans/di",
+    "description": "A flexible dependency injection container based on the modification of `illuminate/container`. - 一个灵活的基于 `illuminate/container` 修改的依赖注入容器。",
+    "keywords": [
+        "container",
+        "di",
+        "dependency injection",
+        "dependency",
+        "injection",
+        "ioc",
+        "PSR-11"
+    ],
+    "homepage": "https://github.com/guanguans/di",
+    "support": {
+        "issues": "https://github.com/guanguans/di/issues",
+        "source": "https://github.com/guanguans/di"
+    },
+    "authors": [
+        {
+            "name": "guanguans",
+            "email": "ityaozm@gmail.com",
+            "homepage": "https://www.guanguans.cn",
+            "role": "developer"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "vimeo/psalm": "^3.11",
+        "mockery/mockery": "^1.2",
+        "brainmaestro/composer-git-hooks": "^2.7",
+        "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Guanguans\\Di\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Guanguans\\Di\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "hooks": {
+            "pre-commit": [
+                "composer test",
+                "composer check-style"
+            ],
+            "pre-push": [
+                "composer test",
+                "composer check-style"
+            ]
+        }
+    },
+    "funding": [
+        {
+            "type": "wechat",
+            "url": "https://www.guanguans.cn/images/wechat.jpeg"
+        }
+    ],
+    "scripts": {
+        "post-update-cmd": [
+            "cghooks update"
+        ],
+        "post-merge": "composer install",
+        "post-install-cmd": [
+            "cghooks add --ignore-lock",
+            "cghooks update"
+        ],
+        "cghooks": "vendor/bin/cghooks",
+        "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs.dist --dry-run --ansi",
+        "fix-style": "php-cs-fixer fix --using-cache=no --config=.php_cs.dist --ansi",
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --coverage-text --colors=always --verbose",
+        "test-coverage": "vendor/bin/phpunit --coverage-html=coverage/ --color=always --verbose"
+    },
+    "scripts-descriptions": {
+        "check-style": "Run style checks (only dry run - no fixing!).",
+        "fix-style": "Run style checks and fix violations.",
+        "test": "Run all tests.",
+        "test-coverage": "Run all tests with coverage."
+    }
+}
