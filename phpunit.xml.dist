@@ -19,7 +19,7 @@
         <whitelist>
             <directory suffix=".php">src/</directory>
             <exclude>
-                <file>src/AspectYiiKernel.php</file>
+                <file>src/PackageSkeleton.php</file>
             </exclude>
         </whitelist>
     </filter>

@@ -1,19 +1,16 @@
 {
-    "name": "guanguans/di",
-    "description": "A flexible dependency injection container based on the modification of `illuminate/container`. - 一个灵活的基于 `illuminate/container` 修改的依赖注入容器。",
+    "name": "guanguans/package-skeleton",
+    "description": "A PHP package template repository. - 一个PHP软件包模板存储库。",
     "keywords": [
-        "container",
-        "di",
-        "dependency injection",
-        "dependency",
-        "injection",
-        "ioc",
-        "PSR-11"
+        "package",
+        "template",
+        "PHP",
+        "skeleton"
     ],
-    "homepage": "https://github.com/guanguans/di",
+    "homepage": "https://github.com/guanguans/package-skeleton",
     "support": {
-        "issues": "https://github.com/guanguans/di/issues",
-        "source": "https://github.com/guanguans/di"
+        "issues": "https://github.com/guanguans/package-skeleton/issues",
+        "source": "https://github.com/guanguans/package-skeleton"
     },
     "authors": [
         {
@@ -39,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Guanguans\\Di\\": "src"
+            "Guanguans\\PackageSkeleton\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Guanguans\\Di\\Tests\\": "tests"
+            "Guanguans\\PackageSkeleton\\Tests\\": "tests"
         }
     },
     "config": {

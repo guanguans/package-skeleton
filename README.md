@@ -1,8 +1,12 @@
-# di
+# package-skeleton
 
-> A flexible dependency injection container based on the modification of `illuminate/container`. - 一个灵活的基于 `illuminate/container` 修改的依赖注入容器。
+> A PHP package template repository. - 一个 PHP 软件包模板存储库。
 
-![Tests](https://github.com/guanguans/di/workflows/Tests/badge.svg)
+![Tests](https://github.com/guanguans/package-skeleton/workflows/Tests/badge.svg)
+![Check & fix styling](https://github.com/guanguans/package-skeleton/workflows/Check%20&%20fix%20styling/badge.svg)
+[![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](//packagist.org/packages/guanguans/package-skeleton)
+[![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
+[![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
 
 ## Requirement
 
@@ -11,15 +15,16 @@
 ## Installation
 
 ``` bash
-$ composer require guanguans/di -vvv
+$ composer require guanguans/package-skeleton -vvv
 ```
 
 ## Usage
 
-``` php
-<?php
-$skeleton = new Guanguans\Di\Di();
-```
+1. replace `guanguans/package-skeleton` -> `vendorname/package-name`
+2. replace `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
+3. replace `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
+4. replace `ityaozm@gmail.com` -> `email`
+5. execute `$ composer dumpautoload`
 
 ## Testing
 

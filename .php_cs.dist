@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<EOF
-This file is part of the guanguans/di.
+This file is part of the guanguans/package-skeleton.
 
 (c) guanguans <ityaozm@gmail.com>
 
