@@ -16,6 +16,6 @@ class PackageSkeletonTest extends TestCase
 {
     public function testTest()
     {
-        $this->assertIsString(PackageSkeleton::test());
+        $this->assertTrue(PackageSkeleton::test());
     }
 }
