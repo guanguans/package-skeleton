@@ -11,7 +11,7 @@
 
 ## Requirement
 
-* PHP >= 5.6
+* PHP >= 7.2
 
 ## Installation
 
@@ -21,10 +21,10 @@ $ composer require guanguans/package-skeleton -vvv
 
 ## Usage
 
-1. replace `guanguans/package-skeleton` -> `vendorname/package-name`
+1. replace `guanguans/package-skeleton` -> `vendorName/package-name`
 2. replace `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
 3. replace `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
-4. replace `ityaozm@gmail.com` -> `email`
+4. replace `ityaozm@gmail.com` -> `your email`
 5. execute `$ composer dumpautoload`
 
 ## Testing
