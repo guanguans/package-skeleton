@@ -5,6 +5,7 @@
 build/
 composer.lock
 coverage/
+clover.xml
 phpunit.xml
 psalm.xml
 vendor/

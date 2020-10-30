@@ -10,10 +10,12 @@
 
 namespace Guanguans\PackageSkeleton\Tests;
 
+use Guanguans\PackageSkeleton\PackageSkeleton;
+
 class PackageSkeletonTest extends TestCase
 {
     public function testTest()
     {
-        $this->assertIsString('This is a test.');
+        $this->assertIsString(PackageSkeleton::test());
     }
 }

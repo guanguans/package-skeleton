@@ -12,4 +12,8 @@ namespace Guanguans\PackageSkeleton;
 
 class PackageSkeleton
 {
+    public static function test()
+    {
+        return 'This is a test.';
+    }
 }
