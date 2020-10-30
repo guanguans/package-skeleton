@@ -4,6 +4,7 @@
 
 ![Tests](https://github.com/guanguans/package-skeleton/workflows/Tests/badge.svg)
 ![Check & fix styling](https://github.com/guanguans/package-skeleton/workflows/Check%20&%20fix%20styling/badge.svg)
+[![codecov](https://codecov.io/gh/guanguans/package-skeleton/branch/main/graph/badge.svg?token=URGFAWS6S4)](https://codecov.io/gh/guanguans/package-skeleton)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](//packagist.org/packages/guanguans/package-skeleton)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
