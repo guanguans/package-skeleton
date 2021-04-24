@@ -22,7 +22,10 @@ return PhpCsFixer\Config::create()
     ->setRules([
         // '@PSR2' => true,
         '@Symfony' => true,
-        'header_comment' => ['header' => $header],
+        'header_comment' => [
+            'header' => $header,
+            'commentType' => 'PHPDoc'
+        ],
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sortAlgorithm' => 'alpha'],
         'no_unused_imports' => true,
