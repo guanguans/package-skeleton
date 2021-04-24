@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the guanguans/package-skeleton.
  *
  * (c) guanguans <ityaozm@gmail.com>
