@@ -28,11 +28,12 @@
         "php": ">=7.2"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "vimeo/psalm": "^3.11",
-        "mockery/mockery": "^1.2",
         "brainmaestro/composer-git-hooks": "^2.7",
-        "phpunit/phpunit": "^7 || ^8"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "mockery/mockery": "^1.2",
+        "overtrue/phplint": "^2.3",
+        "phpunit/phpunit": "^7 || ^8",
+        "vimeo/psalm": "^3.11"
     },
     "autoload": {
         "psr-4": {
@@ -56,14 +57,16 @@
     "extra": {
         "hooks": {
             "pre-commit": [
-                "composer test",
-                "composer check-style",
-                "composer lint-md"
+                "composer lint",
+                "composer style-lint",
+                "composer md-lint",
+                "composer test"
             ],
             "pre-push": [
-                "composer test",
-                "composer check-style",
-                "composer lint-md"
+                "composer lint",
+                "composer style-lint",
+                "composer md-lint",
+                "composer test"
             ]
         }
     },
@@ -77,20 +80,22 @@
             "cghooks update"
         ],
         "cghooks": "./vendor/bin/cghooks",
-        "lint-md": "lint-md --config .lintmdrc *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
-        "fix-md": "lint-md --config .lintmdrc --fix *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
-        "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs.dist --dry-run --ansi",
-        "fix-style": "php-cs-fixer fix --using-cache=no --config=.php_cs.dist --ansi",
+        "lint": "./vendor/bin/phplint --configuration=.phplint.yml --ansi -v",
+        "md-lint": "lint-md --config .lintmdrc *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
+        "md-fix": "lint-md --config .lintmdrc --fix *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
+        "style-lint": "./vendor/bin/php-cs-fixer fix --using-cache=no --diff --config=.php_cs.dist --dry-run --ansi",
+        "style-fix": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs.dist --ansi",
         "psalm": "./vendor/bin/psalm",
         "test": "./vendor/bin/phpunit --coverage-text --colors=always --verbose",
         "test-coverage": "./vendor/bin/phpunit --coverage-html=coverage/ --coverage-clover=clover.xml --color=always --verbose"
     },
     "scripts-descriptions": {
         "cghooks": "Run git cghooks.",
-        "lint-md": "Run markdown checks.",
-        "fix-md": "Run markdown fixing.",
-        "check-style": "Run style checks (only dry run - no fixing!).",
-        "fix-style": "Run style checks and fix violations.",
+        "lint": "Run phplint checks.",
+        "md-lint": "Run markdown checks.",
+        "md-fix": "Run markdown fixing.",
+        "style-lint": "Run style checks (only dry run - no fixing!).",
+        "style-fix": "Run style checks and fix violations.",
         "psalm": "Run psalm checks.",
         "test": "Run all tests.",
         "test-coverage": "Run all tests with coverage."
