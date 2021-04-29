@@ -77,8 +77,8 @@
             "cghooks update"
         ],
         "cghooks": "./vendor/bin/cghooks",
-        "lint-md": "lint-md *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
-        "fix-md": "lint-md --fix *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
+        "lint-md": "lint-md --config .lintmdrc *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
+        "fix-md": "lint-md --config .lintmdrc --fix *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
         "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs.dist --dry-run --ansi",
         "fix-style": "php-cs-fixer fix --using-cache=no --config=.php_cs.dist --ansi",
         "psalm": "./vendor/bin/psalm",
