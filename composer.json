@@ -47,24 +47,26 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-        "hooks": {
-            "pre-commit": [
-                "composer test",
-                "composer check-style"
-            ],
-            "pre-push": [
-                "composer test",
-                "composer check-style"
-            ]
-        }
-    },
     "funding": [
         {
             "type": "wechat",
             "url": "https://www.guanguans.cn/images/wechat.jpeg"
         }
     ],
+    "extra": {
+        "hooks": {
+            "pre-commit": [
+                "composer test",
+                "composer check-style",
+                "composer lint-md"
+            ],
+            "pre-push": [
+                "composer test",
+                "composer check-style",
+                "composer lint-md"
+            ]
+        }
+    },
     "scripts": {
         "post-update-cmd": [
             "cghooks update"
@@ -75,6 +77,8 @@
             "cghooks update"
         ],
         "cghooks": "./vendor/bin/cghooks",
+        "lint-md": "lint-md *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
+        "fix-md": "lint-md --fix *.md .github/*.md .github/ISSUE_TEMPLATE/*.md",
         "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs.dist --dry-run --ansi",
         "fix-style": "php-cs-fixer fix --using-cache=no --config=.php_cs.dist --ansi",
         "psalm": "./vendor/bin/psalm",
@@ -82,6 +86,9 @@
         "test-coverage": "./vendor/bin/phpunit --coverage-html=coverage/ --coverage-clover=clover.xml --color=always --verbose"
     },
     "scripts-descriptions": {
+        "cghooks": "Run git cghooks.",
+        "lint-md": "Run markdown checks.",
+        "fix-md": "Run markdown fixing.",
         "check-style": "Run style checks (only dry run - no fixing!).",
         "fix-style": "Run style checks and fix violations.",
         "psalm": "Run psalm checks.",
