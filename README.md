@@ -18,7 +18,7 @@
 ## Installation
 
 ``` bash
-$ composer require guanguans/package-skeleton -vvv
+$ composer require guanguans/package-skeleton --prefer-dist -vvv
 ```
 
 ## Usage
