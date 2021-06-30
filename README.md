@@ -1,6 +1,6 @@
 # package-skeleton
 
-[简体中文](README-CN.md) | [ENGLISH](README.md)
+[简体中文](README_zh_CN.md) | [ENGLISH](README.md)
 
 > A PHP package template repository. - 一个 PHP 软件包模板存储库。
 
