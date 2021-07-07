@@ -13,7 +13,10 @@ namespace Guanguans\PackageSkeleton\Tests\Benchmark;
 use Guanguans\PackageSkeleton\PackageSkeleton;
 
 /**
- * @BeforeMethods({"setUp"})
+ * @beforeMethods({"setUp"})
+ * @warmup(2)
+ * @revs(1000)
+ * @iterations(15)
  */
 final class PackageSkeletonBench
 {
