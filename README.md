@@ -4,8 +4,8 @@
 
 > A PHP package template repository. - 一个 PHP 软件包模板存储库。
 
-[![Tests](https://github.com/guanguans/package-skeleton/workflows/Tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
-[![Check & fix styling](https://github.com/guanguans/package-skeleton/workflows/Check%20&%20fix%20styling/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
+[![tests](https://github.com/guanguans/package-skeleton/workflows/tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
+[![check & fix styling](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
 [![codecov](https://codecov.io/gh/guanguans/package-skeleton/branch/main/graph/badge.svg?token=URGFAWS6S4)](https://codecov.io/gh/guanguans/package-skeleton)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](//packagist.org/packages/guanguans/package-skeleton)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
