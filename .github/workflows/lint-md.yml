@@ -11,3 +11,7 @@ jobs:
 
       - name: lint-md-github-action
         uses: lint-md/github-action@v0.1.1
+        with:
+          configFile: .lintmdrc
+          failOnWarnings: false
+          files: ./ ./.github/
