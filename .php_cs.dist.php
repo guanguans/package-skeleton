@@ -24,13 +24,13 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
         'header_comment' => [
             'header' => $header,
-            'commentType' => 'PHPDoc'
+            'comment_type' => 'PHPDoc'
         ],
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sort_algorithm' => 'alpha'],
         'no_unused_imports' => true,
         'not_operator_with_successor_space' => true,
-        // 'trailing_comma_in_multiline_array' => true,
+        'trailing_comma_in_multiline' => true,
         'no_useless_else' => true,
         'no_useless_return' => true,
         'single_quote' => true,
