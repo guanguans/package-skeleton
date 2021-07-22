@@ -1,6 +1,6 @@
 # package-skeleton
 
-[简体中文](README_zh_CN.md) | [ENGLISH](README.md)
+[简体中文](README-zh_CN.md) | [ENGLISH](README.md)
 
 > 一个 PHP 软件包模板存储库。- A PHP package template repository.
 
@@ -11,27 +11,44 @@
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
 
+## 功能
+
+* 集成了 [brainmaestro/composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) - git 钩子
+* 集成了 [sebastianbergmann/phpunit](https://github.com/sebastianbergmann/phpunit) - 单元测试
+* 集成了 [mockery/mockery](https://github.com/mockery/mockery) - mock
+* 集成了 [Nyholm/NSA](https://github.com/Nyholm/NSA) - 单元测试辅助包
+* 集成了 [phpbench/phpbench](https://github.com/phpbench/phpbench) - 基准测试
+* 集成了 [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) - 编码规范检查
+* 集成了 [overtrue/phplint](https://github.com/overtrue/phplint) - 语法检查
+* 集成了 [vimeo/psalm](https://github.com/vimeo/psalm) - 静态检查
+* 集成了 [lint-md/lint-md](https://github.com/lint-md/lint-md) - markdown 语法检查
+* 自带中英文 `README.md`
+* 自带常用徽章图标
+
 ## 环境要求
 
 * PHP >= 7.2
 
 ## 安装
 
-``` bash
+```bash
 $ composer require guanguans/package-skeleton --prefer-dist -vvv
 ```
 
 ## 使用
 
-1. 替换 `guanguans/package-skeleton` -> `vendorName/package-name`
-2. 替换 `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
-3. 替换 `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
-4. 替换 `ityaozm@gmail.com` -> `your email`
-5. 执行 `$ composer dumpautoload`
+1. 执行 `$ git clone https://github.com/guanguans/package-skeleton.git`
+2. 替换 `guanguans/package-skeleton` -> `vendorName/package-name`
+3. 替换 `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
+4. 替换 `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
+5. 替换 `ityaozm@gmail.com` -> `your email`
+6. 执行 `$ composer install && composer dumpautoload`
+7. 执行 `$ rm .git/`
+8. 执行 `$ git init && git add . && git commit -m 'Build the basic skeleton'`
 
 ## 测试
 
-``` bash
+```bash
 $ composer test
 ```
 
