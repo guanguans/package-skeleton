@@ -22,8 +22,9 @@
 * Integrated [overtrue/phplint](https://github.com/overtrue/phplint) - Grammar check
 * Integrated [vimeo/psalm](https://github.com/vimeo/psalm) - Static check
 * Integrated [lint-md/lint-md](https://github.com/lint-md/lint-md) - Markdown grammar check
-* With Chinese and English `README.md`
+* With IDE helper file
 * With common badge icons
+* With Chinese and English `README.md` file
 
 ## Requirement
 
