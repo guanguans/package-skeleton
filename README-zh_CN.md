@@ -14,6 +14,7 @@
 ## 功能
 
 * 集成了 [brainmaestro/composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) - git 钩子
+* 集成了 [dms/phpunit-arraysubset-asserts](https://github.com/rdohms/phpunit-arraysubset-asserts) - 单元测试辅助包
 * 集成了 [sebastianbergmann/phpunit](https://github.com/sebastianbergmann/phpunit) - 单元测试
 * 集成了 [bovigo/vfsStream](https://github.com/bovigo/vfsStream) - 单元测试辅助包
 * 集成了 [mockery/mockery](https://github.com/mockery/mockery) - mock
