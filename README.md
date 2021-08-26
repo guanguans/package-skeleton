@@ -15,6 +15,7 @@
 
 * Integrated [brainmaestro/composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) - Git hooks
 * Integrated [sebastianbergmann/phpunit](https://github.com/sebastianbergmann/phpunit) - Unit test
+* Integrated [bovigo/vfsStream](https://github.com/bovigo/vfsStream) - Unit test assistant package
 * Integrated [mockery/mockery](https://github.com/mockery/mockery) - Mock
 * Integrated [Nyholm/NSA](https://github.com/Nyholm/NSA) - Unit test assistant package
 * Integrated [phpbench/phpbench](https://github.com/phpbench/phpbench) - Benchmarks  

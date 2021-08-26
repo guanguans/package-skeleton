@@ -15,6 +15,7 @@
 
 * 集成了 [brainmaestro/composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) - git 钩子
 * 集成了 [sebastianbergmann/phpunit](https://github.com/sebastianbergmann/phpunit) - 单元测试
+* 集成了 [bovigo/vfsStream](https://github.com/bovigo/vfsStream) - 单元测试辅助包
 * 集成了 [mockery/mockery](https://github.com/mockery/mockery) - mock
 * 集成了 [Nyholm/NSA](https://github.com/Nyholm/NSA) - 单元测试辅助包
 * 集成了 [phpbench/phpbench](https://github.com/phpbench/phpbench) - 基准测试
