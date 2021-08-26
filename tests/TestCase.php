@@ -11,10 +11,27 @@
 namespace Guanguans\PackageSkeleton\Tests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use InterNations\Component\HttpMock\PHPUnit\HttpMockTrait;
 
 class TestCase extends \PHPUnit\Framework\TestCase
 {
     use ArraySubsetAsserts;
+    use HttpMockTrait;
+
+    public static function setUpBeforeClass(): void
+    {
+        // static::setUpHttpMockBeforeClass('8088', 'localhost');
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        // static::tearDownHttpMockAfterClass();
+    }
+
+    public function setUp(): void
+    {
+        // $this->setUpHttpMock();
+    }
 
     /**
      * Tear down the test case.
@@ -32,5 +49,6 @@ class TestCase extends \PHPUnit\Framework\TestCase
     protected function finish()
     {
         // call more tear down methods
+        // $this->tearDownHttpMock();
     }
 }
