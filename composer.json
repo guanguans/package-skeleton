@@ -29,6 +29,7 @@
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
+        "dms/phpunit-arraysubset-asserts": "^0.3.0",
         "friendsofphp/php-cs-fixer": "^3.0",
         "mikey179/vfsstream": "^1.6",
         "mockery/mockery": "^1.3",

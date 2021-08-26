@@ -10,8 +10,12 @@
 
 namespace Guanguans\PackageSkeleton\Tests;
 
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+
 class TestCase extends \PHPUnit\Framework\TestCase
 {
+    use ArraySubsetAsserts;
+
     /**
      * Tear down the test case.
      */
@@ -19,6 +23,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         $this->finish();
         parent::tearDown();
+        \Mockery::close();
     }
 
     /**
