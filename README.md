@@ -23,6 +23,7 @@
 * Integrated [phpbench/phpbench](https://github.com/phpbench/phpbench) - Benchmarks  
 * Integrated [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) - Coding standard check
 * Integrated [overtrue/phplint](https://github.com/overtrue/phplint) - Grammar check
+* Integrated [symplify/monorepo-builder](https://github.com/symplify/monorepo-builder) - Monorepo
 * Integrated [vimeo/psalm](https://github.com/vimeo/psalm) - Static check
 * Integrated [lint-md/lint-md](https://github.com/lint-md/lint-md) - Markdown grammar check
 * With IDE helper file

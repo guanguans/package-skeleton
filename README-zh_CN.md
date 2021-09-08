@@ -23,6 +23,7 @@
 * 集成了 [phpbench/phpbench](https://github.com/phpbench/phpbench) - 基准测试
 * 集成了 [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) - 编码规范检查
 * 集成了 [overtrue/phplint](https://github.com/overtrue/phplint) - 语法检查
+* 集成了 [symplify/monorepo-builder](https://github.com/symplify/monorepo-builder) - Monorepo
 * 集成了 [vimeo/psalm](https://github.com/vimeo/psalm) - 静态检查
 * 集成了 [lint-md/lint-md](https://github.com/lint-md/lint-md) - markdown 语法检查
 * 自带 IDE 帮助文件
