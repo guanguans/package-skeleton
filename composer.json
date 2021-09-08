@@ -38,6 +38,7 @@
         "overtrue/phplint": "^2.4 || ^3.0",
         "phpbench/phpbench": "^1.1",
         "phpunit/phpunit": "^8.0 || ^9.0",
+        "symplify/monorepo-builder": "^9.4",
         "vimeo/psalm": "^4.9"
     },
     "autoload": {
@@ -93,7 +94,8 @@
         "psalm": "./vendor/bin/psalm",
         "test": "./vendor/bin/phpunit --coverage-text --colors=always --verbose",
         "test-coverage": "./vendor/bin/phpunit --coverage-html=coverage/ --coverage-clover=clover.xml --color=always --verbose",
-        "benchmark": "./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2"
+        "benchmark": "./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
+        "release": "./vendor/bin/monorepo-builder release --ansi -vvv"
     },
     "scripts-descriptions": {
         "cghooks": "Run git cghooks.",
@@ -105,6 +107,7 @@
         "psalm": "Run psalm checks.",
         "test": "Run all tests.",
         "test-coverage": "Run all tests with coverage.",
-        "benchmark": "Run all benchmark."
+        "benchmark": "Run all benchmark.",
+        "release": "Run perform release process with set Release Workers."
     }
 }
