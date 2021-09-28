@@ -24,6 +24,7 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "provide": {},
     "require": {
         "php": ">=7.2"
     },
@@ -41,10 +42,16 @@
         "symplify/monorepo-builder": "^9.4",
         "vimeo/psalm": "^4.9"
     },
+    "replace": {},
+    "conflict": {},
+    "suggest": {},
     "autoload": {
         "psr-4": {
             "Guanguans\\PackageSkeleton\\": "src"
-        }
+        },
+        "files": [],
+        "classmap": [],
+        "exclude-from-classmap": []
     },
     "autoload-dev": {
         "psr-4": {
@@ -76,6 +83,7 @@
             ]
         }
     },
+    "bin": [],
     "scripts": {
         "post-update-cmd": [
             "cghooks update"
@@ -109,5 +117,6 @@
         "test-coverage": "Run all tests with coverage.",
         "benchmark": "Run all benchmark.",
         "release": "Run perform release process with set Release Workers."
-    }
+    },
+    "repositories": []
 }
