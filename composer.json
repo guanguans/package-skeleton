@@ -1,6 +1,7 @@
 {
     "name": "guanguans/package-skeleton",
     "description": "A PHP package template repository. - 一个PHP软件包模板存储库。",
+    "type": "library",
     "keywords": [
         "package",
         "template",
@@ -8,10 +9,8 @@
         "skeleton"
     ],
     "homepage": "https://github.com/guanguans/package-skeleton",
-    "support": {
-        "issues": "https://github.com/guanguans/package-skeleton/issues",
-        "source": "https://github.com/guanguans/package-skeleton"
-    },
+    "readme": "README.md",
+    "license": "MIT",
     "authors": [
         {
             "name": "guanguans",
@@ -20,11 +19,16 @@
             "role": "developer"
         }
     ],
-    "type": "library",
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "provide": {},
+    "support": {
+        "issues": "https://github.com/guanguans/package-skeleton/issues",
+        "source": "https://github.com/guanguans/package-skeleton"
+    },
+    "funding": [
+        {
+            "type": "wechat",
+            "url": "https://www.guanguans.cn/images/wechat.jpeg"
+        }
+    ],
     "require": {
         "php": ">=7.2"
     },
@@ -42,48 +46,33 @@
         "symplify/monorepo-builder": "^9.4",
         "vimeo/psalm": "^4.9"
     },
-    "replace": {},
     "conflict": {},
+    "replace": {},
+    "provide": {},
     "suggest": {},
     "autoload": {
         "psr-4": {
             "Guanguans\\PackageSkeleton\\": "src"
         },
+        "psr-0": {},
         "files": [],
         "classmap": [],
-        "exclude-from-classmap": []
+        "exclude-from-classmap": ["tests"]
     },
     "autoload-dev": {
         "psr-4": {
             "Guanguans\\PackageSkeleton\\Tests\\": "tests"
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [],
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true
     },
-    "funding": [
-        {
-            "type": "wechat",
-            "url": "https://www.guanguans.cn/images/wechat.jpeg"
-        }
-    ],
-    "extra": {
-        "hooks": {
-            "pre-commit": [
-                "composer lint",
-                "composer style-lint",
-                "composer md-lint",
-                "composer test"
-            ],
-            "pre-push": [
-                "composer lint",
-                "composer style-lint",
-                "composer md-lint",
-                "composer test"
-            ]
-        }
-    },
-    "bin": [],
     "scripts": {
         "post-update-cmd": [
             "cghooks update"
@@ -105,18 +94,25 @@
         "benchmark": "./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
         "release": "./vendor/bin/monorepo-builder release --ansi -vvv"
     },
-    "scripts-descriptions": {
-        "cghooks": "Run git cghooks.",
-        "lint": "Run phplint checks.",
-        "md-lint": "Run markdown checks.",
-        "md-fix": "Run markdown fixing.",
-        "style-lint": "Run style checks (only dry run - no fixing!).",
-        "style-fix": "Run style checks and fix violations.",
-        "psalm": "Run psalm checks.",
-        "test": "Run all tests.",
-        "test-coverage": "Run all tests with coverage.",
-        "benchmark": "Run all benchmark.",
-        "release": "Run perform release process with set Release Workers."
+    "scripts-descriptions": {},
+    "extra": {
+        "hooks": {
+            "pre-commit": [
+                "composer lint",
+                "composer style-lint",
+                "composer md-lint",
+                "composer test"
+            ],
+            "pre-push": [
+                "composer lint",
+                "composer style-lint",
+                "composer md-lint",
+                "composer test"
+            ]
+        }
     },
-    "repositories": []
+    "bin": [],
+    "archive": {},
+    "abandoned": false,
+    "non-feature-branches": []
 }
