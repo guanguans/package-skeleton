@@ -27,6 +27,7 @@
 * Integrated [vimeo/psalm](https://github.com/vimeo/psalm) - Static check
 * Integrated [lint-md/lint-md](https://github.com/lint-md/lint-md) - Markdown grammar check
 * With IDE helper file
+* With `github/pages` docsify [documentation site](https://guanguans.github.io/package-skeleton/)
 * With common badge icons
 * With Chinese and English `README.md` file
 

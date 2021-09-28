@@ -27,6 +27,7 @@
 * 集成了 [vimeo/psalm](https://github.com/vimeo/psalm) - 静态检查
 * 集成了 [lint-md/lint-md](https://github.com/lint-md/lint-md) - markdown 语法检查
 * 自带 IDE 帮助文件
+* 自带 `github/pages` docsify [文档网站](https://guanguans.github.io/package-skeleton/)
 * 自带常用徽章图标
 * 自带中英文 `README.md` 文件
 
