@@ -11,6 +11,8 @@
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/guanguans/package-skeleton)
+![GitHub repo size](https://img.shields.io/github/repo-size/guanguans/package-skeleton)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/package-skeleton)
 
 ## Features
 
