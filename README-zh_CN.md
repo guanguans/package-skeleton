@@ -10,6 +10,7 @@
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](//packagist.org/packages/guanguans/package-skeleton)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
+[![Open in Visual Studio Code][vscode-icon]][vscode-href]
 
 ## 功能
 
