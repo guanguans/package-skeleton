@@ -27,6 +27,7 @@
 * 集成了 [Nyholm/NSA](https://github.com/Nyholm/NSA) - 单元测试辅助包
 * 集成了 [phpbench/phpbench](https://github.com/phpbench/phpbench) - 基准测试
 * 集成了 [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) - 编码规范检查
+* 集成了 [johnkary/phpunit-speedtrap](https://github.com/johnkary/phpunit-speedtrap) - 报告 PHPUnit 测试中运行缓慢的测试
 * 集成了 [overtrue/phplint](https://github.com/overtrue/phplint) - 语法检查
 * 集成了 [symplify/monorepo-builder](https://github.com/symplify/monorepo-builder) - Monorepo
 * 集成了 [vimeo/psalm](https://github.com/vimeo/psalm) - 静态检查

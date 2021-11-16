@@ -27,6 +27,7 @@
 * Integrated [Nyholm/NSA](https://github.com/Nyholm/NSA) - Unit test assistant package
 * Integrated [phpbench/phpbench](https://github.com/phpbench/phpbench) - Benchmarks  
 * Integrated [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) - Coding standard check
+* Integrated [johnkary/phpunit-speedtrap](https://github.com/johnkary/phpunit-speedtrap) - Reports on slow-running tests in your PHPUnit test suite
 * Integrated [overtrue/phplint](https://github.com/overtrue/phplint) - Grammar check
 * Integrated [symplify/monorepo-builder](https://github.com/symplify/monorepo-builder) - Monorepo
 * Integrated [vimeo/psalm](https://github.com/vimeo/psalm) - Static check
