@@ -59,11 +59,13 @@
         "psr-0": {},
         "files": [],
         "classmap": [],
-        "exclude-from-classmap": ["benchmarks"]
+        "exclude-from-classmap": [
+            "benchmarks"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Guanguans\\PackageSkeleton\\Tests\\": "tests"
+            "Guanguans\\PackageSkeletonTests\\": "tests"
         }
     },
     "minimum-stability": "dev",
