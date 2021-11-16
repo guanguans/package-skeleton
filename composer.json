@@ -34,6 +34,7 @@
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
+        "brianium/paratest": "^6.0",
         "dg/bypass-finals": "^1.3",
         "dms/phpunit-arraysubset-asserts": "^0.3.0",
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -57,7 +58,7 @@
         "psr-0": {},
         "files": [],
         "classmap": [],
-        "exclude-from-classmap": ["tests"]
+        "exclude-from-classmap": ["benchmarks"]
     },
     "autoload-dev": {
         "psr-4": {
@@ -91,6 +92,8 @@
         "psalm": "./vendor/bin/psalm",
         "test": "./vendor/bin/phpunit --coverage-text --colors=always --verbose",
         "test-coverage": "./vendor/bin/phpunit --coverage-html=coverage/ --coverage-clover=clover.xml --color=always --verbose",
+        "paratest": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-text=coverage/coverage.text ./tests/ --verbose",
+        "paratest-coverage": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-html=coverage/ --coverage-clover=clover.xml ./tests/ --verbose",
         "benchmark": "./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
         "release": "./vendor/bin/monorepo-builder release --ansi -vvv"
     },

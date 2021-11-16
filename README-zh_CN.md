@@ -17,6 +17,7 @@
 ## 功能
 
 * 集成了 [brainmaestro/composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) - git 钩子
+* 集成了 [brianium/paratest](https://github.com/paratestphp/paratest) - PHPUnit 的并行测试
 * 集成了 [dg/bypass-finals](https://github.com/rdohms/dg/bypass-finals) - 单元测试辅助包
 * 集成了 [dms/phpunit-arraysubset-asserts](https://github.com/rdohms/phpunit-arraysubset-asserts) - 单元测试辅助包
 * 集成了 [sebastianbergmann/phpunit](https://github.com/sebastianbergmann/phpunit) - 单元测试
