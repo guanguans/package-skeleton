@@ -88,19 +88,19 @@
             "cghooks add --ignore-lock",
             "cghooks update"
         ],
+        "benchmark": "./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
         "cghooks": "./vendor/bin/cghooks",
+        "doctum": "./vendor/bin/doctum.php update doctum.php",
         "md-lint": "lint-md --config .lintmdrc ./*.md ./.github/ ./docs/",
         "md-fix": "lint-md --config .lintmdrc --fix ./*.md ./.github/ ./docs/",
+        "paratest": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-text=coverage/coverage.text ./tests/ --verbose",
+        "paratest-c": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-html=coverage/ --coverage-clover=clover.xml ./tests/ --verbose",
+        "psalm": "./vendor/bin/psalm",
+        "release": "./vendor/bin/monorepo-builder release --ansi -vvv",
         "style-lint": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --diff --dry-run --ansi",
         "style-fix": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --ansi",
-        "psalm": "./vendor/bin/psalm",
         "test": "./vendor/bin/phpunit --coverage-text --colors=always --cache-result-file=./build/.phpunit.result.cache --verbose",
-        "test-coverage": "./vendor/bin/phpunit --coverage-html=./build/coverage/ --coverage-clover=./build/clover.xml --color=always --cache-result-file=./build/.phpunit.result.cache --verbose",
-        "paratest": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-text=coverage/coverage.text ./tests/ --verbose",
-        "paratest-coverage": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-html=coverage/ --coverage-clover=clover.xml ./tests/ --verbose",
-        "benchmark": "./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
-        "release": "./vendor/bin/monorepo-builder release --ansi -vvv",
-        "doctum": "./vendor/bin/doctum.php update doctum.php"
+        "test-c": "./vendor/bin/phpunit --coverage-html=./build/coverage/ --coverage-clover=./build/clover.xml --color=always --cache-result-file=./build/.phpunit.result.cache --verbose"
     },
     "scripts-descriptions": {},
     "extra": {
