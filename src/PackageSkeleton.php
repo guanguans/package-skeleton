@@ -12,7 +12,7 @@ namespace Guanguans\PackageSkeleton;
 
 class PackageSkeleton
 {
-    public static function test()
+    public static function test(): bool
     {
         return true;
     }
