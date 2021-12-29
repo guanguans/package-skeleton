@@ -12,7 +12,7 @@ namespace Guanguans\PackageSkeletonTests;
 
 use Guanguans\PackageSkeleton\PackageSkeleton;
 
-class PackageSkeletonTest extends TestCase
+final class PackageSkeletonTest extends TestCase
 {
     public function testTest()
     {
