@@ -23,8 +23,10 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__ . '/tests',
     ])
     ->exclude([
-        'vendor/',
+        '.github/',
+        'doc/',
         'docs/',
+        'vendor/',
     ])
     ->name('*.php')
     ->notName('*.blade.php')
