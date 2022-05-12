@@ -82,9 +82,11 @@
     "bin": [],
     "archive": {},
     "config": {
+        "allow-plugins": {},
         "apcu-autoloader": true,
         "classmap-authoritative": true,
         "optimize-autoloader": true,
+        "preferred-install": "dist",
         "sort-packages": true
     },
     "extra": {
