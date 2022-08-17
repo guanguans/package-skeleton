@@ -18,9 +18,15 @@ EOF;
 
 $finder = PhpCsFixer\Finder::create()
     ->in([
-        __DIR__ . '/benchmarks',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
+        __DIR__.'/benchmarks',
+        __DIR__.'/src',
+        __DIR__.'/tests',
+    ])
+    ->append([
+        __DIR__.'/.php-cs-fixer.php',
+        __DIR__.'/doctum.php',
+        __DIR__.'/monorepo-builder.php',
+        __DIR__.'/update-helper.php',
     ])
     ->exclude([
         '.github/',
@@ -29,8 +35,10 @@ $finder = PhpCsFixer\Finder::create()
         'vendor/',
     ])
     ->name('*.php')
-    ->notName('*.blade.php')
-    ->notName('_ide_helper.php')
+    ->notName([
+        '*.blade.php',
+        '_ide_helper.php',
+    ])
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
@@ -40,7 +48,7 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
         'header_comment' => [
             'header' => $header,
-            'comment_type' => 'PHPDoc'
+            'comment_type' => 'PHPDoc',
         ],
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sort_algorithm' => 'alpha'],

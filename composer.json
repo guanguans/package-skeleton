@@ -70,7 +70,9 @@
         "psr-4": {
             "Guanguans\\PackageSkeleton\\": "src"
         },
-        "classmap": [],
+        "classmap": [
+            "update-helper.php"
+        ],
         "files": [],
         "exclude-from-classmap": [
             "benchmarks"
@@ -104,7 +106,7 @@
                 "composer test"
             ]
         },
-        "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper"
+        "update-helper": "GuanguansPackageSkeletonUpdateHelper"
     },
     "scripts": {
         "post-install-cmd": [
