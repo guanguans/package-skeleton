@@ -152,8 +152,8 @@
         "release": "./vendor/bin/monorepo-builder release --ansi -vvv",
         "style-fix": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --ansi",
         "style-lint": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --diff --dry-run --ansi",
-        "test": "./vendor/bin/phpunit --coverage-text --colors=always --cache-result-file=./build/.phpunit.result.cache --verbose",
-        "test-coverage": "./vendor/bin/phpunit --coverage-html=./build/coverage/ --coverage-clover=./build/clover.xml --color=always --cache-result-file=./build/.phpunit.result.cache --verbose"
+        "test": "./vendor/bin/pest --coverage-text --colors=always --cache-result-file=./build/.phpunit.result.cache --verbose",
+        "test-coverage": "./vendor/bin/pest --coverage-html=./build/coverage/ --coverage-clover=./build/clover.xml --color=always --cache-result-file=./build/.phpunit.result.cache --verbose"
     },
     "scripts-descriptions": {}
 }

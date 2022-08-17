@@ -12,7 +12,7 @@ namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 
-class TestCase extends \PHPUnit\Framework\TestCase
+class TestCase extends \Orchestra\Testbench\TestCase
 {
     use ArraySubsetAsserts;
 
@@ -33,15 +33,23 @@ class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * This method is called before each test.
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
+        parent::setUp();
+
         // \DG\BypassFinals::enable();
+
+        \Illuminate\Database\Eloquent\Factories\Factory::guessFactoryNamesUsing(
+            function ($modelName) {
+                return 'Guanguans\\PackageSkeleton\\Database\\Factories\\'.class_basename($modelName).'Factory';
+            }
+        );
     }
 
     /**
      * This method is called after each test.
      */
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         $this->finish();
         \Mockery::close();
@@ -53,5 +61,20 @@ class TestCase extends \PHPUnit\Framework\TestCase
     protected function finish()
     {
         // call more tear down methods
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            // SkeletonServiceProvider::class,
+        ];
+    }
+
+    public function getEnvironmentSetUp($app)
+    {
+        config()->set('database.default', 'testing');
+
+        // $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
+        // $migration->up();
     }
 }
