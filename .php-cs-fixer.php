@@ -26,7 +26,6 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__.'/.php-cs-fixer.php',
         __DIR__.'/doctum.php',
         __DIR__.'/monorepo-builder.php',
-        __DIR__.'/update-helper.php',
     ])
     ->exclude([
         '.github/',
