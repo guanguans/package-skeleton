@@ -54,10 +54,10 @@ $ composer require guanguans/package-skeleton --prefer-dist -vvv
 2. 替换 `guanguans/package-skeleton` -> `vendorName/package-name`
 3. 替换 `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
 4. 替换 `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
-5. 替换 `ityaozm@gmail.com` -> `your email`
-6. 执行 `$ composer install && composer dumpautoload`
-7. 执行 `$ rm .git/`
-8. 执行 `$ git init && git add . && git commit -m 'Build the basic skeleton'`
+5. 替换 `GuanguansPackageSkeletonUpdateHelper` -> `VendorNamePackageNameUpdateHelper`
+6. 替换 `ityaozm@gmail.com` -> `your email`
+7. 执行 `$ composer install && composer dumpautoload`
+8. 执行 `$ rm .git/ && git init && git add . && git commit -m 'Build the basic skeleton'`
 
 ## 测试
 
