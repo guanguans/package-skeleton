@@ -148,7 +148,7 @@
         "post-merge": [
             "composer install"
         ],
-        "psalm": "./vendor/bin/psalm",
+        "psalm": "./vendor/bin/psalm --update-baseline",
         "release": "./vendor/bin/monorepo-builder release --ansi -vvv",
         "style-fix": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --ansi",
         "style-lint": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --diff --dry-run --ansi",
