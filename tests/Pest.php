@@ -8,7 +8,7 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-use Guanguans\PackageSkeletonTests\TestCase;
+namespace Guanguans\PackageSkeletonTests;
 
 uses(TestCase::class)
     ->beforeEach(function () {
