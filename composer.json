@@ -113,7 +113,7 @@
             "pre-commit": [
                 "composer checks"
             ],
-            "pre-merge": [
+            "post-merge": [
                 "composer checks"
             ]
         },
