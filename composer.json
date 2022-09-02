@@ -110,10 +110,10 @@
     },
     "extra": {
         "hooks": {
-            "pre-commit": [
+            "post-merge": [
                 "composer checks"
             ],
-            "post-merge": [
+            "pre-commit": [
                 "composer checks"
             ]
         },
@@ -143,11 +143,17 @@
         "changelog-minor": "@changelog --minor",
         "changelog-patch": "@changelog --patch",
         "checks": [
+            "@mark-start",
             "@style-lint",
-            "@test"
+            "@mark-separate",
+            "@test",
+            "@mark-finish"
         ],
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
+        "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
+        "mark-separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"----------------\"",
+        "mark-start": "printf '\\n!\\n!\\t\\033[0;36m%s\\033[0m\\n!\\n\\n' \"Started\"",
         "md-fix": "@md-lint --fix",
         "md-lint": "lint-md --config .lintmdrc ./*.md ./.github/ ./docs/",
         "paratest": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-text=coverage/coverage.text ./tests/ --verbose",
