@@ -1,13 +1,12 @@
 includes:
     - phpstan-baseline.neon
     - vendor/roave/no-floaters/rules.neon
-    - vendor/phpstan/phpstan-strict-rules/rules.neon
+#    - vendor/phpstan/phpstan-strict-rules/rules.neon
 
 parameters:
     level: 8
     paths:
         - src
-        - config
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: true
