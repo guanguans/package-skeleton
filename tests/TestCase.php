@@ -11,6 +11,8 @@
 namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Mockery;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -39,8 +41,8 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
         // \DG\BypassFinals::enable();
 
-        \Illuminate\Database\Eloquent\Factories\Factory::guessFactoryNamesUsing(
-            function ($modelName) {
+        Factory::guessFactoryNamesUsing(
+            static function ($modelName): string {
                 return 'Guanguans\\PackageSkeleton\\Database\\Factories\\'.class_basename($modelName).'Factory';
             }
         );
@@ -52,13 +54,13 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function tearDown(): void
     {
         $this->finish();
-        \Mockery::close();
+        Mockery::close();
     }
 
     /**
      * Run extra tear down code.
      */
-    protected function finish()
+    protected function finish(): void
     {
         // call more tear down methods
     }
@@ -70,7 +72,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 

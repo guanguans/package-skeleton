@@ -8,6 +8,6 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-it('can test', function () {
+it('can test', function (): void {
     expect(true)->toBeTrue();
 });

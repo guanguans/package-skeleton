@@ -14,7 +14,7 @@ use Guanguans\PackageSkeleton\PackageSkeleton;
 
 final class PackageSkeletonTest extends TestCase
 {
-    public function testTest()
+    public function testTest(): void
     {
         $this->assertTrue(PackageSkeleton::test());
     }

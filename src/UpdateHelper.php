@@ -14,9 +14,9 @@ use UpdateHelper\UpdateHelperInterface;
 
 class UpdateHelper implements UpdateHelperInterface
 {
-    public function check(\UpdateHelper\UpdateHelper $helper)
+    public function check(\UpdateHelper\UpdateHelper $updateHelper): void
     {
-        $helper->write('Package update checking...');
-        $helper->write('Package update checking done.');
+        $updateHelper->write('Package update checking...');
+        $updateHelper->write('Package update checking done.');
     }
 }
