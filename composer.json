@@ -41,6 +41,8 @@
         "code-lts/doctum": "^5.4",
         "codedungeon/phpunit-result-printer": "^0.31 || ^0.32",
         "dms/phpunit-arraysubset-asserts": "^0.3 || ^0.4",
+        "ekino/phpstan-banned-code": "^1.0",
+        "ergebnis/phpstan-rules": "^1.0",
         "friendsofphp/php-cs-fixer": "^3.4",
         "infection/infection": "^0.26",
         "jetbrains/phpstorm-attributes": "^1.0",
