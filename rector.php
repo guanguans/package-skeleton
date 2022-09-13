@@ -18,13 +18,17 @@ use Rector\CodeQuality\Rector\Expression\InlineIfToExplicitIfRector;
 use Rector\CodeQuality\Rector\Identical\SimplifyBoolIdenticalTrueRector;
 use Rector\CodeQuality\Rector\LogicalAnd\LogicalToBooleanRector;
 use Rector\CodingStyle\Enum\PreferenceSelfThis;
+use Rector\CodingStyle\Rector\ClassMethod\UnSpreadOperatorRector;
+use Rector\CodingStyle\Rector\FuncCall\ConsistentPregDelimiterRector;
 use Rector\CodingStyle\Rector\MethodCall\PreferThisOrSelfMethodCallRector;
 use Rector\Config\RectorConfig;
 use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
+use Rector\DeadCode\Rector\Assign\RemoveUnusedVariableAssignRector;
 use Rector\DeadCode\Rector\MethodCall\RemoveEmptyMethodCallRector;
 use Rector\EarlyReturn\Rector\If_\ChangeAndIfToEarlyReturnRector;
 use Rector\EarlyReturn\Rector\Return_\ReturnBinaryOrToEarlyReturnRector;
+use Rector\Php56\Rector\FunctionLike\AddDefaultValueForUndefinedVariableRector;
 use Rector\PHPUnit\Rector\Class_\AddSeeTestAnnotationRector;
 use Rector\PHPUnit\Set\PHPUnitLevelSetList;
 use Rector\PHPUnit\Set\PHPUnitSetList;
@@ -57,6 +61,12 @@ return static function (RectorConfig $rectorConfig): void {
         NormalizeNamespaceByPSR4ComposerAutoloadRector::class,
         ChangeAndIfToEarlyReturnRector::class,
         ReturnBinaryOrToEarlyReturnRector::class,
+
+        // fix
+        AddDefaultValueForUndefinedVariableRector::class,
+        RemoveUnusedVariableAssignRector::class,
+        UnSpreadOperatorRector::class,
+        ConsistentPregDelimiterRector::class,
 
         // paths
         '**/Fixture*',
@@ -97,12 +107,13 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->importNames(true, false);
     $rectorConfig->nestedChainMethodCallLimit(3);
     $rectorConfig->phpstanConfig(__DIR__.'/phpstan.neon');
-    // $rectorConfig->parameters()->set(Option::APPLY_AUTO_IMPORT_NAMES_ON_CHANGED_FILES_ONLY, true);
-    // $rectorConfig->phpVersion(PhpVersion::PHP_80);
     // $rectorConfig->cacheClass(FileCacheStorage::class);
     // $rectorConfig->cacheDirectory(__DIR__.'/build/rector');
-    // $rectorConfig->indent(' ', 4);
+    // $rectorConfig->fileExtensions(['php']);
+    // $rectorConfig->parameters()->set(Option::APPLY_AUTO_IMPORT_NAMES_ON_CHANGED_FILES_ONLY, true);
+    // $rectorConfig->phpVersion(PhpVersion::PHP_80);
     // $rectorConfig->parallel();
+    // $rectorConfig->indent(' ', 4);
 
     $rectorConfig->rules([
         InlineConstructorDefaultToPropertyRector::class,

@@ -37,7 +37,6 @@
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
-        "brianium/paratest": "^6.0",
         "code-lts/doctum": "^5.4",
         "codedungeon/phpunit-result-printer": "^0.31 || ^0.32",
         "dms/phpunit-arraysubset-asserts": "^0.3 || ^0.4",
@@ -112,6 +111,9 @@
         "sort-packages": true
     },
     "extra": {
+        "branch-alias": {
+            "dev-main": "2.x-dev"
+        },
         "hooks": {
             "post-merge": [
                 "composer checks"
@@ -159,8 +161,6 @@
         "mark-start": "printf '\\n!\\n!\\t\\033[0;36m%s\\033[0m\\n!\\n\\n' \"Started\"",
         "md-fix": "@md-lint --fix",
         "md-lint": "lint-md --config .lintmdrc ./*.md ./.github/ ./docs/",
-        "paratest": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-text=coverage/coverage.text ./tests/ --verbose",
-        "paratest-coverage": "./vendor/bin/paratest -p4 --runner=WrapperRunner --coverage-html=coverage/ --coverage-clover=clover.xml ./tests/ --verbose",
         "pest": "./vendor/bin/pest --coverage-text --colors=always --cache-result-file=./build/.phpunit.result.cache --verbose",
         "pest-coverage": "./vendor/bin/pest --coverage-html=./build/coverage/ --coverage-clover=./build/clover.xml --color=always --cache-result-file=./build/.phpunit.result.cache --verbose",
         "phpmnd": "./vendor/bin/phpmnd ./src/ --exclude=./vendor/ --non-zero-exit-on-violation",
