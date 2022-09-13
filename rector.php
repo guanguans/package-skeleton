@@ -19,6 +19,9 @@ use Rector\CodeQuality\Rector\Identical\SimplifyBoolIdenticalTrueRector;
 use Rector\CodeQuality\Rector\LogicalAnd\LogicalToBooleanRector;
 use Rector\CodingStyle\Enum\PreferenceSelfThis;
 use Rector\CodingStyle\Rector\ClassMethod\UnSpreadOperatorRector;
+use Rector\CodingStyle\Rector\Closure\StaticClosureRector;
+use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
+use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
 use Rector\CodingStyle\Rector\FuncCall\ConsistentPregDelimiterRector;
 use Rector\CodingStyle\Rector\MethodCall\PreferThisOrSelfMethodCallRector;
 use Rector\Config\RectorConfig;
@@ -61,12 +64,15 @@ return static function (RectorConfig $rectorConfig): void {
         NormalizeNamespaceByPSR4ComposerAutoloadRector::class,
         ChangeAndIfToEarlyReturnRector::class,
         ReturnBinaryOrToEarlyReturnRector::class,
+        EncapsedStringsToSprintfRector::class,
+        WrapEncapsedVariableInCurlyBracesRector::class,
 
-        // fix
-        AddDefaultValueForUndefinedVariableRector::class,
-        RemoveUnusedVariableAssignRector::class,
-        UnSpreadOperatorRector::class,
-        ConsistentPregDelimiterRector::class,
+        // optional rules
+        // AddDefaultValueForUndefinedVariableRector::class,
+        // RemoveUnusedVariableAssignRector::class,
+        // UnSpreadOperatorRector::class,
+        // ConsistentPregDelimiterRector::class,
+        // StaticClosureRector::class,
 
         // paths
         '**/Fixture*',
