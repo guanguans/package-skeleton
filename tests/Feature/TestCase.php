@@ -8,6 +8,8 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-it('to be true ', function (): void {
-    expect(true)->toBeTrue();
-});
+namespace Guanguans\PackageSkeletonTests\Feature;
+
+class TestCase extends \Guanguans\PackageSkeletonTests\TestCase
+{
+}
