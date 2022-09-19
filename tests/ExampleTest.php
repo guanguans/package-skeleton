@@ -8,6 +8,6 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-it('to be true ', function (): void {
-    expect(true)->toBeTrue();
-});
+it('to be string', function ($movie): void {
+    expect($movie)->toBeString();
+})->group(__DIR__, __FILE__)->with('movies');
