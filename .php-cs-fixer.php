@@ -34,6 +34,9 @@ $finder = PhpCsFixer\Finder::create()
         'docs/',
         'vendor/',
     ])
+    ->notPath([
+        'vendor',
+    ])
     ->name('*.php')
     ->notName([
         '*.blade.php',
@@ -44,7 +47,7 @@ $finder = PhpCsFixer\Finder::create()
 
 return (new PhpCsFixer\Config())
     ->setRules([
-        // '@PSR12' => true,
+        '@PSR12' => true,
         '@Symfony' => true,
         'header_comment' => [
             'header' => $header,
