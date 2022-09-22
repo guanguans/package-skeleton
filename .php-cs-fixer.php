@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * This file is part of the guanguans/package-skeleton.
  *
@@ -47,25 +49,42 @@ $finder = PhpCsFixer\Finder::create()
 
 return (new PhpCsFixer\Config())
     ->setRules([
-        '@PSR12' => true,
+        '@DoctrineAnnotation' => true,
+        '@PHP80Migration:risky' => true,
+        '@PHPUnit84Migration:risky' => true,
+        '@PSR12:risky' => true,
         '@Symfony' => true,
         'header_comment' => [
             'header' => $header,
             'comment_type' => 'PHPDoc',
         ],
-        'array_syntax' => ['syntax' => 'short'],
-        'ordered_imports' => ['sort_algorithm' => 'alpha'],
-        'no_unused_imports' => true,
+        'blank_line_before_statement' => [
+            'statements' => ['break', 'continue', 'declare', 'return', 'throw', 'try'],
+        ],
+        'comment_to_phpdoc' => [
+            'ignored_tags' => [],
+        ],
+        'declare_strict_types' => true,
+        'method_argument_space' => [
+            'on_multiline' => 'ensure_fully_multiline',
+        ],
         'not_operator_with_successor_space' => true,
-        'no_useless_else' => true,
         'no_useless_return' => true,
-        'single_quote' => true,
-        'class_attributes_separation' => true,
-        'standardize_not_equals' => true,
-        // 'trailing_comma_in_multiline' => true,
-        // 'php_unit_construct' => true,
-        // 'php_unit_strict' => true,
-        // 'declare_strict_types' => true,
+        'no_useless_else' => true,
+        'is_null' => true,
+        'return_assignment' => true,
+        'multiline_comment_opening_closing' => true,
+        'align_multiline_comment' => [
+            'comment_type' => 'phpdocs_only',
+        ],
+        'phpdoc_to_comment' => [],
+        'phpdoc_var_annotation_correct_order' => true,
+        'php_unit_construct' => [
+            'assertions' => ['assertEquals', 'assertSame', 'assertNotEquals', 'assertNotSame'],
+        ],
+        'array_indentation' => true,
+        'method_chaining_indentation' => true,
+        'statement_indentation' => true,
     ])
-    // ->setRiskyAllowed(true)
+    ->setRiskyAllowed(true)
     ->setFinder($finder);

@@ -125,7 +125,9 @@ return static function (RectorConfig $rectorConfig): void {
         InlineConstructorDefaultToPropertyRector::class,
     ]);
 
-    $rectorConfig->ruleWithConfiguration(PreferThisOrSelfMethodCallRector::class, [
+    $rectorConfig->ruleWithConfiguration(
+        PreferThisOrSelfMethodCallRector::class,
+        [
             TestCase::class => PreferenceSelfThis::PREFER_THIS,
         ]
     );

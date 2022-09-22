@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * This file is part of the guanguans/package-skeleton.
  *
@@ -42,9 +44,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
         // \DG\BypassFinals::enable();
 
         Factory::guessFactoryNamesUsing(
-            static function ($modelName): string {
-                return 'Guanguans\\PackageSkeleton\\Database\\Factories\\'.class_basename($modelName).'Factory';
-            }
+            static fn ($modelName): string => 'Guanguans\\PackageSkeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
