@@ -14,7 +14,6 @@ namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Mockery;
 use Spatie\Snapshots\MatchesSnapshots;
 
 class TestCase extends \Orchestra\Testbench\TestCase
@@ -56,7 +55,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function tearDown(): void
     {
         $this->finish();
-        Mockery::close();
+        \Mockery::close();
     }
 
     /**
