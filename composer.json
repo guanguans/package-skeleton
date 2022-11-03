@@ -69,6 +69,8 @@
         "roave/no-floaters": "^1.6",
         "roave/security-advisories": "dev-latest",
         "spatie/pest-plugin-snapshots": "^1.1",
+        "spatie/phpunit-snapshot-assertions": "^4.2",
+        "spatie/phpunit-watcher": "^1.23",
         "symplify/monorepo-builder": "^10.0",
         "vimeo/psalm": "^4.16"
     },
@@ -177,7 +179,11 @@
         "style-fix": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --ansi",
         "style-lint": "@style-fix --diff --dry-run",
         "test": "@pest",
-        "test-coverage": "@pest-coverage"
+        "test-coverage": "@pest-coverage",
+        "test-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "./vendor/bin/phpunit-watcher watch < /dev/tty"
+        ]
     },
     "scripts-descriptions": {}
 }

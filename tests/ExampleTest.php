@@ -10,6 +10,10 @@ declare(strict_types=1);
  * This source file is subject to the MIT license that is bundled.
  */
 
-it('to be string', function ($movie): void {
+it('to be string.', function ($movie): void {
     expect($movie)->toBeString();
+})->group(__DIR__, __FILE__)->with('movies');
+
+it('is is snapshot.', function ($movie): void {
+    $this->assertMatchesSnapshot($movie);
 })->group(__DIR__, __FILE__)->with('movies');

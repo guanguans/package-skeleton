@@ -15,10 +15,12 @@ namespace Guanguans\PackageSkeletonTests;
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Mockery;
+use Spatie\Snapshots\MatchesSnapshots;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
     use ArraySubsetAsserts;
+    use MatchesSnapshots;
 
     /**
      * This method is called before the first test of this test class is run.
