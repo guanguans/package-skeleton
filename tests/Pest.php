@@ -14,7 +14,7 @@ namespace Guanguans\PackageSkeletonTests;
 
 use Pest\Expectation;
 
-uses(TestCase::class)
+uses(LaravelTestCase::class)
     ->beforeEach(function (): void {
     })
     ->in(__DIR__);

@@ -14,7 +14,7 @@ namespace Guanguans\PackageSkeletonTests;
 
 use Guanguans\PackageSkeleton\PackageSkeleton;
 
-final class PackageSkeletonTest extends TestCase
+final class PackageSkeletonLaravelTest extends LaravelTestCase
 {
     public function testTest(): void
     {

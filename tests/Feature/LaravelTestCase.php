@@ -12,6 +12,6 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeletonTests\Feature;
 
-class TestCase extends \Guanguans\PackageSkeletonTests\TestCase
+class LaravelTestCase extends \Guanguans\PackageSkeletonTests\LaravelTestCase
 {
 }

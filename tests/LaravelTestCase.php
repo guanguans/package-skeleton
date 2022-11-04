@@ -13,10 +13,11 @@ declare(strict_types=1);
 namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Mockery;
 use Spatie\Snapshots\MatchesSnapshots;
 
-class TestCase extends \PHPUnit\Framework\TestCase
+class LaravelTestCase extends \Orchestra\Testbench\TestCase
 {
     use ArraySubsetAsserts;
     use MatchesSnapshots;
@@ -38,15 +39,21 @@ class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * This method is called before each test.
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
+        parent::setUp();
+
         // \DG\BypassFinals::enable();
+
+        Factory::guessFactoryNamesUsing(
+            static fn ($modelName): string => 'Guanguans\\PackageSkeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
+        );
     }
 
     /**
      * This method is called after each test.
      */
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         $this->finish();
         Mockery::close();
@@ -58,5 +65,20 @@ class TestCase extends \PHPUnit\Framework\TestCase
     protected function finish(): void
     {
         // call more tear down methods
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            // SkeletonServiceProvider::class,
+        ];
+    }
+
+    protected function getEnvironmentSetUp($app): void
+    {
+        config()->set('database.default', 'testing');
+
+        // $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
+        // $migration->up();
     }
 }
