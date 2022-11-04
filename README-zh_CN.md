@@ -10,7 +10,6 @@
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](//packagist.org/packages/guanguans/package-skeleton)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/guanguans/package-skeleton)
 ![GitHub repo size](https://img.shields.io/github/repo-size/guanguans/package-skeleton)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/package-skeleton)
 
@@ -33,6 +32,7 @@
 * 集成了 [vimeo/psalm](https://github.com/vimeo/psalm) - 静态检查
 * 集成了 [lint-md/lint-md](https://github.com/lint-md/lint-md) - markdown 语法检查
 * 集成了 [povils/phpmnd](https://github.com/povils/phpmnd) - PHP 幻数检测器
+* 集成了 ...
 * 自带 IDE 帮助文件
 * 自带 `github/pages` docsify [文档网站](https://guanguans.github.io/package-skeleton/)
 * 自带常用徽章图标
@@ -45,7 +45,7 @@
 ## 安装
 
 ```bash
-$ composer require guanguans/package-skeleton --prefer-dist -vvv
+composer require guanguans/package-skeleton --prefer-dist -vvv
 ```
 
 ## 使用
@@ -55,14 +55,15 @@ $ composer require guanguans/package-skeleton --prefer-dist -vvv
 3. 替换 `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
 4. 替换 `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
 5. 替换 `GuanguansPackageSkeletonUpdateHelper` -> `VendorNamePackageNameUpdateHelper`
-6. 替换 `ityaozm@gmail.com` -> `your email`
-7. 执行 `$ composer install && composer dumpautoload`
-8. 执行 `$ rm .git/ && git init && git add . && git commit -m 'Build the basic skeleton'`
+6. 替换 `package-skeleton` -> `your repository name`
+7. 替换 `ityaozm@gmail.com` -> `your email`
+8. 执行 `$ composer install && composer dumpautoload`
+9. 执行 `$ rm .git/ && git init && git add . && git commit -m 'Build the basic skeleton'`
 
 ## 测试
 
 ```bash
-$ composer test
+composer test
 ```
 
 ## 变更日志

@@ -10,7 +10,6 @@
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](//packagist.org/packages/guanguans/package-skeleton)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](//packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](//packagist.org/packages/guanguans/package-skeleton)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/guanguans/package-skeleton)
 ![GitHub repo size](https://img.shields.io/github/repo-size/guanguans/package-skeleton)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/package-skeleton)
 
@@ -33,6 +32,7 @@
 * Integrated [vimeo/psalm](https://github.com/vimeo/psalm) - Static check
 * Integrated [lint-md/lint-md](https://github.com/lint-md/lint-md) - Markdown grammar check
 * Integrated [povils/phpmnd](https://github.com/povils/phpmnd) - PHP Magic Number Detector
+* Integrated ...
 * With IDE helper file
 * With `github/pages` docsify [documentation site](https://guanguans.github.io/package-skeleton/)
 * With common badge icons
@@ -45,7 +45,7 @@
 ## Installation
 
 ```bash
-$ composer require guanguans/package-skeleton --prefer-dist -vvv
+composer require guanguans/package-skeleton --prefer-dist -vvv
 ```
 
 ## Usage
@@ -55,14 +55,15 @@ $ composer require guanguans/package-skeleton --prefer-dist -vvv
 3. replace `Guanguans\\PackageSkeleton` -> `VendorName\\PackageName`
 4. replace `Guanguans\PackageSkeleton` -> `VendorName\PackageName`
 5. replace `GuanguansPackageSkeletonUpdateHelper` -> `VendorNamePackageNameUpdateHelper`
-6. replace `ityaozm@gmail.com` -> `your email`
-7. execute `$ composer install && composer dumpautoload`  
-8. execute `$ rm .git/ && git init && git add . && git commit -m 'Build the basic skeleton'`
+6. replace `package-skeleton` -> `your repository name`
+7. replace `ityaozm@gmail.com` -> `your email`
+8. execute `$ composer install && composer dumpautoload`  
+9. execute `$ rm .git/ && git init && git add . && git commit -m 'Build the basic skeleton'`
 
 ## Testing
 
 ```bash
-$ composer test
+composer test
 ```
 
 ## Changelog
