@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
-use Mockery;
 use Spatie\Snapshots\MatchesSnapshots;
 
 class TestCase extends \PHPUnit\Framework\TestCase
@@ -49,7 +48,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     public function tearDown(): void
     {
         $this->finish();
-        Mockery::close();
+        \Mockery::close();
     }
 
     /**
