@@ -26,6 +26,7 @@ $finder = PhpCsFixer\Finder::create()
     ])
     ->append([
         __DIR__.'/.php-cs-fixer.php',
+        __DIR__.'/composer-unused.php',
         __DIR__.'/doctum.php',
         __DIR__.'/rector.php',
         __DIR__.'/monorepo-builder.php',

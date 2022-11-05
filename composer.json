@@ -201,6 +201,7 @@
         "ekino/phpstan-banned-code": "^1.0",
         "ergebnis/phpstan-rules": "^1.0",
         "friendsofphp/php-cs-fixer": "^3.4",
+        "icanhazstring/composer-unused": "^0.8.4",
         "infection/infection": "^0.26",
         "jetbrains/phpstorm-attributes": "^1.0",
         "johnkary/phpunit-speedtrap": "^4.0",
@@ -319,6 +320,7 @@
             "@test",
             "@mark-finish"
         ],
+        "composer-unused": "./vendor/bin/composer-unused --ansi",
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
