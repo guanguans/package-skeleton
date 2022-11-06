@@ -2,6 +2,10 @@
 
 All notable changes to `guanguans/package-skeleton` will be documented in this file.
 
+## v2.0.1 - 2022-11-06
+
+**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v2.0.0...v2.0.1
+
 ## 1.0.7 - 2022-02-22
 
 ## What's Changed
