@@ -333,7 +333,7 @@
             "@mark-finish"
         ],
         "composer-require-checker": "./vendor/bin/composer-require-checker check --config-file=composer-require-checker.dist.json composer.json --ansi",
-        "composer-unused": "./vendor/bin/composer-unused --ansi",
+        "composer-unused-checker": "./vendor/bin/composer-unused --ansi",
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
