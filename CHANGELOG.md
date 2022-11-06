@@ -2,6 +2,10 @@
 
 All notable changes to `guanguans/package-skeleton` will be documented in this file.
 
+## v2.0.1 - 2022-11-06
+
+**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v2.0.0...v2.0.1
+
 ## v2.0.0 - 2022-11-06
 
 ### What's Changed
@@ -26,10 +30,6 @@ All notable changes to `guanguans/package-skeleton` will be documented in this f
 - Bump laminas/automatic-releases from 1.16.0 to 1.19.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/27
 
 **Full Changelog**: https://github.com/guanguans/package-skeleton/compare/1.0.7...v2.0.0
-
-## v2.0.1 - 2022-11-06
-
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v2.0.0...v2.0.1
 
 ## 1.0.7 - 2022-02-22
 
