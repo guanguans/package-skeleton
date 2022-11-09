@@ -137,6 +137,7 @@
         "mnapoli/silly": "*",
         "mobiledetect/mobiledetectlib": "*",
         "moneyphp/money": "*",
+        "mrclay/minify": "*",
         "myclabs/deep-copy": "*",
         "myclabs/php-enum": "*",
         "nahid/jsonq": "*",
@@ -247,11 +248,13 @@
         "tuupola/callable-handler": "*",
         "umpirsky/country-list": "*",
         "vlucas/valitron": "*",
+        "voku/html-min": "*",
         "voku/portable-ascii": "*",
         "webmozart/assert": "*",
         "willdurand/email-reply-parser": "*",
         "willdurand/jsonp-callback-validator": "*",
         "willdurand/negotiation": "*",
+        "wyrihaximus/html-compress": "*",
         "yohang/finite": "*"
     },
     "require-dev": {
