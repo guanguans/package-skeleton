@@ -24,6 +24,12 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__.'/src',
         __DIR__.'/tests',
     ])
+    ->exclude([
+        '.github/',
+        'doc/',
+        'docs/',
+        'vendor/',
+    ])
     ->append([
         __DIR__.'/.php-cs-fixer.php',
         __DIR__.'/composer-unused.php',
@@ -31,14 +37,11 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__.'/rector.php',
         __DIR__.'/monorepo-builder.php',
     ])
-    ->exclude([
-        '.github/',
-        'doc/',
-        'docs/',
-        'vendor/',
-    ])
     ->notPath([
-        'vendor',
+        'bootstrap/*',
+        'storage/*',
+        'resources/view/mail/*',
+        'vendor/*',
     ])
     ->name('*.php')
     ->notName([
