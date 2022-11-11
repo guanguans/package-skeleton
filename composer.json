@@ -34,6 +34,7 @@
     ],
     "require": {
         "php": ">=8.0",
+        "aacotroneo/laravel-saml2": "*",
         "apigen/apigen": "*",
         "asm89/stack-cors": "*",
         "azjezz/psl": "*",
@@ -161,6 +162,7 @@
         "nyholm/psr7-server": "*",
         "nyholm/sunflower": "*",
         "ocramius/package-versions": "*",
+        "onelogin/php-saml": "*",
         "opis/closure": "*",
         "overtrue/chinese-calendar": "*",
         "pagerfanta/pagerfanta": "*",
@@ -219,6 +221,7 @@
         "sebastian/exporter": "*",
         "sebastian/phpcpd": "*",
         "seld/jsonlint": "*",
+        "simplesamlphp/saml2": "*",
         "slim/slim": "*",
         "spatie/async": "*",
         "spatie/backtrace": "*",
