@@ -105,6 +105,7 @@
         "jasny/sso": "*",
         "jaybizzle/crawler-detect": "*",
         "jbroadway/urlify": "*",
+        "jdenticon/jdenticon": "*",
         "jean85/pretty-package-versions": "*",
         "jenssegers/agent": "*",
         "jenssegers/date": "*",
