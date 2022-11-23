@@ -150,6 +150,7 @@
         "moneyphp/money": "*",
         "mossadal/math-parser": "*",
         "mrclay/minify": "*",
+        "mrsuh/php-generics": "*",
         "myclabs/deep-copy": "*",
         "myclabs/php-enum": "*",
         "nahid/jsonq": "*",
@@ -277,6 +278,7 @@
         "yohang/finite": "*"
     },
     "require-dev": {
+        "awssat/tailwindo": "^3.0",
         "behat/behat": "^3.11",
         "brainmaestro/composer-git-hooks": "^2.8",
         "code-lts/doctum": "^5.5",
@@ -319,7 +321,7 @@
         "spatie/phpunit-snapshot-assertions": "^4.2",
         "spatie/phpunit-watcher": "^1.23",
         "symfony/var-dumper": "^5.0 || ^6.0",
-        "symplify/monorepo-builder": "^10.3",
+        "symplify/monorepo-builder": "^11.1",
         "vimeo/psalm": "^4.29"
     },
     "replace": {},
@@ -352,7 +354,8 @@
             "infection/extension-installer": true,
             "kylekatarnls/update-helper": true,
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "mrsuh/php-generics": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": true,

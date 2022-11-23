@@ -1,0 +1,23 @@
+{
+    "name": "guanguans/laravel",
+    "autoload": {
+        "psr-4": {
+            "Guanguans\\Laravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yaozm",
+            "email": "ityaozm@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "enlightn/enlightn": "*"
+    },
+    "require": {
+        "wnx/laravel-stats": "*",
+        "awssat/str-helper": "*",
+        "awssat/laravel-kabsa": "*",
+        "awssat/array-helper": "*"
+    }
+}
