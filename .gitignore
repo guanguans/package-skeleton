@@ -14,3 +14,5 @@ vendor/
 tests.php
 .DS_Store
 .history/
+node_modules/
+package-lock.json
