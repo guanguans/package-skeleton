@@ -37,6 +37,7 @@
         "aacotroneo/laravel-saml2": "*",
         "alecrabbit/php-cli-snake": "*",
         "alecrabbit/php-console-spinner": "*",
+        "amphp/amp": "*",
         "apigen/apigen": "*",
         "asm89/stack-cors": "*",
         "azjezz/psl": "*",
@@ -213,8 +214,10 @@
         "psr/simple-cache": "*",
         "ralouphie/getallheaders": "*",
         "ramsey/uuid": "*",
+        "react/event-loop": "*",
         "relay/relay": "*",
         "respect/validation": "*",
+        "revolt/event-loop": "*",
         "riverline/multipart-parser": "*",
         "roave/better-reflection": "*",
         "robmorgan/phinx": "*",
@@ -274,6 +277,7 @@
         "willdurand/email-reply-parser": "*",
         "willdurand/jsonp-callback-validator": "*",
         "willdurand/negotiation": "*",
+        "workerman/workerman": "*",
         "wyrihaximus/html-compress": "*",
         "yohang/finite": "*"
     },
@@ -353,9 +357,9 @@
         "allow-plugins": {
             "infection/extension-installer": true,
             "kylekatarnls/update-helper": true,
+            "mrsuh/php-generics": true,
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true,
-            "mrsuh/php-generics": true
+            "phpstan/extension-installer": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": true,

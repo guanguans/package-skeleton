@@ -1,0 +1,17 @@
+{
+    "name": "guanguans/yii2",
+    "autoload": {
+        "psr-4": {
+            "Guanguans\\Yii2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yaozm",
+            "email": "ityaozm@gmail.com"
+        }
+    ],
+    "require": {
+        "kartik-v/yii2-widgets": "*"
+    }
+}
