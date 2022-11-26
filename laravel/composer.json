@@ -18,6 +18,8 @@
         "wnx/laravel-stats": "*",
         "awssat/str-helper": "*",
         "awssat/laravel-kabsa": "*",
-        "awssat/array-helper": "*"
+        "awssat/array-helper": "*",
+        "van-ons/laraberg": "*",
+        "embed/embed": "*"
     }
 }
