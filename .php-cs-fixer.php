@@ -18,6 +18,7 @@ This file is part of the guanguans/package-skeleton.
 This source file is subject to the MIT license that is bundled.
 EOF;
 
+/** @noinspection PhpParamsInspection */
 $finder = PhpCsFixer\Finder::create()
     ->in([
         __DIR__.'/benchmarks',
@@ -36,6 +37,7 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__.'/doctum.php',
         __DIR__.'/rector.php',
         __DIR__.'/monorepo-builder.php',
+        __DIR__.'/phparkitect.php',
     ])
     ->notPath([
         'bootstrap/*',
