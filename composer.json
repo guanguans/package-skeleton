@@ -298,6 +298,7 @@
         "code-lts/doctum": "^5.5",
         "dms/phpunit-arraysubset-asserts": "^0.4",
         "ekino/phpstan-banned-code": "^1.0",
+        "ergebnis/license": "^2.1",
         "ergebnis/phpstan-rules": "^1.0",
         "friendsofphp/php-cs-fixer": "^3.13",
         "icanhazstring/composer-unused": "^0.8",
