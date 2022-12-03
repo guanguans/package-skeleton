@@ -48,6 +48,7 @@ $finder = PhpCsFixer\Finder::create()
     ])
     ->append([
         __DIR__.'/.php-cs-fixer.php',
+        __DIR__.'/.phpstorm.meta.php',
         __DIR__.'/composer-unused.php',
         __DIR__.'/doctum.php',
         __DIR__.'/rector.php',
@@ -67,6 +68,8 @@ $finder = PhpCsFixer\Finder::create()
     ])
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
+
+// dd(json_encode($header, JSON_UNESCAPED_SLASHES));
 
 return (new PhpCsFixer\Config())
     ->setRules([

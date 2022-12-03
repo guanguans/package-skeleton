@@ -307,6 +307,7 @@
         "jetbrains/phpstorm-attributes": "^1.0",
         "johnkary/phpunit-speedtrap": "^4.0",
         "kylekatarnls/update-helper": "^1.2",
+        "laravel/pint": "^1.2",
         "maglnet/composer-require-checker": "^3.8",
         "marcocesarato/php-conventional-changelog": "^1.15",
         "mikey179/vfsstream": "^1.6",
@@ -428,6 +429,7 @@
         "composer-unused-checker": "./vendor/bin/composer-unused --ansi",
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
+        "lint": "for P in src tests; do find $P -type f -name '*.php' -exec php -l {} \\;; done",
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
         "mark-separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"----------------\"",
         "mark-start": "printf '\\n!\\n!\\t\\033[0;36m%s\\033[0m\\n!\\n\\n' \"Started\"",
@@ -439,6 +441,8 @@
         "phpmnd": "./vendor/bin/phpmnd ./src/ --exclude=./vendor/ --non-zero-exit-on-violation",
         "phpstan": "./vendor/bin/phpstan analyse -vv",
         "phpstan-baseline": "@phpstan --generate-baseline",
+        "pint": "./vendor/bin/pint -v",
+        "pint-test": "@pint --test",
         "post-merge": [
             "composer install"
         ],
