@@ -52,6 +52,7 @@ $finder = PhpCsFixer\Finder::create()
         __DIR__.'/composer-unused.php',
         __DIR__.'/doctum.php',
         __DIR__.'/rector.php',
+        __DIR__.'/rector-laravel.php',
         __DIR__.'/monorepo-builder.php',
         __DIR__.'/phparkitect.php',
     ])
