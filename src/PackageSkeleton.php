@@ -14,6 +14,9 @@ namespace Guanguans\PackageSkeleton;
 
 class PackageSkeleton
 {
+    /**
+     * @return int
+     */
     public static function test(): bool
     {
         return true;

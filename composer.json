@@ -420,9 +420,17 @@
         "changelog-patch": "@changelog --patch",
         "checks": [
             "@mark-start",
+            "@md-lint",
+            "@mark-separate",
+            "@lint",
+            "@mark-separate",
             "@style-lint",
             "@mark-separate",
             "@test",
+            "@phpstan",
+            "@psalm",
+            "@mark-separate",
+            "@psalm",
             "@mark-finish"
         ],
         "composer-require-checker": "./vendor/bin/composer-require-checker check --config-file=composer-require-checker.json composer.json --ansi",
@@ -430,7 +438,8 @@
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
         "lint": [
-            "for dir in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $dir -type f -name '*.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
+            "for DIR in .; do find $DIR -maxdepth 1 -type f -name '*.php' -type f ! -name 'xxx.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done",
+            "for DIR in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $DIR -type f -name '*.php' -type f ! -name 'xxx.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
         ],
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
         "mark-separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"----------------\"",
