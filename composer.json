@@ -429,7 +429,9 @@
         "composer-unused-checker": "./vendor/bin/composer-unused --ansi",
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
-        "lint": "for P in src tests; do find $P -type f -name '*.php' -exec php -l {} \\;; done",
+        "lint": [
+            "for dir in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $dir -type f -name '*.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
+        ],
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
         "mark-separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"----------------\"",
         "mark-start": "printf '\\n!\\n!\\t\\033[0;36m%s\\033[0m\\n!\\n\\n' \"Started\"",
