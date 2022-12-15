@@ -145,6 +145,7 @@
         "league/uri-interfaces": "*",
         "lstrojny/functional-php": "*",
         "luracast/restler": "*",
+        "marcj/topsort": "*",
         "marcosh/lamphpda": "*",
         "markbaker/complex": "*",
         "markbaker/matrix": "*",
