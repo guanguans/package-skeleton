@@ -20,6 +20,7 @@
         "awssat/laravel-kabsa": "*",
         "awssat/array-helper": "*",
         "van-ons/laraberg": "*",
-        "embed/embed": "*"
+        "embed/embed": "*",
+        "wireui/wireui": "^0.17.1"
     }
 }
