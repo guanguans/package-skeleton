@@ -12,6 +12,8 @@
         }
     ],
     "require": {
-        "kartik-v/yii2-widgets": "*"
+        "kartik-v/yii2-widgets": "*",
+        "awssat/str-helper": "^2.1",
+        "awssat/array-helper": "^1.0"
     }
 }
