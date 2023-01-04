@@ -61,6 +61,7 @@
         "d11wtq/boris": "*",
         "danielstjules/stringy": "*",
         "daveross/functional-programming-utils": "*",
+        "degraciamathieu/manager": "*",
         "dflydev/dot-access-data": "*",
         "dflydev/fig-cookies": "*",
         "doctrine/annotations": "*",
@@ -297,6 +298,7 @@
         "behat/behat": "^3.11",
         "brainmaestro/composer-git-hooks": "^2.8",
         "code-lts/doctum": "^5.5",
+        "degraciamathieu/php-arguments-detector": "^0.5.0",
         "dms/phpunit-arraysubset-asserts": "^0.4",
         "ekino/phpstan-banned-code": "^1.0",
         "ergebnis/license": "^2.1",
@@ -430,6 +432,7 @@
         ],
         "composer-require-checker": "./vendor/bin/composer-require-checker check --config-file=composer-require-checker.json composer.json --ansi",
         "composer-unused-checker": "./vendor/bin/composer-unused --ansi",
+        "composer-validate": "@composer validate --check-lock --strict",
         "doctum": "./vendor/bin/doctum.php update doctum.php",
         "infection": "./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi",
         "lint": [

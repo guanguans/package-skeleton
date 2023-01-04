@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/guanguans/package-skeleton#readme",
   "dependencies": {
+    "@lint-md/cli": "^2.0.0-beta.11",
     "qwik": "^1.0.57"
   }
 }
