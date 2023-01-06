@@ -19,6 +19,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
 {
     use ArraySubsetAsserts;
     use MatchesSnapshots;
+    use \phpmock\phpunit\PHPMock;
 
     /**
      * This method is called before the first test of this test class is run.
