@@ -22,6 +22,7 @@
         "wireui/wireui": "^0.17.1",
         "calebporzio/sushi": "^2.4",
         "ryangjchandler/orbit": "^0.9.1",
-        "iksaku/laravel-mass-update": "^1.0"
+        "iksaku/laravel-mass-update": "^1.0",
+        "gordalina/cachetool": "^8.5"
     }
 }

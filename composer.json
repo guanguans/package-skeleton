@@ -382,7 +382,7 @@
             "phpstan/extension-installer": true
         },
         "apcu-autoloader": true,
-        "classmap-authoritative": true,
+        "classmap-authoritative": false,
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
