@@ -1,28 +1,33 @@
 {
     "name": "guanguans/laravel",
-    "autoload": {
-        "psr-4": {
-            "Guanguans\\Laravel\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "yaozm",
             "email": "ityaozm@gmail.com"
         }
     ],
+    "require": {
+        "awssat/laravel-kabsa": "*",
+        "calebporzio/sushi": "^2.4",
+        "cviebrock/eloquent-sluggable": "^8.0",
+        "elasticquent/elasticquent": "dev-master",
+        "embed/embed": "*",
+        "gordalina/cachetool": "^8.5",
+        "iksaku/laravel-mass-update": "^1.0",
+        "ryangjchandler/orbit": "^0.9.1",
+        "van-ons/laraberg": "*",
+        "wireui/wireui": "^0.17.1",
+        "wnx/laravel-stats": "*"
+    },
     "require-dev": {
         "enlightn/enlightn": "*"
     },
-    "require": {
-        "wnx/laravel-stats": "*",
-        "awssat/laravel-kabsa": "*",
-        "van-ons/laraberg": "*",
-        "embed/embed": "*",
-        "wireui/wireui": "^0.17.1",
-        "calebporzio/sushi": "^2.4",
-        "ryangjchandler/orbit": "^0.9.1",
-        "iksaku/laravel-mass-update": "^1.0",
-        "gordalina/cachetool": "^8.5"
+    "autoload": {
+        "psr-4": {
+            "Guanguans\\Laravel\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
 }

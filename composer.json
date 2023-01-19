@@ -243,6 +243,7 @@
         "seld/jsonlint": "*",
         "simplesamlphp/saml2": "*",
         "slim/slim": "*",
+        "sokil/php-bitmap": "*",
         "spatie/async": "*",
         "spatie/backtrace": "*",
         "spatie/blink": "*",
