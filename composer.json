@@ -418,6 +418,9 @@
         "post-autoload-dump": [
             "UpdateHelper\\UpdateHelper::check"
         ],
+        "auto-commit": "auto-commit",
+        "auto-commit-dry-run": "@auto-commit --dry-run",
+        "auto-commit-review ": "@auto-commit --review",
         "benchmark": "@php ./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
         "cghooks": "@php ./vendor/bin/cghooks",
         "changelog": "@php ./vendor/bin/conventional-changelog",
