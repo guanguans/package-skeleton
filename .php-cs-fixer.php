@@ -112,4 +112,6 @@ return (new PhpCsFixer\Config())
         'statement_indentation' => true,
     ])
     ->setRiskyAllowed(true)
+    ->setCacheFile(__DIR__.'/build/.php-cs-fixer.cache')
+    ->setUsingCache(true)
     ->setFinder($finder);
