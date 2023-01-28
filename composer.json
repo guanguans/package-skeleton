@@ -434,6 +434,7 @@
             "@test",
             "@mark-finish"
         ],
+        "composer-check-platform-reqs": "@composer check-platform-reqs --lock",
         "composer-require-checker": "@php ./vendor/bin/composer-require-checker check --config-file=composer-require-checker.json composer.json --ansi",
         "composer-unused-checker": "@php ./vendor/bin/composer-unused --ansi",
         "composer-validate": "@composer validate --check-lock --strict",
