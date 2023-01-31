@@ -13,13 +13,14 @@ declare(strict_types=1);
 namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use phpmock\phpunit\PHPMock;
 use Spatie\Snapshots\MatchesSnapshots;
 
 class TestCase extends \PHPUnit\Framework\TestCase
 {
     use ArraySubsetAsserts;
     use MatchesSnapshots;
-    use \phpmock\phpunit\PHPMock;
+    use PHPMock;
 
     /**
      * This method is called before the first test of this test class is run.
@@ -40,6 +41,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
      */
     public function setUp(): void
     {
+        parent::setUp();
         // \DG\BypassFinals::enable();
     }
 

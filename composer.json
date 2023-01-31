@@ -401,9 +401,7 @@
             ]
         },
         "phpstan": {
-            "includes": [
-                "extension.neon"
-            ]
+            "includes": []
         },
         "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper"
     },
@@ -416,11 +414,11 @@
             "@cghooks update"
         ],
         "post-autoload-dump": [
-            "UpdateHelper\\UpdateHelper::check"
+            "UpdateHelper\\UpdateHelper::check",
+            "@php ./vendor/bin/testbench package:discover --ansi"
         ],
         "auto-commit": "auto-commit",
         "auto-commit-dry-run": "@auto-commit --dry-run",
-        "auto-commit-review ": "@auto-commit --review",
         "benchmark": "@php ./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2",
         "cghooks": "@php ./vendor/bin/cghooks",
         "changelog": "@php ./vendor/bin/conventional-changelog",
@@ -457,7 +455,7 @@
         "phparkitect": "@php ./vendor/bin/phparkitect check",
         "phpmnd": "@php ./vendor/bin/phpmnd ./src/ --exclude=./vendor/ --non-zero-exit-on-violation",
         "phpstan": "@php ./vendor/bin/phpstan analyse -vv",
-        "phpstan-baseline": "@phpstan --generate-baseline",
+        "phpstan-baseline": "@phpstan --generate-baseline --allow-empty-baseline",
         "pint": "@php ./vendor/bin/pint -v",
         "pint-test": "@pint --test",
         "post-merge": [
