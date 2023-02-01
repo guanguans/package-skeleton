@@ -57,6 +57,7 @@
         "composer/package-versions-deprecated": "*",
         "composer/semver": "*",
         "consolidation/robo": "*",
+        "consolidation/self-update": "*",
         "cviebrock/eloquent-sluggable": "*",
         "d11wtq/boris": "*",
         "danielstjules/stringy": "*",
