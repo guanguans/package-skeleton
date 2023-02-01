@@ -98,6 +98,7 @@
         "hidehalo/nanoid-php": "*",
         "http-interop/http-factory-guzzle": "*",
         "hybridauth/hybridauth": "*",
+        "hyperf/composer-plugin": "*",
         "iamcal/php-emoji": "*",
         "ihor/nspl": "^1.3",
         "illuminate/collections": "*",
@@ -381,7 +382,8 @@
             "kylekatarnls/update-helper": true,
             "mrsuh/php-generics": true,
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "hyperf/composer-plugin": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": false,
