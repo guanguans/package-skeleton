@@ -12,6 +12,7 @@
         "cviebrock/eloquent-sluggable": "^8.0",
         "elasticquent/elasticquent": "dev-master",
         "embed/embed": "*",
+        "gabrielrcouto/php-gui": "*",
         "gordalina/cachetool": "^8.5",
         "iksaku/laravel-mass-update": "^1.0",
         "ryangjchandler/orbit": "^0.9.1",
