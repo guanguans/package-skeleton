@@ -298,6 +298,7 @@
     },
     "require-dev": {
         "awssat/tailwindo": "^3.0",
+        "bamarni/composer-bin-plugin": "^1.8",
         "behat/behat": "^3.11",
         "brainmaestro/composer-git-hooks": "^2.8",
         "code-lts/doctum": "^5.5",
@@ -315,6 +316,7 @@
         "kylekatarnls/update-helper": "^1.2",
         "laravel/pint": "^1.2",
         "maglnet/composer-require-checker": "^3.8",
+        "mandisma/pest-converter": "^0.2.0",
         "marcocesarato/php-conventional-changelog": "^1.15",
         "mikey179/vfsstream": "^1.6",
         "mockery/mockery": "^1.5",
@@ -349,7 +351,8 @@
         "spatie/phpunit-watcher": "^1.23",
         "symfony/var-dumper": "^5.0 || ^6.0",
         "symplify/monorepo-builder": "^11.1",
-        "vimeo/psalm": "^4.29"
+        "vimeo/psalm": "^4.29",
+        "wikimedia/composer-merge-plugin": "^2.0"
     },
     "replace": {},
     "conflict": {},
@@ -383,7 +386,9 @@
             "mrsuh/php-generics": true,
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true,
-            "hyperf/composer-plugin": true
+            "hyperf/composer-plugin": true,
+            "bamarni/composer-bin-plugin": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": false,
