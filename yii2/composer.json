@@ -18,5 +18,9 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "require-dev": {
+        "humbug/php-scoper": "^0.17.5",
+        "padraic/phar-updater": "^1.0"
     }
 }
