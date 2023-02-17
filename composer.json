@@ -287,6 +287,7 @@
         "vlucas/valitron": "*",
         "voku/html-min": "*",
         "voku/portable-ascii": "*",
+        "webimpress/safe-writer": "^2.2",
         "webmozart/assert": "*",
         "widmogrod/php-functional": "*",
         "willdurand/email-reply-parser": "*",
