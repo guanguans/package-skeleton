@@ -293,6 +293,7 @@
         "willdurand/email-reply-parser": "*",
         "willdurand/jsonp-callback-validator": "*",
         "willdurand/negotiation": "*",
+        "winzou/state-machine": "*",
         "workerman/workerman": "*",
         "wyrihaximus/html-compress": "*",
         "yohang/finite": "*"
@@ -353,7 +354,9 @@
         "symfony/var-dumper": "^5.0 || ^6.0",
         "symplify/monorepo-builder": "^11.1",
         "vimeo/psalm": "^4.29 || ^5.0",
-        "wikimedia/composer-merge-plugin": "^2.0"
+        "webmozarts/strict-phpunit": "^7.6",
+        "wikimedia/composer-merge-plugin": "^2.0",
+        "worksome/pretty-pest": "^0.2.1"
     },
     "replace": {},
     "conflict": {},
@@ -389,7 +392,8 @@
             "phpstan/extension-installer": true,
             "hyperf/composer-plugin": true,
             "bamarni/composer-bin-plugin": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": false,

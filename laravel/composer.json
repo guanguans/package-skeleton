@@ -16,11 +16,14 @@
         "gordalina/cachetool": "^8.5",
         "iksaku/laravel-mass-update": "^1.0",
         "ryangjchandler/orbit": "^0.9.1",
+        "stillat/blade-directives": "^1.2",
+        "stillat/blade-parser": "*",
         "van-ons/laraberg": "*",
         "wireui/wireui": "^0.17.1",
         "wnx/laravel-stats": "*"
     },
     "require-dev": {
+        "defstudio/pest-plugin-laravel-expectations": "^1.12",
         "enlightn/enlightn": "*"
     },
     "autoload": {
@@ -29,6 +32,9 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
