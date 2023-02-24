@@ -467,7 +467,7 @@
         "pest-coverage": "@pest --coverage-html=./build/phpunit/ --coverage-clover=clover.xml --coverage",
         "phparkitect": "@php ./vendor/bin/phparkitect check",
         "phpmnd": "@php ./vendor/bin/phpmnd ./src/ --exclude=./vendor/ --non-zero-exit-on-violation",
-        "phpstan": "@php ./vendor/bin/phpstan analyse -vv",
+        "phpstan": "@php ./vendor/bin/phpstan analyse --xdebug --ansi -vv",
         "phpstan-baseline": "@phpstan --generate-baseline --allow-empty-baseline",
         "pint": "@php ./vendor/bin/pint -v",
         "pint-test": "@pint --test",
