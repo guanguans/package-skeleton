@@ -16,6 +16,7 @@
         "gordalina/cachetool": "^8.5",
         "iksaku/laravel-mass-update": "^1.0",
         "ryangjchandler/orbit": "^0.9.1",
+        "sammyjo20/saloon-laravel": "^1.5",
         "stillat/blade-directives": "^1.2",
         "stillat/blade-parser": "*",
         "van-ons/laraberg": "*",
