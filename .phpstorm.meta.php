@@ -70,13 +70,13 @@ override(\App::makeWith(0), map([
     'view.finder' => \Illuminate\View\FileViewFinder::class,
 ]));
 
-override(\app(0), map([
+override(app(0), map([
     '' => '@',
     'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
     'db' => \Illuminate\Database\DatabaseManager::class,
     'view.finder' => \Illuminate\View\FileViewFinder::class,
 ]));
-override(\resolve(0), map([
+override(resolve(0), map([
     '' => '@',
     'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
     'db' => \Illuminate\Database\DatabaseManager::class,
@@ -91,4 +91,4 @@ override(\Psr\Container\ContainerInterface::get(0), map([
 ]));
 
 override(\Illuminate\Support\Arr::add(0), type(0));
-override(\optional(0), type(0));
+override(optional(0), type(0));

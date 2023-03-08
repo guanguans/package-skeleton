@@ -16,6 +16,13 @@ use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use phpmock\phpunit\PHPMock;
 use Spatie\Snapshots\MatchesSnapshots;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ *
+ * @small
+ */
 class TestCase extends \PHPUnit\Framework\TestCase
 {
     use ArraySubsetAsserts;
@@ -39,7 +46,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * This method is called before each test.
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
         // \DG\BypassFinals::enable();
@@ -48,7 +55,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * This method is called after each test.
      */
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         $this->finish();
         \Mockery::close();

@@ -16,6 +16,13 @@ use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Spatie\Snapshots\MatchesSnapshots;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ *
+ * @small
+ */
 class LaravelTestCase extends \Orchestra\Testbench\TestCase
 {
     use ArraySubsetAsserts;
