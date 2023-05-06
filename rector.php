@@ -66,6 +66,9 @@ return static function (RectorConfig $rectorConfig): void {
         ReturnBinaryOrToEarlyReturnRector::class,
         EncapsedStringsToSprintfRector::class,
         WrapEncapsedVariableInCurlyBracesRector::class,
+        // \Rector\Renaming\Rector\Name\RenameClassRector::class => [
+        //     __DIR__.'/src/ComplicatedFile.php',
+        // ],
 
         // optional rules
         // AddDefaultValueForUndefinedVariableRector::class,
@@ -109,17 +112,22 @@ return static function (RectorConfig $rectorConfig): void {
         PHPUnitSetList::PHPUNIT_YIELD_DATA_PROVIDER,
     ]);
 
-    $rectorConfig->disableParallel();
     $rectorConfig->importNames(true, false);
+    $rectorConfig->importShortClasses(false);
     $rectorConfig->nestedChainMethodCallLimit(3);
+    $rectorConfig->parallel();
     $rectorConfig->phpstanConfig(__DIR__.'/phpstan.neon');
+    $rectorConfig->phpVersion(PhpVersion::PHP_80);
     // $rectorConfig->cacheClass(FileCacheStorage::class);
     // $rectorConfig->cacheDirectory(__DIR__.'/build/rector');
+    // $rectorConfig->containerCacheDirectory(__DIR__.'/build/rector');
+    // $rectorConfig->disableParallel();
     // $rectorConfig->fileExtensions(['php']);
-    // $rectorConfig->parameters()->set(Option::APPLY_AUTO_IMPORT_NAMES_ON_CHANGED_FILES_ONLY, true);
-    // $rectorConfig->phpVersion(PhpVersion::PHP_80);
-    // $rectorConfig->parallel();
     // $rectorConfig->indent(' ', 4);
+    // $rectorConfig->memoryLimit('2G');
+    // $rectorConfig->noDiffs();
+    // $rectorConfig->parameters()->set(Option::APPLY_AUTO_IMPORT_NAMES_ON_CHANGED_FILES_ONLY, true);
+    // $rectorConfig->removeUnusedImports();
 
     $rectorConfig->rules([
         InlineConstructorDefaultToPropertyRector::class,
