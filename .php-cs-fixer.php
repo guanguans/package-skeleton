@@ -77,6 +77,8 @@ return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setUsingCache(false)
     ->setCacheFile(__DIR__.'/build/.php-cs-fixer.cache')
+    ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())
+    ->registerCustomFixers(new PedroTroller\CS\Fixer\Fixers())
     ->setRules([
         // '@PHP70Migration' => true,
         // '@PHP70Migration:risky' => true,
@@ -287,4 +289,99 @@ return (new PhpCsFixer\Config())
             ],
         ],
         'statement_indentation' => true,
+
+        // https://github.com/kubawerlos/php-cs-fixer-custom-fixers
+        PhpCsFixerCustomFixers\Fixer\CommentSurroundedBySpacesFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\CommentedOutFunctionFixer::name() => [
+            'functions' => ['print_r', 'var_dump', 'var_export', 'dump', 'dd'],
+        ],
+        // PhpCsFixerCustomFixers\Fixer\ConstructorEmptyBracesFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\DataProviderNameFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\DataProviderReturnTypeFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\DeclareAfterOpeningTagFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\EmptyFunctionBodyFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\IssetToArrayKeyExistsFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\MultilineCommentOpeningClosingAloneFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\MultilinePromotedPropertiesFixer::name() => [
+        //     'minimum_number_of_parameters' => 5,
+        //     'keep_blank_lines' => false,
+        // ],
+        // PhpCsFixerCustomFixers\Fixer\NoCommentedOutCodeFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoDuplicatedArrayKeyFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoDuplicatedImportsFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoImportFromGlobalNamespaceFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoLeadingSlashInGlobalNamespaceFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\NoNullableBooleanTypeFixer::name() => false,
+        PhpCsFixerCustomFixers\Fixer\NoPhpStormGeneratedCommentFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\NoReferenceInFunctionDefinitionFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoSuperfluousConcatenationFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoTrailingCommaInSinglelineFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoUselessCommentFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoUselessDirnameCallFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoUselessDoctrineRepositoryCommentFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoUselessParenthesisFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\NoUselessStrlenFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\NumericLiteralSeparatorFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpUnitAssertArgumentsOrderFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpUnitDedicatedAssertFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpUnitNoUselessReturnFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocArrayStyleFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocNoIncorrectVarAnnotationFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocNoSuperfluousParamFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\PhpdocOnlyAllowedAnnotationsFixer::name() => [
+        //     'elements' => [
+        //         'covers',
+        //         'coversNothing',
+        //         'dataProvider',
+        //         'deprecated',
+        //         'implements',
+        //         'internal',
+        //         'method',
+        //         'noinspection',
+        //         'param',
+        //         'property',
+        //         'requires',
+        //         'return',
+        //         'runInSeparateProcess',
+        //         'see',
+        //         'var',
+        //     ],
+        // ],
+        PhpCsFixerCustomFixers\Fixer\PhpdocParamOrderFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocParamTypeFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocSelfAccessorFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocSingleLineVarFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocTypesCommaSpacesFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PhpdocTypesTrimFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\PhpdocVarAnnotationToAssertFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\PromotedConstructorPropertyFixer::name() => [
+            'promote_only_existing_properties' => false,
+        ],
+        // PhpCsFixerCustomFixers\Fixer\ReadonlyPromotedPropertiesFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\SingleSpaceAfterStatementFixer::name() => [
+            'allow_linebreak' => false,
+        ],
+        PhpCsFixerCustomFixers\Fixer\SingleSpaceBeforeStatementFixer::name() => true,
+        PhpCsFixerCustomFixers\Fixer\StringableInterfaceFixer::name() => true,
+
+        // https://github.com/PedroTroller/PhpCSFixer-Custom-Fixers
+        // 'PedroTroller/order_behat_steps' => ['instanceof' => ['Behat\Behat\Context\Context']],
+        'PedroTroller/ordered_with_getter_and_setter_first' => true,
+        'PedroTroller/exceptions_punctuation' => true,
+        'PedroTroller/forbidden_functions' => [
+            'comment' => '@TODO remove this line',
+            'functions' => ['var_dump', 'dump', 'die'],
+        ],
+        'PedroTroller/line_break_between_method_arguments' => [
+            'max-args' => 5,
+            'max-length' => 120,
+            // 'automatic-argument-merge' => true,
+            // 'inline-attributes' => false,
+        ],
+        'PedroTroller/line_break_between_statements' => true,
+        'PedroTroller/comment_line_to_phpdoc_block' => true,
+        'PedroTroller/useless_code_after_return' => true,
+        // 'PedroTroller/doctrine_migrations' => ['instanceof' => ['Doctrine\Migrations\AbstractMigration']],
+        // 'PedroTroller/phpspec' => ['instanceof' => ['PhpSpec\ObjectBehavior']],
     ]);
