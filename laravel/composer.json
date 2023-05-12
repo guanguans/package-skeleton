@@ -36,6 +36,7 @@
         "iksaku/laravel-mass-update": "^1.0",
         "jenssegers/agent": "^2.6",
         "jiannei/laravel-response": "^5.2",
+        "joetannenbaum/terminalia": "^0.2.2",
         "kevinrob/guzzle-cache-middleware": "^4.0",
         "knuckleswtf/scribe": "^4.16",
         "laravel/octane": "^1.4",
