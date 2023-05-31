@@ -249,6 +249,7 @@
         "seld/jsonlint": "*",
         "simplesamlphp/saml2": "*",
         "slim/slim": "*",
+        "smoren/probability-selector": "^2.1",
         "sokil/php-bitmap": "*",
         "spatie/async": "*",
         "spatie/backtrace": "*",
