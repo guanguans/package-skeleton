@@ -315,7 +315,7 @@
         "brianium/paratest": "^6.6",
         "code-lts/doctum": "^5.5",
         "degraciamathieu/php-arguments-detector": "^0.5.0",
-        "dms/phpunit-arraysubset-asserts": "^0.4",
+        "dms/phpunit-arraysubset-asserts": "^0.4 || ^0.5",
         "ekino/phpstan-banned-code": "^1.0",
         "ergebnis/license": "^2.1",
         "ergebnis/phpstan-rules": "^1.0",
