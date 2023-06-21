@@ -303,6 +303,7 @@
         "willdurand/jsonp-callback-validator": "*",
         "willdurand/negotiation": "*",
         "winzou/state-machine": "*",
+        "wixel/gump": "^2.0",
         "workerman/workerman": "*",
         "wyrihaximus/html-compress": "*",
         "yohang/finite": "*"
