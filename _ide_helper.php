@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * This file is part of the guanguans/package-skeleton.
  *
@@ -8,6 +10,8 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-namespace {
+namespace A {
+}
 
+namespace B {
 }

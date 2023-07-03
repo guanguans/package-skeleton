@@ -16,8 +16,11 @@ use Guanguans\PackageSkeleton\PackageSkeleton;
 
 /**
  * @beforeMethods({"setUp"})
+ *
  * @warmup(2)
+ *
  * @revs(1000)
+ *
  * @iterations(15)
  */
 final class PackageSkeletonBench
