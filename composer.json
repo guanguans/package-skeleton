@@ -54,6 +54,7 @@
         "classpreloader/classpreloader": "*",
         "cocur/slugify": "*",
         "codeguy/upload": "*",
+        "colinodell/json5": "^2.3",
         "composer/package-versions-deprecated": "*",
         "composer/semver": "*",
         "consolidation/robo": "*",
