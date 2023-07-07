@@ -249,7 +249,7 @@
         "sebastian/exporter": "*",
         "sebastian/phpcpd": "*",
         "seld/jsonlint": "*",
-        "simplesamlphp/saml2": "*",
+        "simplesamlphp/saml2": "^4.6",
         "slim/slim": "*",
         "smoren/probability-selector": "^2.1",
         "sokil/php-bitmap": "*",
