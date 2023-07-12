@@ -317,6 +317,7 @@
         "awssat/tailwindo": "^3.0",
         "bamarni/composer-bin-plugin": "^1.8",
         "behat/behat": "^3.11",
+        "blastcloud/guzzler": "^2.0",
         "brainmaestro/composer-git-hooks": "^2.8",
         "brianium/paratest": "^6.6",
         "code-lts/doctum": "^5.5",
