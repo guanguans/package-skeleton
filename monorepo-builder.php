@@ -24,7 +24,7 @@ use Symplify\MonorepoBuilder\ValueObject\Option;
 
 return static function (MBConfig $mbConfig): void {
     // default: "<major>.<minor>-dev"
-    $mbConfig->packageAliasFormat('<major>.x-dev');
+    $mbConfig->packageAliasFormat('<major>.<minor>-dev');
     $mbConfig->defaultBranch('main');
 
     // // where are the packages located?
