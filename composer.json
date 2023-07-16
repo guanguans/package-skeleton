@@ -324,6 +324,7 @@
         "degraciamathieu/php-arguments-detector": "^0.5.0",
         "dms/phpunit-arraysubset-asserts": "^0.4 || ^0.5",
         "ekino/phpstan-banned-code": "^1.0",
+        "ergebnis/composer-normalize": "^2.31",
         "ergebnis/license": "^2.1",
         "ergebnis/phpstan-rules": "^1.0 || ^2.0",
         "friendsofphp/php-cs-fixer": "^3.13",
@@ -417,7 +418,9 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "ergebnis/composer-normalize": true,
+            "veewee/composer-run-parallel": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": false,
@@ -445,18 +448,19 @@
     "scripts": {
         "post-install-cmd": [
             "@cghooks add --ignore-lock",
-            "@cghooks update"
+            "@cghooks update",
+            "@composer-bin-all-update"
         ],
         "post-update-cmd": [
-            "@cghooks update"
+            "@cghooks update",
+            "@composer-bin-all-update"
         ],
         "post-autoload-dump": [
             "UpdateHelper\\UpdateHelper::check",
             "@php ./vendor/bin/testbench package:discover --ansi -v"
         ],
         "ai-commit": "@php ./vendor/bin/ai-commit commit --generator=bito_cli --ansi",
-        "auto-commit": "auto-commit",
-        "auto-commit-dry-run": "@auto-commit --dry-run",
+        "ai-commit-no-verify": "@ai-commit --commit-options=--no-verify",
         "benchmark": "@php ./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2 --ansi -v",
         "cghooks": "@php ./vendor/bin/cghooks --ansi -v",
         "changelog": "@php ./vendor/bin/conventional-changelog --ansi -v",
@@ -465,20 +469,28 @@
         "changelog-minor": "@changelog --minor",
         "changelog-patch": "@changelog --patch",
         "checks": [
-            "@mark-start",
+            "@composer-normalize",
             "@md-lint",
-            "@mark-separate",
+            "@json-lint",
+            "@yaml-lint",
+            "@lint",
             "@style-lint",
-            "@mark-separate",
-            "@test",
-            "@mark-finish"
+            "@test"
         ],
+        "composer-bin-all-update": "@composer bin all update --ansi -v",
         "composer-check-platform-reqs": "@composer check-platform-reqs --lock --ansi -v",
+        "composer-normalize": "@composer normalize --dry-run --diff --ansi -v",
+        "composer-parallel": "@composer parallel --ansi -v",
+        "composer-parallel-checks": "@composer-parallel composer-validate md-lint lint style-lint test psalm",
         "composer-require-checker": "@php ./vendor/bin/composer-require-checker check --config-file=composer-require-checker.json composer.json --ansi -v",
+        "composer-unused": "@php ./vendor/bin/composer-unused --ansi -v",
         "composer-unused-checker": "@php ./vendor/bin/composer-unused --ansi -v",
         "composer-validate": "@composer validate --check-lock --strict --ansi -v",
         "doctum": "@php ./vendor/bin/doctum.php update doctum.php --ansi -v",
+        "facades-lint": "@facades-update -- --lint",
+        "facades-update": "/usr/local/opt/php@8.1/bin/php -f ./bin/facades.php",
         "infection": "@php ./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi -v",
+        "json-lint": "@php ./vendor/bin/jsonlint *.json .*rc",
         "lint": [
             "for DIR in .; do find $DIR -maxdepth 1 -type f -name '*.php' -type f ! -name 'xxx.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done",
             "for DIR in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $DIR -type f -name '*.php' -type f ! -name 'xxx.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
@@ -488,9 +500,14 @@
         "mark-start": "printf '\\n!\\n!\\t\\033[0;36m%s\\033[0m\\n!\\n\\n' \"Started\"",
         "md-fix": "@md-lint --fix",
         "md-lint": "lint-md --config .lintmdrc ./*.md ./.github/ ./docs/",
-        "pest": "@php ./vendor/bin/pest --cache-result-file=./build//phpunit/.phpunit.result.cache",
-        "pest-coverage": "@pest --coverage-html=./build/phpunit/ --coverage-clover=clover.xml --coverage",
+        "neon-lint": "@php ./vendor/bin/neon-lint *.neon",
+        "pest": "@php ./vendor/bin/pest",
+        "pest-coverage": "@pest --coverage-html=./build/phpunit/ --coverage-clover=./clover.xml --coverage",
+        "pest-migrate-configuration": "@pest --migrate-configuration",
         "phparkitect": "@php ./vendor/bin/phparkitect check --ansi -v",
+        "phploc": "@php ./vendor/bin/phploc --suffix=php src/",
+        "phpmd": "@php ./vendor/bin/phpmd src/ ansi cleancode,codesize,controversial,design,naming,unusedcode --suffixes=php",
+        "phpmetrics": "@php ./vendor/bin/phpmetrics --report-html=./build/phpmetrics/ ./src/",
         "phpmnd": "@php ./vendor/bin/phpmnd ./src/ --exclude=./vendor/ --non-zero-exit-on-violation --ansi -v",
         "phpstan": "@php ./vendor/bin/phpstan analyse --xdebug --ansi -vv",
         "phpstan-baseline": "@phpstan --generate-baseline --allow-empty-baseline",
@@ -510,12 +527,21 @@
         "style-lint": "@style-fix --diff --dry-run",
         "test": "@pest",
         "test-coverage": "@pest-coverage",
+        "test-migrate-configuration": "@pest-migrate-configuration",
         "test-phpunit": "@php ./vendor/bin/phpunit --cache-result-file=./build/phpunit/.phpunit.result.cache --coverage-text --ansi -v",
         "test-phpunit-coverage": "@test --coverage-html=./build/phpunit/ --coverage-clover=clover.xml",
         "test-watch": [
             "Composer\\Config::disableProcessTimeout",
             "./vendor/bin/phpunit-watcher watch --ansi < /dev/tty"
-        ]
+        ],
+        "trufflehog": "trufflehog git https://github.com/guanguans/ai-commit --only-verified",
+        "var-dump-server": "@php ./vendor/bin/var-dump-server --ansi -v",
+        "vhs": [
+            "@cghooks-uninstall",
+            "vhs < music-dl.tape",
+            "@cghooks-install"
+        ],
+        "yaml-lint": "@php ./vendor/bin/yaml-lint .*.yml .github/ --ansi -v"
     },
     "scripts-descriptions": {}
 }
