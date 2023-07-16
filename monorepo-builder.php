@@ -64,11 +64,11 @@ return static function (MBConfig $mbConfig): void {
     $mbConfig->workers([
         // UpdateReplaceReleaseWorker::class,
         // SetCurrentMutualDependenciesReleaseWorker::class,
-        AddTagToChangelogReleaseWorker::class,
+        // AddTagToChangelogReleaseWorker::class,
         TagVersionReleaseWorker::class,
         PushTagReleaseWorker::class,
         // SetNextMutualDependenciesReleaseWorker::class,
         // UpdateBranchAliasReleaseWorker::class,
-        PushNextDevReleaseWorker::class,
+        // PushNextDevReleaseWorker::class,
     ]);
 };
