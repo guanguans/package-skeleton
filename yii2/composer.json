@@ -7,9 +7,14 @@
         }
     ],
     "require": {
-        "awssat/array-helper": "^1.0",
-        "awssat/str-helper": "^2.1",
+        "php": ">=7.4",
+        "awssat/array-helper": "*",
+        "awssat/str-helper": "*",
         "kartik-v/yii2-widgets": "*"
+    },
+    "require-dev": {
+        "humbug/php-scoper": "*",
+        "padraic/phar-updater": "*"
     },
     "autoload": {
         "psr-4": {
@@ -18,9 +23,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "require-dev": {
-        "humbug/php-scoper": "^0.17.5",
-        "padraic/phar-updater": "^1.0"
     }
 }

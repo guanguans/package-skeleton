@@ -29,7 +29,6 @@ $license = License\Type\MIT::text(
     License\Holder::fromString('guanguans'),
     License\Url::fromString('https://github.com/guanguans/package-skeleton'),
 );
-
 // $license->header();
 // $license->save();
 
