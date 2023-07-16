@@ -66,8 +66,8 @@ $finder = PhpCsFixer\Finder::create()
 return (new PhpCsFixer\Config())
     ->setFinder($finder)
     ->setRiskyAllowed(true)
-    ->setUsingCache(false)
-    ->setCacheFile(__DIR__.'/build/.php-cs-fixer.cache')
+    ->setUsingCache(true)
+    ->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
     ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())
     ->registerCustomFixers(new PedroTroller\CS\Fixer\Fixers())
     ->setRules([
@@ -356,23 +356,23 @@ return (new PhpCsFixer\Config())
         PhpCsFixerCustomFixers\Fixer\SingleSpaceBeforeStatementFixer::name() => true,
         PhpCsFixerCustomFixers\Fixer\StringableInterfaceFixer::name() => true,
 
-        // https://github.com/PedroTroller/PhpCSFixer-Custom-Fixers
+        // // https://github.com/PedroTroller/PhpCSFixer-Custom-Fixers
         // 'PedroTroller/order_behat_steps' => ['instanceof' => ['Behat\Behat\Context\Context']],
-        'PedroTroller/ordered_with_getter_and_setter_first' => true,
-        'PedroTroller/exceptions_punctuation' => true,
-        'PedroTroller/forbidden_functions' => [
-            'comment' => '@TODO remove this line',
-            'functions' => ['var_dump', 'dump', 'die'],
-        ],
-        'PedroTroller/line_break_between_method_arguments' => [
-            'max-args' => 5,
-            'max-length' => 120,
-            // 'automatic-argument-merge' => true,
-            // 'inline-attributes' => false,
-        ],
-        'PedroTroller/line_break_between_statements' => true,
-        'PedroTroller/comment_line_to_phpdoc_block' => true,
-        'PedroTroller/useless_code_after_return' => true,
+        // 'PedroTroller/ordered_with_getter_and_setter_first' => true,
+        // 'PedroTroller/exceptions_punctuation' => true,
+        // 'PedroTroller/forbidden_functions' => [
+        //     'comment' => '@TODO remove this line',
+        //     'functions' => ['var_dump', 'dump', 'die'],
+        // ],
+        // 'PedroTroller/line_break_between_method_arguments' => [
+        //     'max-args' => 5,
+        //     'max-length' => 120,
+        //     // 'automatic-argument-merge' => true,
+        //     // 'inline-attributes' => false,
+        // ],
+        // 'PedroTroller/line_break_between_statements' => true,
+        // 'PedroTroller/comment_line_to_phpdoc_block' => true,
+        // 'PedroTroller/useless_code_after_return' => true,
         // 'PedroTroller/doctrine_migrations' => ['instanceof' => ['Doctrine\Migrations\AbstractMigration']],
         // 'PedroTroller/phpspec' => ['instanceof' => ['PhpSpec\ObjectBehavior']],
     ]);

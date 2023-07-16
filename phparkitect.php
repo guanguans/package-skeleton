@@ -33,7 +33,7 @@ return static function (Config $config): void {
 
         ->rules();
 
-    $serviceNamingRule = Rule::allClasses()
+    $archRule = Rule::allClasses()
         ->that(new ResideInOneOfTheseNamespaces('App\Service'))
         ->should(new HaveNameMatching('*Service'))
         ->because('we want uniform naming for services');
@@ -43,5 +43,5 @@ return static function (Config $config): void {
         ->should(new HaveNameMatching('*Repository'))
         ->because('we want uniform naming for repositories');
 
-    $config->add($classSet, $serviceNamingRule, $repositoryNamingRule, ...$layeredArchitectureRules);
+    $config->add($classSet, $archRule, $repositoryNamingRule, ...$layeredArchitectureRules);
 };
