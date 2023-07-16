@@ -23,15 +23,16 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 use Symplify\MonorepoBuilder\ValueObject\Option;
 
 return static function (MBConfig $mbConfig): void {
+    // default: "<major>.<minor>-dev"
+    $mbConfig->packageAliasFormat('<major>.x-dev');
+    $mbConfig->defaultBranch('main');
+
     // // where are the packages located?
     // $mbConfig->packageDirectories([__DIR__.'/packages']);
     //
     // // how to skip packages in loaded directories?
     // $mbConfig->packageDirectoriesExcludes([__DIR__.'/packages/secret-package']);
-
-    // default: "<major>.<minor>-dev"
-    $mbConfig->packageAliasFormat('<major>.x-dev');
-
+    //
     // // "merge" command related
     // // what extra parts to add after merge?
     // $mbConfig->dataToAppend([
