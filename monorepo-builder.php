@@ -28,10 +28,10 @@ return static function (MBConfig $mbConfig): void {
     //
     // // how to skip packages in loaded directories?
     // $mbConfig->packageDirectoriesExcludes([__DIR__.'/packages/secret-package']);
-    //
-    // // default: "<major>.<minor>-dev"
-    // $mbConfig->packageAliasFormat('<major>.<minor>.x-dev');
-    //
+
+    // default: "<major>.<minor>-dev"
+    $mbConfig->packageAliasFormat('<major>.x-dev');
+
     // // "merge" command related
     // // what extra parts to add after merge?
     // $mbConfig->dataToAppend([
