@@ -1,3 +1,59 @@
+<!--- BEGIN HEADER -->
+# Changelog
+
+All notable changes to this project will be documented in this file.
+<!--- END HEADER -->
+
+## [2.0.9](https://github.com/guanguans/package-skeleton/compare/v2.0.1...v2.0.9) (2023-07-17)
+
+### Features
+
+* Add hyperf/composer-plugin ([55b537](https://github.com/guanguans/package-skeleton/commit/55b53740a6c9447a75a2f6b7002bb9da9411abbf))
+
+##### Composer
+
+* Update scripts and add new commands ([237c3e](https://github.com/guanguans/package-skeleton/commit/237c3e9d134ab434eb062902c82291a690752574))
+
+##### Deps
+
+* Add blastcloud/guzzler dependency ([e254c7](https://github.com/guanguans/package-skeleton/commit/e254c73a3d18548c100773a725cff229b74aebb8))
+* Add colinodell/json5 dependency ([bc531c](https://github.com/guanguans/package-skeleton/commit/bc531c1c3f5156b24f293233c6d8725ab03c71bc))
+* Add ramsey/collection dependency ([6641f7](https://github.com/guanguans/package-skeleton/commit/6641f79f64ba80baed43048f97eb6be337fd45af))
+
+##### Laravel
+
+* Add teamtnt/laravel-scout-tntsearch-driver dependency ([d149c7](https://github.com/guanguans/package-skeleton/commit/d149c7e70a5296705a5a954fe22822ff3d8aa137))
+
+##### Laravel/composer
+
+* Update package versions and PHP version ([b3f537](https://github.com/guanguans/package-skeleton/commit/b3f537bea7c3b6b6f4ebd6f0cb3681278099e530))
+
+##### Php-cs-fixer
+
+* Add new file to php-cs-fixer ([8d7f83](https://github.com/guanguans/package-skeleton/commit/8d7f833303f8b525877860fe96c367d2b9ed1aab))
+
+##### Release Worker
+
+* Add UpdateChangelogReleaseWorker ([eaaaa8](https://github.com/guanguans/package-skeleton/commit/eaaaa8102812a83010e17acecc91424a0f55c169))
+
+##### Textlint
+
+* Add new rules and configuration ([072f00](https://github.com/guanguans/package-skeleton/commit/072f00cd7dbe6cdf9140492f266b98e3a0833146))
+
+##### Workflows
+
+* Add linter.yml workflow ([bea310](https://github.com/guanguans/package-skeleton/commit/bea310b4119c20d1247af6a55e5a60742b1dbf7d))
+
+### Bug Fixes
+
+
+##### Composer
+
+* Remove version constraints for dependencies ([3072d4](https://github.com/guanguans/package-skeleton/commit/3072d424e2d7d1d20ea1c32da2f8fa3fd2ca38e0))
+
+
+---
+
 # Changelog
 
 All notable changes to `guanguans/package-skeleton` will be documented in this file.
