@@ -235,6 +235,7 @@
         "psr/log": "*",
         "psr/simple-cache": "*",
         "ralouphie/getallheaders": "*",
+        "ramsey/collection": "*",
         "ramsey/uuid": "*",
         "react/event-loop": "*",
         "relay/relay": "*",
