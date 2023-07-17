@@ -22,7 +22,13 @@
   },
   "homepage": "https://github.com/guanguans/package-skeleton#readme",
   "dependencies": {
-    "@lint-md/cli": "^2.0.0-beta.11",
+    "@lint-md/cli": "^2.0.0",
     "qwik": "^1.0.57"
+  },
+  "devDependencies": {
+    "textlint": "^13.3.3",
+    "textlint-rule-no-dead-link": "^5.1.2",
+    "textlint-rule-no-todo": "^2.0.1",
+    "textlint-rule-zh-half-and-full-width-bracket": "^1.1.0"
   }
 }
