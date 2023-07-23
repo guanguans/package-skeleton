@@ -4,115 +4,175 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
-## [2.0.9](https://github.com/guanguans/package-skeleton/compare/v2.0.1...v2.0.9) (2023-07-17)
-
-### Features
-
-* Add hyperf/composer-plugin ([55b537](https://github.com/guanguans/package-skeleton/commit/55b53740a6c9447a75a2f6b7002bb9da9411abbf))
-
-##### Composer
-
-* Update scripts and add new commands ([237c3e](https://github.com/guanguans/package-skeleton/commit/237c3e9d134ab434eb062902c82291a690752574))
-
-##### Deps
-
-* Add blastcloud/guzzler dependency ([e254c7](https://github.com/guanguans/package-skeleton/commit/e254c73a3d18548c100773a725cff229b74aebb8))
-* Add colinodell/json5 dependency ([bc531c](https://github.com/guanguans/package-skeleton/commit/bc531c1c3f5156b24f293233c6d8725ab03c71bc))
-* Add ramsey/collection dependency ([6641f7](https://github.com/guanguans/package-skeleton/commit/6641f79f64ba80baed43048f97eb6be337fd45af))
-
-##### Laravel
-
-* Add teamtnt/laravel-scout-tntsearch-driver dependency ([d149c7](https://github.com/guanguans/package-skeleton/commit/d149c7e70a5296705a5a954fe22822ff3d8aa137))
-
-##### Laravel/composer
-
-* Update package versions and PHP version ([b3f537](https://github.com/guanguans/package-skeleton/commit/b3f537bea7c3b6b6f4ebd6f0cb3681278099e530))
-
-##### Php-cs-fixer
-
-* Add new file to php-cs-fixer ([8d7f83](https://github.com/guanguans/package-skeleton/commit/8d7f833303f8b525877860fe96c367d2b9ed1aab))
-
-##### Release Worker
-
-* Add UpdateChangelogReleaseWorker ([eaaaa8](https://github.com/guanguans/package-skeleton/commit/eaaaa8102812a83010e17acecc91424a0f55c169))
-
-##### Textlint
-
-* Add new rules and configuration ([072f00](https://github.com/guanguans/package-skeleton/commit/072f00cd7dbe6cdf9140492f266b98e3a0833146))
-
-##### Workflows
-
-* Add linter.yml workflow ([bea310](https://github.com/guanguans/package-skeleton/commit/bea310b4119c20d1247af6a55e5a60742b1dbf7d))
-
-### Bug Fixes
+<a name="unreleased"></a>
+## [Unreleased]
 
 
-##### Composer
+<a name="2.0.10"></a>
+## [2.0.10] - 2023-07-23
+### Feat
+- **workflow:** add secrets check workflow
 
-* Remove version constraints for dependencies ([3072d4](https://github.com/guanguans/package-skeleton/commit/3072d424e2d7d1d20ea1c32da2f8fa3fd2ca38e0))
+### Refactor
+- **composer.json:** Update scripts and add new package
 
 
----
+<a name="2.0.9"></a>
+## [2.0.9] - 2023-07-17
+### Feat
+- **ReleaseWorker:** Add UpdateChangelogReleaseWorker
 
-# Changelog
 
-All notable changes to `guanguans/package-skeleton` will be documented in this file.
+<a name="2.0.7"></a>
+## [2.0.7] - 2023-07-17
 
-## v2.0.1 - 2022-11-06
+<a name="2.0.8"></a>
+## [2.0.8] - 2023-07-17
+### Feat
+- **deps:** add ramsey/collection dependency
+- **php-cs-fixer:** Add new file to php-cs-fixer
+- **textlint:** add new rules and configuration
+- **workflows:** Add linter.yml workflow
 
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v2.0.0...v2.0.1
 
-## v2.0.0 - 2022-11-06
+<a name="2.0.6"></a>
+## [2.0.6] - 2023-07-16
 
-### What's Changed
+<a name="2.0.5"></a>
+## [2.0.5] - 2023-07-16
 
-- Bump dependabot/fetch-metadata from 1.2.0 to 1.2.1 by @dependabot in https://github.com/guanguans/package-skeleton/pull/9
-- Bump actions/labeler from 3.0.2 to 3.1.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/11
-- Update codedungeon/phpunit-result-printer requirement from ^0.31 to ^0.31 || ^0.32 by @dependabot in https://github.com/guanguans/package-skeleton/pull/10
-- Bump dependabot/fetch-metadata from 1.2.1 to 1.3.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/12
-- Bump actions/stale from 4.1.0 to 5 by @dependabot in https://github.com/guanguans/package-skeleton/pull/13
-- Bump actions/checkout from 2 to 3 by @dependabot in https://github.com/guanguans/package-skeleton/pull/14
-- Bump actions/labeler from 3.1.0 to 4 by @dependabot in https://github.com/guanguans/package-skeleton/pull/15
-- Bump actions/cache from 2 to 3 by @dependabot in https://github.com/guanguans/package-skeleton/pull/16
-- Bump codecov/codecov-action from 2.1.0 to 3 by @dependabot in https://github.com/guanguans/package-skeleton/pull/17
-- Bump dependabot/fetch-metadata from 1.3.0 to 1.3.1 by @dependabot in https://github.com/guanguans/package-skeleton/pull/18
-- Bump dependabot/fetch-metadata from 1.3.1 to 1.3.2 by @dependabot in https://github.com/guanguans/package-skeleton/pull/20
-- Bump dependabot/fetch-metadata from 1.3.2 to 1.3.3 by @dependabot in https://github.com/guanguans/package-skeleton/pull/21
-- Bump actions/github-script from 3 to 6 by @dependabot in https://github.com/guanguans/package-skeleton/pull/22
-- Update povils/phpmnd requirement from ^2.5 to ^2.5 || ^3.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/23
-- Bump actions/checkout from 2 to 3 by @dependabot in https://github.com/guanguans/package-skeleton/pull/24
-- Bump actions/stale from 5 to 6 by @dependabot in https://github.com/guanguans/package-skeleton/pull/25
-- Bump dependabot/fetch-metadata from 1.3.3 to 1.3.4 by @dependabot in https://github.com/guanguans/package-skeleton/pull/26
-- Bump laminas/automatic-releases from 1.16.0 to 1.19.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/27
+<a name="2.0.4"></a>
+## [2.0.4] - 2023-07-16
 
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/1.0.7...v2.0.0
+<a name="2.0.3"></a>
+## [2.0.3] - 2023-07-16
 
-## 1.0.7 - 2022-02-22
+<a name="2.0.2"></a>
+## [2.0.2] - 2023-07-16
+### Docs
+- **readme:** update badges
 
-## What's Changed
+### Feat
+- add hyperf/composer-plugin
+- **composer.json:** Update scripts and add new commands
+- **deps:** add blastcloud/guzzler dependency
+- **deps:** Add colinodell/json5 dependency
+- **laravel:** Add teamtnt/laravel-scout-tntsearch-driver dependency
 
-- Bump actions/labeler from 2 to 3.0.2 by @dependabot in https://github.com/guanguans/package-skeleton/pull/6
-- Bump actions/stale from 3 to 4.1.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/7
-- Update dms/phpunit-arraysubset-asserts requirement from ^0.3 to ^0.3 || ^0.4 by @dependabot in https://github.com/guanguans/package-skeleton/pull/8
+### Fix
+- **composer.json:** remove version constraints for dependencies
 
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v1.0.6...1.0.7
+### Pull Requests
+- Merge pull request [#46](https://github.com/guanguans/monorepo-builder-worker/issues/46) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.6.0
+- Merge pull request [#45](https://github.com/guanguans/monorepo-builder-worker/issues/45) from guanguans/dependabot/composer/ergebnis/phpstan-rules-tw-1.0or-tw-2.0
+- Merge pull request [#44](https://github.com/guanguans/monorepo-builder-worker/issues/44) from guanguans/dependabot/composer/dms/phpunit-arraysubset-asserts-tw-0.4or-tw-0.5
+- Merge pull request [#43](https://github.com/guanguans/monorepo-builder-worker/issues/43) from guanguans/dependabot/composer/rector/rector-tw-0.14or-tw-0.15or-tw-0.17
+- Merge pull request [#42](https://github.com/guanguans/monorepo-builder-worker/issues/42) from guanguans/dependabot/composer/infection/infection-tw-0.26or-tw-0.27
+- Merge pull request [#41](https://github.com/guanguans/monorepo-builder-worker/issues/41) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.5.1
+- Merge pull request [#40](https://github.com/guanguans/monorepo-builder-worker/issues/40) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.5.0
+- Merge pull request [#39](https://github.com/guanguans/monorepo-builder-worker/issues/39) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.4.0
+- Merge pull request [#38](https://github.com/guanguans/monorepo-builder-worker/issues/38) from guanguans/dependabot/github_actions/actions/stale-8
+- Merge pull request [#37](https://github.com/guanguans/monorepo-builder-worker/issues/37) from guanguans/dependabot/composer/vimeo/psalm-tw-4.29or-tw-5.0
+- Merge pull request [#36](https://github.com/guanguans/monorepo-builder-worker/issues/36) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.6
+- Merge pull request [#35](https://github.com/guanguans/monorepo-builder-worker/issues/35) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.24.0
+- Merge pull request [#34](https://github.com/guanguans/monorepo-builder-worker/issues/34) from guanguans/dependabot/composer/rector/rector-tw-0.14or-tw-0.15
+- Merge pull request [#33](https://github.com/guanguans/monorepo-builder-worker/issues/33) from guanguans/dependabot/github_actions/actions/stale-7
+- Merge pull request [#32](https://github.com/guanguans/monorepo-builder-worker/issues/32) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.23.0
+- Merge pull request [#31](https://github.com/guanguans/monorepo-builder-worker/issues/31) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.22.0
+- Merge pull request [#30](https://github.com/guanguans/monorepo-builder-worker/issues/30) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.21.0
+- Merge pull request [#29](https://github.com/guanguans/monorepo-builder-worker/issues/29) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.20.0
+- Merge pull request [#28](https://github.com/guanguans/monorepo-builder-worker/issues/28) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.5
 
-## v1.0.6 - 2022-02-22
 
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v1.0.5...v1.0.6
+<a name="v2.0.1"></a>
+## [v2.0.1] - 2022-11-06
 
-## v1.0.5 - 2022-01-14
+<a name="v2.0.0"></a>
+## [v2.0.0] - 2022-11-06
+### Pull Requests
+- Merge pull request [#27](https://github.com/guanguans/monorepo-builder-worker/issues/27) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.19.0
+- Merge pull request [#26](https://github.com/guanguans/monorepo-builder-worker/issues/26) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.4
+- Merge pull request [#25](https://github.com/guanguans/monorepo-builder-worker/issues/25) from guanguans/dependabot/github_actions/actions/stale-6
+- Merge pull request [#24](https://github.com/guanguans/monorepo-builder-worker/issues/24) from guanguans/dependabot/github_actions/actions/checkout-3
+- Merge pull request [#23](https://github.com/guanguans/monorepo-builder-worker/issues/23) from guanguans/dependabot/composer/povils/phpmnd-tw-2.5or-tw-3.0
+- Merge pull request [#22](https://github.com/guanguans/monorepo-builder-worker/issues/22) from guanguans/dependabot/github_actions/actions/github-script-6
+- Merge pull request [#21](https://github.com/guanguans/monorepo-builder-worker/issues/21) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.3
+- Merge pull request [#20](https://github.com/guanguans/monorepo-builder-worker/issues/20) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.2
+- Merge pull request [#18](https://github.com/guanguans/monorepo-builder-worker/issues/18) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.1
+- Merge pull request [#17](https://github.com/guanguans/monorepo-builder-worker/issues/17) from guanguans/dependabot/github_actions/codecov/codecov-action-3
+- Merge pull request [#16](https://github.com/guanguans/monorepo-builder-worker/issues/16) from guanguans/dependabot/github_actions/actions/cache-3
+- Merge pull request [#15](https://github.com/guanguans/monorepo-builder-worker/issues/15) from guanguans/dependabot/github_actions/actions/labeler-4
+- Merge pull request [#14](https://github.com/guanguans/monorepo-builder-worker/issues/14) from guanguans/dependabot/github_actions/actions/checkout-3
+- Merge pull request [#13](https://github.com/guanguans/monorepo-builder-worker/issues/13) from guanguans/dependabot/github_actions/actions/stale-5
+- Merge pull request [#12](https://github.com/guanguans/monorepo-builder-worker/issues/12) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.3.0
+- Merge pull request [#10](https://github.com/guanguans/monorepo-builder-worker/issues/10) from guanguans/dependabot/composer/codedungeon/phpunit-result-printer-tw-0.31or-tw-0.32
+- Merge pull request [#11](https://github.com/guanguans/monorepo-builder-worker/issues/11) from guanguans/dependabot/github_actions/actions/labeler-3.1.0
+- Merge pull request [#9](https://github.com/guanguans/monorepo-builder-worker/issues/9) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-1.2.1
 
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v1.0.4...v1.0.5
 
-## v1.0.4 - 2022-01-14
+<a name="1.0.7"></a>
+## [1.0.7] - 2022-02-22
+### Pull Requests
+- Merge pull request [#8](https://github.com/guanguans/monorepo-builder-worker/issues/8) from guanguans/dependabot/composer/dms/phpunit-arraysubset-asserts-tw-0.3or-tw-0.4
+- Merge pull request [#7](https://github.com/guanguans/monorepo-builder-worker/issues/7) from guanguans/dependabot/github_actions/actions/stale-4.1.0
+- Merge pull request [#6](https://github.com/guanguans/monorepo-builder-worker/issues/6) from guanguans/dependabot/github_actions/actions/labeler-3.0.2
 
-## What's Changed
 
-- Update symplify/monorepo-builder requirement from ^9.4 to ^9.4 || ^10.0 by @dependabot in https://github.com/guanguans/package-skeleton/pull/5
+<a name="v1.0.6"></a>
+## [v1.0.6] - 2022-02-22
 
-**Full Changelog**: https://github.com/guanguans/package-skeleton/compare/v1.0.3...v1.0.4
+<a name="v1.0.5"></a>
+## [v1.0.5] - 2022-01-14
 
-## 1.0.0 - 202X-XX-XX
+<a name="v1.0.4"></a>
+## [v1.0.4] - 2022-01-14
+### Pull Requests
+- Merge pull request [#5](https://github.com/guanguans/monorepo-builder-worker/issues/5) from guanguans/dependabot/composer/symplify/monorepo-builder-tw-9.4or-tw-10.0
 
-- Initial release.
+
+<a name="v1.0.3"></a>
+## [v1.0.3] - 2021-09-28
+### Pull Requests
+- Merge pull request [#4](https://github.com/guanguans/monorepo-builder-worker/issues/4) from guanguans/dependabot/github_actions/codecov/codecov-action-2.1.0
+
+
+<a name="v1.0.2"></a>
+## [v1.0.2] - 2021-09-08
+
+<a name="v1.0.1"></a>
+## [v1.0.1] - 2021-09-08
+### Pull Requests
+- Merge pull request [#3](https://github.com/guanguans/monorepo-builder-worker/issues/3) from guanguans/dependabot/composer/friendsofphp/php-cs-fixer-tw-2.17or-tw-3.0
+- Merge pull request [#1](https://github.com/guanguans/monorepo-builder-worker/issues/1) from guanguans/dependabot/composer/vimeo/psalm-tw-3.11or-tw-4.0
+- Merge pull request [#2](https://github.com/guanguans/monorepo-builder-worker/issues/2) from guanguans/dependabot/composer/overtrue/phplint-tw-2.3or-tw-3.0
+
+
+<a name="v1.0.0"></a>
+## v1.0.0 - 2021-07-22
+### CI
+- Update CI config files
+
+### Docs
+- Update README.md
+- Update CHANGELOG.md
+
+
+[Unreleased]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.10...HEAD
+[2.0.10]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.9...2.0.10
+[2.0.9]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.7...2.0.9
+[2.0.7]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.8...2.0.7
+[2.0.8]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.6...2.0.8
+[2.0.6]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.5...2.0.6
+[2.0.5]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.4...2.0.5
+[2.0.4]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.3...2.0.4
+[2.0.3]: https://github.com/guanguans/monorepo-builder-worker/compare/2.0.2...2.0.3
+[2.0.2]: https://github.com/guanguans/monorepo-builder-worker/compare/v2.0.1...2.0.2
+[v2.0.1]: https://github.com/guanguans/monorepo-builder-worker/compare/v2.0.0...v2.0.1
+[v2.0.0]: https://github.com/guanguans/monorepo-builder-worker/compare/1.0.7...v2.0.0
+[1.0.7]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.6...1.0.7
+[v1.0.6]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.5...v1.0.6
+[v1.0.5]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.4...v1.0.5
+[v1.0.4]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.3...v1.0.4
+[v1.0.3]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.2...v1.0.3
+[v1.0.2]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.1...v1.0.2
+[v1.0.1]: https://github.com/guanguans/monorepo-builder-worker/compare/v1.0.0...v1.0.1
