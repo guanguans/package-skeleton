@@ -4,7 +4,6 @@
     "license": "MIT",
     "type": "library",
     "abandoned": false,
-    "version": "1.0.7",
     "non-feature-branches": [],
     "keywords": [
         "package",
@@ -340,7 +339,6 @@
         "kylekatarnls/update-helper": "*",
         "laravel/pint": "*",
         "maglnet/composer-require-checker": "*",
-        "mandisma/pest-converter": "*",
         "marcocesarato/php-conventional-changelog": "*",
         "mikey179/vfsstream": "*",
         "mockery/mockery": "*",
