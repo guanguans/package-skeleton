@@ -18,6 +18,7 @@
         "calebporzio/parental": "*",
         "calebporzio/sushi": "*",
         "cviebrock/eloquent-sluggable": "*",
+        "dragon-code/laravel-support": "*",
         "dyrynda/laravel-cascade-soft-deletes": "*",
         "elasticquent/elasticquent": "dev-master",
         "embed/embed": "*",

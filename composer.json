@@ -75,6 +75,8 @@
         "doctrine/instantiator": "*",
         "doctrine/lexer": "*",
         "doctrine/sql-formatter": "*",
+        "dragon-code/pretty-array": "*",
+        "dragon-code/support": "*",
         "dragonmantank/cron-expression": "*",
         "drupol/phpermutations": "*",
         "egulias/email-validator": "*",
