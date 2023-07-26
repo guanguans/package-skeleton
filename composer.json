@@ -45,6 +45,7 @@
         "behat/transliterator": "*",
         "bluem/tree": "*",
         "bramus/ansi-php": "*",
+        "bramus/monolog-colored-line-formatter": "*",
         "bref/bref": "*",
         "brick/math": "*",
         "broadway/broadway": "*",

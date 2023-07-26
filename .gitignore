@@ -16,3 +16,4 @@ tests.php
 .history/
 node_modules/
 package-lock.json
+.ai-commit.json
