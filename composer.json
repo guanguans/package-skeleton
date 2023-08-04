@@ -87,6 +87,7 @@
         "fidry/cpu-core-counter": "*",
         "fig/link-util": "*",
         "fightbulc/moment": "*",
+        "fp4php/functional": "*",
         "fruitcake/php-cors": "*",
         "functional-php/fantasy-land": "*",
         "geocoder-php/google-maps-provider": "*",
