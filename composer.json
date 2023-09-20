@@ -39,6 +39,7 @@
         "alecrabbit/php-console-spinner": "*",
         "amphp/amp": "*",
         "apigen/apigen": "*",
+        "apix/log": "*",
         "asm89/stack-cors": "*",
         "azjezz/psl": "*",
         "beberlei/assert": "*",
