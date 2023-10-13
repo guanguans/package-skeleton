@@ -124,6 +124,7 @@
         "jawira/sanitizer": "*",
         "jaybizzle/crawler-detect": "*",
         "jbroadway/urlify": "*",
+        "jbzoo/utils": "*",
         "jdenticon/jdenticon": "*",
         "jean85/pretty-package-versions": "*",
         "jenssegers/agent": "*",
