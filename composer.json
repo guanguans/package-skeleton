@@ -486,8 +486,8 @@
         ],
         "composer-bin-all-update": "@composer bin all update --ansi -v",
         "composer-check-platform-reqs": "@composer check-platform-reqs --lock --ansi -v",
-        "composer-normalize": "@composer normalize --dry-run --diff --ansi -v",
         "composer-diff": "@php ./vendor/bin/composer-diff --ansi -v",
+        "composer-normalize": "@composer normalize --dry-run --diff --ansi -v",
         "composer-parallel": "@composer parallel --ansi -v",
         "composer-parallel-checks": "@composer-parallel composer-validate md-lint lint style-lint test psalm",
         "composer-require-checker": "@php ./vendor/bin/composer-require-checker check --config-file=composer-require-checker.json composer.json --ansi -v",
@@ -557,7 +557,9 @@
             "vhs < music-dl.tape",
             "@cghooks-install"
         ],
-        "yaml-lint": "@php ./vendor/bin/yaml-lint .*.yml .github/ --ansi -v"
+        "yaml-lint": "@php ./vendor/bin/yaml-lint .*.yml .github/ --ansi -v",
+        "zhlint": "zhlint *-zh_CN.md docs/*-zh_CN.md docs/**/*-zh_CN.md",
+        "zhlint-fix": "@zhlint --fix"
     },
     "scripts-descriptions": {}
 }

@@ -23,7 +23,8 @@
   "homepage": "https://github.com/guanguans/package-skeleton#readme",
   "dependencies": {
     "@lint-md/cli": "^2.0.0",
-    "qwik": "^1.0.57"
+    "qwik": "^1.0.57",
+    "zhlint": "^0.7.1"
   },
   "devDependencies": {
     "textlint": "^13.3.3",
