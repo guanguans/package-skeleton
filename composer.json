@@ -478,6 +478,7 @@
         "checks": [
             "@composer-normalize",
             "@md-lint",
+            "@zh-lint",
             "@json-lint",
             "@yaml-lint",
             "@lint",
@@ -500,8 +501,8 @@
         "infection": "@php ./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi -v",
         "json-lint": "@php ./vendor/bin/jsonlint *.json .*rc",
         "lint": [
-            "for DIR in .; do find $DIR -maxdepth 1 -type f -name '*.php' -type f ! -name 'xxx.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done",
-            "for DIR in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $DIR -type f -name '*.php' -type f ! -name 'xxx.php' -exec php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
+            "for DIR in .; do find $DIR -maxdepth 1 -type f -name '*.php' -type f ! -name 'xxx.php' -exec php80 -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done",
+            "for DIR in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $DIR -type f -name '*.php' -type f ! -name 'xxx.php' -exec php80 -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
         ],
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
         "mark-separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"----------------\"",
@@ -558,8 +559,8 @@
             "@cghooks-install"
         ],
         "yaml-lint": "@php ./vendor/bin/yaml-lint .*.yml .github/ --ansi -v",
-        "zhlint": "zhlint *-zh_CN.md docs/*-zh_CN.md docs/**/*-zh_CN.md",
-        "zhlint-fix": "@zhlint --fix"
+        "zh-fix": "@zh-lint --fix",
+        "zh-lint": "zhlint {./,docs/,docs/**/}*-zh_CN.md"
     },
     "scripts-descriptions": {}
 }
