@@ -2,7 +2,7 @@
 
 [简体中文](README-zh_CN.md) | [ENGLISH](README.md)
 
-> 一个 PHP 软件包模板存储库。- A PHP package template repository.
+> 一个 PHP 软件包模板存储库。- A PHP package template repository。
 
 [![tests](https://github.com/guanguans/package-skeleton/workflows/tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
 [![check & fix styling](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
@@ -87,4 +87,4 @@ composer test
 
 ## 协议
 
-MIT 许可证(MIT)。有关更多信息，请参见[协议文件](LICENSE)。
+MIT 许可证 (MIT)。有关更多信息，请参见[协议文件](LICENSE)。
