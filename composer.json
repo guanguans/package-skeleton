@@ -399,7 +399,8 @@
         "facade-documenter": {
             "type": "vcs",
             "url": "git@github.com:laravel/facade-documenter.git"
-        }},
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {

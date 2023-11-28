@@ -20,7 +20,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 collect([
     __DIR__.'/../composer.json',
-    __DIR__.'/../laravel/composer.json',
+    // __DIR__.'/../laravel/composer.json',
     // __DIR__.'/../yii2/composer.json',
 ])
     ->map(static fn ($composerFile): string => realpath($composerFile))

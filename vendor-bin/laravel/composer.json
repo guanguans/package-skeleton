@@ -1,11 +1,4 @@
 {
-    "name": "guanguans/laravel",
-    "authors": [
-        {
-            "name": "yaozm",
-            "email": "ityaozm@gmail.com"
-        }
-    ],
     "require": {
         "php": ">=8.0",
         "appstract/laravel-blade-directives": "*",
@@ -121,13 +114,7 @@
         "spatie/laravel-stubs": "*",
         "thedoctor0/laravel-factory-generator": "*"
     },
-    "autoload": {
-        "psr-4": {
-            "Guanguans\\Laravel\\": "src/"
-        }
-    },
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
