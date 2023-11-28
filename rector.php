@@ -36,6 +36,8 @@ use Rector\Naming\Rector\Foreach_\RenameForeachValueVariableToMatchExprVariableR
 use Rector\Php56\Rector\FunctionLike\AddDefaultValueForUndefinedVariableRector;
 use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Php80\Rector\Catch_\RemoveUnusedVariableInCatchRector;
+use Rector\Php80\Rector\Class_\AnnotationToAttributeRector;
+use Rector\Php80\ValueObject\AnnotationToAttribute;
 use Rector\PHPUnit\Set\PHPUnitLevelSetList;
 use Rector\PHPUnit\Set\PHPUnitSetList;
 use Rector\Renaming\Rector\FuncCall\RenameFunctionRector;
@@ -181,4 +183,17 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->ruleWithConfiguration(RenameFunctionRector::class, [
         'test' => 'it',
     ]);
+
+    (function ($rectorConfig): void {
+        $rectorConfig->ruleConfigurations[AnnotationToAttributeRector::class] = array_filter(
+            $rectorConfig->ruleConfigurations[AnnotationToAttributeRector::class],
+            static fn (AnnotationToAttribute $annotationToAttribute): bool => ! in_array(
+                $annotationToAttribute->getAttributeClass(),
+                [
+                    CodeCoverageIgnore::class,
+                ],
+                true
+            )
+        );
+    })->call($rectorConfig, $rectorConfig);
 };

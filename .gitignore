@@ -5,7 +5,7 @@
 .php-cs-fixer.cache
 .phpunit.result.cache
 build/
-composer.lock
+#composer.lock
 coverage/
 clover.xml
 phpunit.xml

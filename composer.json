@@ -85,6 +85,7 @@
         "enshrined/svg-sanitize": "*",
         "ergebnis/clock": "*",
         "ezyang/htmlpurifier": "*",
+        "fansipan/fansipan": "*",
         "fidry/cpu-core-counter": "*",
         "fig/link-util": "*",
         "fightbulc/moment": "*",
@@ -436,6 +437,11 @@
         "sort-packages": true
     },
     "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": true,
+            "target-directory": "vendor-bin"
+        },
         "branch-alias": {
             "dev-main": "2.x-dev"
         },
@@ -496,8 +502,8 @@
         "composer-unused-checker": "@php ./vendor/bin/composer-unused --ansi -v",
         "composer-validate": "@composer validate --check-lock --strict --ansi -v",
         "doctum": "@php ./vendor/bin/doctum.php update doctum.php --ansi -v",
-        "facades-lint": "@facades-update -- --lint",
-        "facades-update": "/usr/local/opt/php@8.1/bin/php -f ./bin/facades.php",
+        "facade-lint": "@facade-update --lint",
+        "facade-update": "/opt/homebrew/opt/php@8.1/bin/php -f ./facade.php -- App\\\\Facades\\\\Music",
         "infection": "@php ./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi -v",
         "json-lint": "@php ./vendor/bin/jsonlint *.json .*rc",
         "lint": [
@@ -510,9 +516,10 @@
         "md-fix": "@md-lint --fix",
         "md-lint": "lint-md --config .lintmdrc ./*.md ./.github/ ./docs/",
         "neon-lint": "@php ./vendor/bin/neon-lint *.neon",
-        "pest": "@php ./vendor/bin/pest --coverage",
-        "pest-coverage": "@pest --coverage-html=./build/phpunit/ --coverage-clover=./clover.xml --coverage",
+        "pest": "@php ./vendor/bin/pest --coverage --profile",
+        "pest-coverage": "@pest --coverage-html=./build/phpunit/ --coverage-clover=./clover.xml",
         "pest-migrate-configuration": "@pest --migrate-configuration",
+        "pest-type-coverage": "@pest --type-coverage",
         "phparkitect": "@php ./vendor/bin/phparkitect check --ansi -v",
         "phploc": "@php ./vendor/bin/phploc --suffix=php src/",
         "phpmd": "@php ./vendor/bin/phpmd src/ ansi cleancode,codesize,controversial,design,naming,unusedcode --suffixes=php",
@@ -527,7 +534,7 @@
         ],
         "psalm": "@php ./vendor/bin/psalm",
         "psalm-baseline": "@psalm --update-baseline",
-        "rector": "@php ./vendor/bin/rector --clear-cache --ansi -v",
+        "rector": "@php ./vendor/bin/rector --ansi -v",
         "rector-dry-run": "@rector --dry-run",
         "release": "@php ./vendor/bin/monorepo-builder release --ansi -v",
         "release-major": "@release major",
@@ -545,6 +552,7 @@
         "test-migrate-configuration": "@pest-migrate-configuration",
         "test-phpunit": "@php ./vendor/bin/phpunit --cache-result-file=./build/phpunit/.phpunit.result.cache --coverage-text --ansi -v",
         "test-phpunit-coverage": "@test --coverage-html=./build/phpunit/ --coverage-clover=clover.xml",
+        "test-type-coverage": "@pest-type-coverage",
         "test-watch": [
             "Composer\\Config::disableProcessTimeout",
             "./vendor/bin/phpunit-watcher watch --ansi < /dev/tty"
