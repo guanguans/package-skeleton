@@ -20,8 +20,8 @@ require __DIR__.'/../vendor/autoload.php';
 
 collect([
     __DIR__.'/../composer.json',
-    // __DIR__.'/../laravel/composer.json',
-    // __DIR__.'/../yii2/composer.json',
+    __DIR__.'/../vendor-bin/laravel/composer.json',
+    __DIR__.'/../vendor-bin/yii2/composer.json',
 ])
     ->map(static fn ($composerFile): string => realpath($composerFile))
     ->each(static function ($composerFile): void {
@@ -33,7 +33,7 @@ collect([
 
                 $packagist = array_filter(
                     $packagist,
-                    fn ($version, $package) => ! in_array(
+                    static fn ($version, $package) => ! in_array(
                         $package,
                         [
                             'php',
@@ -52,8 +52,7 @@ collect([
                 $packagist = array_map(static fn ($package) => "$package:'*'", array_keys($packagist));
                 $hydratedPackagist = implode(' ', $packagist);
 
-                $command = "COMPOSER_MEMORY_LIMIT=-1 composer require {$hydratedPackagist} -W --ansi -v";
-                // $command = "COMPOSER_MEMORY_LIMIT=-1 /usr/local/opt/php@7.4/bin/php /usr/local/bin/composer require {$hydratedPackagist} -W --ansi -v";
+                $command = "COMPOSER_MEMORY_LIMIT=-1 composer require $hydratedPackagist -W --ansi -v";
                 'require-dev' === $env && $command .= ' --dev';
 
                 $symfonyStyle->note($command);
