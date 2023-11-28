@@ -25,6 +25,7 @@ collect([
 ])
     ->map(static fn ($composerFile): string => realpath($composerFile))
     ->each(static function ($composerFile): void {
+        /** @noinspection PhpUnhandledExceptionInspection */
         collect(json_decode(file_get_contents($composerFile), true, 512, JSON_THROW_ON_ERROR))
             ->only(['require', 'require-dev'])
             ->each(static function ($packagist, $env) use ($composerFile): void {
@@ -33,18 +34,19 @@ collect([
 
                 $packagist = array_filter(
                     $packagist,
-                    static fn ($version, $package) => ! in_array(
+                    static fn ($version, $package) => '*' !== $version && ! in_array(
                         $package,
                         [
                             'php',
                             'elasticquent/elasticquent',
                         ],
                         true
-                    ) && '*' !== $version,
+                    ),
                     ARRAY_FILTER_USE_BOTH
                 );
-                if (empty($package)) {
+                if (empty($packagist)) {
                     $symfonyStyle->note("The composer file($composerFile) $env nothing to update.");
+                    $symfonyStyle->newLine();
 
                     return;
                 }
@@ -56,14 +58,12 @@ collect([
                 'require-dev' === $env && $command .= ' --dev';
 
                 $symfonyStyle->note($command);
-                Process::fromShellCommandline(
-                    $command,
-                    dirname($composerFile),
-                    ['COMPOSER_MEMORY_LIMIT' => -1]
-                )->mustRun(static function ($type, $buffer) use ($symfonyStyle): void {
-                    $symfonyStyle->write($buffer);
-                });
+                Process::fromShellCommandline($command, dirname($composerFile), ['COMPOSER_MEMORY_LIMIT' => -1])
+                    ->mustRun(static function ($type, $buffer) use ($symfonyStyle): void {
+                        $symfonyStyle->write($buffer);
+                    });
 
                 $symfonyStyle->note("The composer file($composerFile) $env updated.");
+                $symfonyStyle->newLine();
             });
     });
