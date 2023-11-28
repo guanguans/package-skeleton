@@ -41,6 +41,7 @@ use Rector\Php80\ValueObject\AnnotationToAttribute;
 use Rector\PHPUnit\Set\PHPUnitLevelSetList;
 use Rector\PHPUnit\Set\PHPUnitSetList;
 use Rector\Renaming\Rector\FuncCall\RenameFunctionRector;
+use Rector\Set\ValueObject\DowngradeLevelSetList;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
@@ -157,6 +158,7 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
 
     $rectorConfig->sets([
+        DowngradeLevelSetList::DOWN_TO_PHP_80,
         LevelSetList::UP_TO_PHP_80,
         SetList::PHP_80,
         SetList::CODE_QUALITY,
@@ -184,16 +186,16 @@ return static function (RectorConfig $rectorConfig): void {
         'test' => 'it',
     ]);
 
-    (function ($rectorConfig): void {
-        $rectorConfig->ruleConfigurations[AnnotationToAttributeRector::class] = array_filter(
-            $rectorConfig->ruleConfigurations[AnnotationToAttributeRector::class],
-            static fn (AnnotationToAttribute $annotationToAttribute): bool => ! in_array(
-                $annotationToAttribute->getAttributeClass(),
-                [
-                    CodeCoverageIgnore::class,
-                ],
-                true
-            )
-        );
-    })->call($rectorConfig, $rectorConfig);
+    // (function ($rectorConfig): void {
+    //     $rectorConfig->ruleConfigurations[AnnotationToAttributeRector::class] = array_filter(
+    //         $rectorConfig->ruleConfigurations[AnnotationToAttributeRector::class],
+    //         static fn (AnnotationToAttribute $annotationToAttribute): bool => ! in_array(
+    //             $annotationToAttribute->getAttributeClass(),
+    //             [
+    //                 CodeCoverageIgnore::class,
+    //             ],
+    //             true
+    //         )
+    //     );
+    // })->call($rectorConfig, $rectorConfig);
 };
