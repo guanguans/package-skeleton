@@ -30,6 +30,8 @@ use Rector\DeadCode\Rector\ClassMethod\RemoveEmptyClassMethodRector;
 use Rector\EarlyReturn\Rector\If_\ChangeAndIfToEarlyReturnRector;
 use Rector\EarlyReturn\Rector\Return_\ReturnBinaryOrToEarlyReturnRector;
 use Rector\EarlyReturn\Rector\StmtsAwareInterface\ReturnEarlyIfVariableRector;
+use Rector\Laravel\Set\LaravelLevelSetList;
+use Rector\Laravel\Set\LaravelSetList;
 use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
 use Rector\Naming\Rector\ClassMethod\RenameParamToMatchTypeRector;
 use Rector\Naming\Rector\Foreach_\RenameForeachValueVariableToMatchExprVariableRector;
@@ -176,6 +178,13 @@ return static function (RectorConfig $rectorConfig): void {
         PHPUnitSetList::PHPUNIT_90,
         // PHPUnitSetList::PHPUNIT80_DMS,
         PHPUnitSetList::PHPUNIT_CODE_QUALITY,
+
+        // LaravelLevelSetList::UP_TO_LARAVEL_70,
+        // LaravelSetList::ARRAY_STR_FUNCTIONS_TO_STATIC_CALL,
+        // // LaravelSetList::LARAVEL_STATIC_TO_INJECTION,
+        // LaravelSetList::LARAVEL_CODE_QUALITY,
+        // LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
+        // LaravelSetList::LARAVEL_LEGACY_FACTORIES_TO_CLASSES,
     ]);
 
     $rectorConfig->rules([
