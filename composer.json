@@ -337,6 +337,7 @@
         "friendsofphp/php-cs-fixer": "*",
         "guanguans/ai-commit": "*",
         "guanguans/monorepo-builder-worker": "*",
+        "humbug/php-scoper": "*",
         "icanhazstring/composer-unused": "*",
         "infection/extension-installer": "*",
         "infection/infection": "*",
@@ -394,7 +395,11 @@
     "conflict": {},
     "provide": {},
     "suggest": {},
-    "repositories": {},
+    "repositories": {
+        "facade-documenter": {
+            "type": "vcs",
+            "url": "git@github.com:laravel/facade-documenter.git"
+        }},
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
@@ -546,8 +551,8 @@
         "release-patch-dry-run": "@release-patch --dry-run",
         "roave-infection-static-analysis-plugin": "@php ./vendor/bin/roave-infection-static-analysis-plugin --psalm-config=psalm.xml.dist",
         "roave-no-leaks": "@php ./vendor/bin/roave-no-leaks",
-        "style-fix": "@php ./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --ansi -v",
-        "style-lint": "@style-fix --diff --dry-run",
+        "style-fix": "@php ./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --diff --ansi -v",
+        "style-lint": "@style-fix --dry-run",
         "test": "@pest",
         "test-coverage": "@pest-coverage",
         "test-migrate-configuration": "@pest-migrate-configuration",
