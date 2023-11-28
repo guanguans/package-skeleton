@@ -19,6 +19,4 @@ namespace Guanguans\PackageSkeletonTests\Feature;
  *
  * @small
  */
-class LaravelTestCase extends \Guanguans\PackageSkeletonTests\LaravelTestCase
-{
-}
+class LaravelTestCase extends \Guanguans\PackageSkeletonTests\LaravelTestCase {}

@@ -507,8 +507,8 @@
         "infection": "@php ./vendor/bin/infection --test-framework=pest --show-mutations --threads=4 --ansi -v",
         "json-lint": "@php ./vendor/bin/jsonlint *.json .*rc",
         "lint": [
-            "for DIR in .; do find $DIR -maxdepth 1 -type f -name '*.php' -type f ! -name 'xxx.php' -exec php80 -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done",
-            "for DIR in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $DIR -type f -name '*.php' -type f ! -name 'xxx.php' -exec php80 -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
+            "for DIR in .; do find $DIR -maxdepth 1 -type f -name '*.php' -type f ! -name 'xxx.php' -exec /opt/homebrew/opt/php@8.0/bin/php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done",
+            "for DIR in ./benchmarks ./laravel/src ./src ./tests ./yii2/src; do find $DIR -type f -name '*.php' -type f ! -name 'xxx.php' -exec /opt/homebrew/opt/php@8.0/bin/php -l {} \\; 2>&1 | (! grep -v '^No syntax errors detected'); done"
         ],
         "mark-finish": "printf '\\n!\\n!\\t\\033[0;32m%s\\033[0m\\n!\\n\\n' \"Finished\"",
         "mark-separate": "printf '\\n!\\n!\\t\\033[0;33m%s\\033[0m\\n!\\n\\n' \"----------------\"",
@@ -516,9 +516,10 @@
         "md-fix": "@md-lint --fix",
         "md-lint": "lint-md --config .lintmdrc ./*.md ./.github/ ./docs/",
         "neon-lint": "@php ./vendor/bin/neon-lint *.neon",
-        "pest": "@php ./vendor/bin/pest --coverage --profile",
+        "pest": "@php ./vendor/bin/pest --coverage",
         "pest-coverage": "@pest --coverage-html=./build/phpunit/ --coverage-clover=./clover.xml",
         "pest-migrate-configuration": "@pest --migrate-configuration",
+        "pest-profile": "@pest --profile",
         "pest-type-coverage": "@pest --type-coverage",
         "phparkitect": "@php ./vendor/bin/phparkitect check --ansi -v",
         "phploc": "@php ./vendor/bin/phploc --suffix=php src/",

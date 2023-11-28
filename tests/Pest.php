@@ -14,14 +14,10 @@ use Guanguans\PackageSkeletonTests\TestCase;
 use Pest\Expectation;
 
 uses(TestCase::class)
-    ->beforeAll(function (): void {
-    })
-    ->beforeEach(function (): void {
-    })
-    ->afterEach(function (): void {
-    })
-    ->afterAll(function (): void {
-    })
+    ->beforeAll(function (): void {})
+    ->beforeEach(function (): void {})
+    ->afterEach(function (): void {})
+    ->afterAll(function (): void {})
     ->in(__DIR__.'/Feature', __DIR__.'/Unit');
 /*
 |--------------------------------------------------------------------------
@@ -62,11 +58,9 @@ expect()->extend('between', function (int $min, int $max): Expectation {
  */
 
 /**
- * @param object|string $class
- *
  * @throws \ReflectionException
  */
-function class_namespace($class): string
+function class_namespace(object|string $class): string
 {
     $class = is_object($class) ? get_class($class) : $class;
 

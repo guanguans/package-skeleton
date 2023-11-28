@@ -34,6 +34,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
      */
     public static function setUpBeforeClass(): void
     {
+        parent::setUpBeforeClass();
     }
 
     /**
@@ -41,6 +42,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
      */
     public static function tearDownAfterClass(): void
     {
+        parent::tearDownAfterClass();
     }
 
     /**
@@ -57,6 +59,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
      */
     protected function tearDown(): void
     {
+        parent::tearDown();
         $this->finish();
         \Mockery::close();
     }

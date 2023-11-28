@@ -76,16 +76,16 @@ return (new PhpCsFixer\Config())
         // '@PHP71Migration' => true,
         // '@PHP71Migration:risky' => true,
         // '@PHP73Migration' => true,
-        '@PHP74Migration' => true,
-        '@PHP74Migration:risky' => true,
-        // '@PHP80Migration' => true,
-        // '@PHP80Migration:risky' => true,
+        // '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        '@PHP80Migration' => true,
+        '@PHP80Migration:risky' => true,
         // '@PHP81Migration' => true,
         // '@PHP82Migration' => true,
 
         // '@PHPUnit75Migration:risky' => true,
-        '@PHPUnit84Migration:risky' => true,
-        // '@PHPUnit100Migration:risky' => true,
+        // '@PHPUnit84Migration:risky' => true,
+        '@PHPUnit100Migration:risky' => true,
 
         // '@DoctrineAnnotation' => true,
         '@PhpCsFixer' => true,
@@ -97,7 +97,7 @@ return (new PhpCsFixer\Config())
         // array_notation
 
         // basic
-        'curly_braces_position' => [
+        'braces_position' => [
             'control_structures_opening_brace' => 'same_line',
             'functions_opening_brace' => 'next_line_unless_newline_at_signature_end',
             'anonymous_functions_opening_brace' => 'same_line',
@@ -186,7 +186,7 @@ return (new PhpCsFixer\Config())
         ],
         'regular_callable_call' => true,
         'single_line_throw' => false,
-        // 'static_lambda' => true,
+        'static_lambda' => false,
 
         // import
         'group_import' => false,
@@ -197,7 +197,7 @@ return (new PhpCsFixer\Config())
         // list_notation
 
         // namespace_notation
-        'no_blank_lines_before_namespace' => false,
+        'blank_lines_before_namespace' => false,
 
         // naming
 
@@ -217,6 +217,9 @@ return (new PhpCsFixer\Config())
             'call_type' => 'this',
             'methods' => [],
         ],
+        'php_unit_test_class_requires_covers' => false,
+        'php_unit_data_provider_name' => true,
+        'php_unit_data_provider_return_type' => true,
 
         // phpdoc
         'general_phpdoc_annotation_remove' => [
@@ -241,6 +244,7 @@ return (new PhpCsFixer\Config())
         'phpdoc_to_comment' => [
             // 'ignored_tags' => [],
         ],
+        'phpdoc_param_order' => true,
 
         // return_notation
         'simplified_null_return' => true,
@@ -284,11 +288,11 @@ return (new PhpCsFixer\Config())
         // https://github.com/kubawerlos/php-cs-fixer-custom-fixers
         PhpCsFixerCustomFixers\Fixer\CommentSurroundedBySpacesFixer::name() => true,
         PhpCsFixerCustomFixers\Fixer\CommentedOutFunctionFixer::name() => [
-            'functions' => ['print_r', 'var_dump', 'var_export', 'dump', 'dd'],
+            'functions' => ['print_r', 'var_dump', 'var_export'],
         ],
         // PhpCsFixerCustomFixers\Fixer\ConstructorEmptyBracesFixer::name() => true,
-        PhpCsFixerCustomFixers\Fixer\DataProviderNameFixer::name() => true,
-        PhpCsFixerCustomFixers\Fixer\DataProviderReturnTypeFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\DataProviderNameFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\DataProviderReturnTypeFixer::name() => true,
         // PhpCsFixerCustomFixers\Fixer\DeclareAfterOpeningTagFixer::name() => true,
         // PhpCsFixerCustomFixers\Fixer\EmptyFunctionBodyFixer::name() => true,
         // PhpCsFixerCustomFixers\Fixer\IssetToArrayKeyExistsFixer::name() => true,
@@ -339,7 +343,7 @@ return (new PhpCsFixer\Config())
         //         'var',
         //     ],
         // ],
-        PhpCsFixerCustomFixers\Fixer\PhpdocParamOrderFixer::name() => true,
+        // PhpCsFixerCustomFixers\Fixer\PhpdocParamOrderFixer::name() => true,
         PhpCsFixerCustomFixers\Fixer\PhpdocParamTypeFixer::name() => true,
         PhpCsFixerCustomFixers\Fixer\PhpdocSelfAccessorFixer::name() => true,
         PhpCsFixerCustomFixers\Fixer\PhpdocSingleLineVarFixer::name() => true,
