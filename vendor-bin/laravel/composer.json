@@ -41,6 +41,7 @@
         "nunomaduro/laravel-console-task": "*",
         "overtrue/laravel-query-logger": "*",
         "php-open-source-saver/jwt-auth": "*",
+        "pion/laravel-chunk-upload": "*",
         "propaganistas/laravel-disposable-email": "*",
         "rap2hpoutre/laravel-log-viewer": "*",
         "rennokki/laravel-eloquent-query-cache": "*",
