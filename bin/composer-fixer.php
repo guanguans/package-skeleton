@@ -32,31 +32,28 @@ collect([
                 $symfonyStyle = new SymfonyStyle(new ArgvInput(), new ConsoleOutput());
                 $symfonyStyle->note("The composer file($composerFile) $env updating...");
 
-                $packagist = array_filter(
-                    $packagist,
-                    static fn ($version, $package) => '*' !== $version && ! in_array(
+                $hydratedPackagist = collect($packagist)
+                    ->filter(static fn ($version, $package) => '*' !== $version && ! in_array(
                         $package,
                         [
                             'php',
                             'elasticquent/elasticquent',
                         ],
                         true
-                    ),
-                    ARRAY_FILTER_USE_BOTH
-                );
-                if (empty($packagist)) {
+                    ))
+                    ->map(static fn ($version, $package) => "$package:'*'")
+                    ->implode(' ');
+                if (empty($hydratedPackagist)) {
                     $symfonyStyle->note("The composer file($composerFile) $env nothing to update.");
                     $symfonyStyle->newLine();
 
                     return;
                 }
 
-                $packagist = array_map(static fn ($package) => "$package:'*'", array_keys($packagist));
-                $hydratedPackagist = implode(' ', $packagist);
-
-                $command = "COMPOSER_MEMORY_LIMIT=-1 composer require $hydratedPackagist -W --ansi -v";
-                'require-dev' === $env && $command .= ' --dev';
-
+                /** @noinspection ToStringSimplificationInspection */
+                $command = str("COMPOSER_MEMORY_LIMIT=-1 composer require $hydratedPackagist -W --ansi -v")
+                    ->when('require-dev' === $env, static fn (Illuminate\Support\Stringable $command) => $command->append(' --dev'))
+                    ->__toString();
                 $symfonyStyle->note($command);
                 Process::fromShellCommandline($command, dirname($composerFile), ['COMPOSER_MEMORY_LIMIT' => -1])
                     ->mustRun(static function ($type, $buffer) use ($symfonyStyle): void {
