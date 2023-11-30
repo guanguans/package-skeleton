@@ -56,7 +56,6 @@
         "cocur/slugify": "*",
         "codeguy/upload": "*",
         "colinodell/json5": "*",
-        "composer/package-versions-deprecated": "*",
         "composer/semver": "*",
         "consolidation/robo": "*",
         "consolidation/self-update": "*",
@@ -328,6 +327,7 @@
         "brainmaestro/composer-git-hooks": "*",
         "brianium/paratest": "*",
         "code-lts/doctum": "*",
+        "composer/package-versions-deprecated": "*",
         "degraciamathieu/php-arguments-detector": "*",
         "dms/phpunit-arraysubset-asserts": "*",
         "ekino/phpstan-banned-code": "*",
@@ -424,6 +424,7 @@
     "config": {
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true,
+            "composer/package-versions-deprecated": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "ergebnis/composer-normalize": true,
             "hyperf/composer-plugin": true,
@@ -439,7 +440,9 @@
         "apcu-autoloader": true,
         "classmap-authoritative": false,
         "optimize-autoloader": true,
-        "preferred-install": "dist",
+        "preferred-install": {
+            "*": "dist"
+        },
         "sort-packages": true
     },
     "extra": {
