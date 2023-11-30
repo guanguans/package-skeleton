@@ -14,16 +14,23 @@ declare(strict_types=1);
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\Process\Process;
 
 require __DIR__.'/../vendor/autoload.php';
 
-collect([
-    __DIR__.'/../composer.json',
-    __DIR__.'/../vendor-bin/laravel/composer.json',
-    __DIR__.'/../vendor-bin/yii2/composer.json',
-])
-    ->map(static fn ($composerFile): string => realpath($composerFile))
+collect(
+    Finder::create()
+        ->in([
+            __DIR__.'/../',
+            __DIR__.'/../vendor-bin/*/',
+        ])
+        ->exclude('vendor')
+        ->name('composer.json')
+        ->depth(0)
+        ->files()
+)
+    ->map(static fn (Symfony\Component\Finder\SplFileInfo $splFileInfo, $composerFile): string => realpath($composerFile))
     ->each(static function ($composerFile): void {
         /** @noinspection PhpUnhandledExceptionInspection */
         collect(json_decode(file_get_contents($composerFile), true, 512, JSON_THROW_ON_ERROR))
@@ -33,12 +40,13 @@ collect([
                 $symfonyStyle->note("The composer file($composerFile) $env updating...");
 
                 $hydratedPackagist = collect($packagist)
-                    ->filter(static fn ($version, $package) => '*' !== $version && ! in_array(
+                    ->filter(static fn ($version, $package) => ! in_array(
+                        $version,
+                        ['*', 'dev-main', 'dev-master'],
+                        true
+                    ) && ! in_array(
                         $package,
-                        [
-                            'php',
-                            'elasticquent/elasticquent',
-                        ],
+                        ['php', 'elasticquent/elasticquent'],
                         true
                     ))
                     ->map(static fn ($version, $package) => "$package:'*'")
