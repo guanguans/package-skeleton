@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b558f400799a43593bcdf43b4d5e1c2",
+    "content-hash": "281ae300b595eaecc49fe26e8542712e",
     "packages": [
         {
             "name": "kartik-v/bootstrap-fileinput",
@@ -1412,7 +1412,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0"
+        "php": ">=8.1"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"

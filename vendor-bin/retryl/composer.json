@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mention/retry": "^1.0"
+    }
+}

@@ -32,7 +32,7 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "aacotroneo/laravel-saml2": "*",
         "ajthinking/archetype": "*",
         "alecrabbit/php-cli-snake": "*",
@@ -425,6 +425,7 @@
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
             "hyperf/composer-plugin": true,
             "infection/extension-installer": true,
             "kylekatarnls/update-helper": true,
@@ -432,9 +433,8 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "wikimedia/composer-merge-plugin": true,
-            "ergebnis/composer-normalize": true,
-            "veewee/composer-run-parallel": true
+            "veewee/composer-run-parallel": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": false,
