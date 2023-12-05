@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.1.0](https://github.com/guanguans/package-skeleton/compare/2.0.10...v2.1.0) (2023-12-05)
+
+
+### Features
+
+* **.zhlintrc:** Add .zhlintrc file ([53293ee](https://github.com/guanguans/package-skeleton/commit/53293ee80603ee8998e4b445247536821c236438))
+* **composer.json:** Add composer/package-versions-deprecated ([d0e3338](https://github.com/guanguans/package-skeleton/commit/d0e3338964cc4dd23fc9924a543c51755f86270a))
+* **composer.json:** add fansipan/fansipan package ([f4c7e2b](https://github.com/guanguans/package-skeleton/commit/f4c7e2bdf7cc50b44211916951d302c79ff8412e))
+* **composer:** Add bramus/monolog-colored-line-formatter dependency ([3ed51e2](https://github.com/guanguans/package-skeleton/commit/3ed51e21811b3b4a55dcf973a64dece48a311c25))
+* **deps:** add apix/log dependency ([435dc8f](https://github.com/guanguans/package-skeleton/commit/435dc8fb593378eb94eabc76da334205aaab9e27))
+* **deps:** Add dragon-code/pretty-array and dragon-code/support dependencies ([8fb7401](https://github.com/guanguans/package-skeleton/commit/8fb7401bd4480f0643a20256f912462cebd60f00))
+* **deps:** Add fp4php/functional dependency ([0694239](https://github.com/guanguans/package-skeleton/commit/06942398feffe36176afd56f8c4c0e276a202db3))
+* **deps:** Add jbzoo/utils dependency ([3775e06](https://github.com/guanguans/package-skeleton/commit/3775e06a6f8ef6425d97eab3c197e0d6e1b606d1))
+* **vendor-bin:** Add pion/laravel-chunk-upload dependency ([28322a3](https://github.com/guanguans/package-skeleton/commit/28322a3e632926f3ec9cfbc85dd504ea07974247))
+
+
+### Bug Fixes
+
+* **bin/composer-fixer.php:** Update composer file ([0315723](https://github.com/guanguans/package-skeleton/commit/0315723022c7f3df55b06278cb4dbf5ff397d9c5))
+* **bin:** Add new line after composer update ([6c1738b](https://github.com/guanguans/package-skeleton/commit/6c1738bddea597d6d1b1825615db597b2997d0a1))
+* **bin:** Update composer-fixer.php ([688bd87](https://github.com/guanguans/package-skeleton/commit/688bd87bc6081b337bada39a90d07de56298980e))
+* **bin:** Update composer-fixer.php ([1285547](https://github.com/guanguans/package-skeleton/commit/128554793130b90bd6cfbae2f3bdb94ed81c0588))
+
 ## [Unreleased]
 
 
