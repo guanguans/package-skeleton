@@ -80,7 +80,8 @@
         "watson/validating": "*",
         "wendelladriel/laravel-validated-dto": "*",
         "wireui/wireui": "*",
-        "wnx/laravel-stats": "*"
+        "wnx/laravel-stats": "*",
+        "worksome/envy": "*"
     },
     "require-dev": {
         "andreaselia/laravel-api-to-postman": "*",
