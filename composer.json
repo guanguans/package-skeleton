@@ -384,6 +384,7 @@
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
         "spatie/phpunit-watcher": "*",
+        "staabm/phpstan-baseline-analysis": "*",
         "symfony/var-dumper": "*",
         "symplify/monorepo-builder": "*",
         "vimeo/psalm": "*",
