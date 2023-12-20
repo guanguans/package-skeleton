@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.2.0](https://github.com/guanguans/package-skeleton/compare/v2.1.0...v2.2.0) (2023-12-20)
+
+
+### Features
+
+* **deps:** Add staabm/phpstan-baseline-analysis dependency ([44182ea](https://github.com/guanguans/package-skeleton/commit/44182ea40e845ae9865a270de66f5956ee7088e3))
+
 ## [2.1.0](https://github.com/guanguans/package-skeleton/compare/2.0.10...v2.1.0) (2023-12-05)
 
 
