@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.3.0](https://github.com/guanguans/package-skeleton/compare/v2.2.0...v2.3.0) (2023-12-30)
+
+
+### Features
+
+* **tests:** add ArchTest ([8918460](https://github.com/guanguans/package-skeleton/commit/89184604b938170036cb0eca7bc03552cedf7f73))
+
 ## [2.2.0](https://github.com/guanguans/package-skeleton/compare/v2.1.0...v2.2.0) (2023-12-20)
 
 
