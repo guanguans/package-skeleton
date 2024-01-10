@@ -18,7 +18,6 @@ use Rector\CodeQuality\Rector\Identical\SimplifyBoolIdenticalTrueRector;
 use Rector\CodeQuality\Rector\If_\ExplicitBoolCompareRector;
 use Rector\CodeQuality\Rector\LogicalAnd\LogicalToBooleanRector;
 use Rector\CodingStyle\Rector\Class_\AddArrayDefaultToArrayPropertyRector;
-use Rector\CodingStyle\Rector\ClassMethod\UnSpreadOperatorRector;
 use Rector\CodingStyle\Rector\Closure\StaticClosureRector;
 use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
 use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
@@ -35,7 +34,6 @@ use Rector\Laravel\Set\LaravelSetList;
 use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
 use Rector\Naming\Rector\ClassMethod\RenameParamToMatchTypeRector;
 use Rector\Naming\Rector\Foreach_\RenameForeachValueVariableToMatchExprVariableRector;
-use Rector\Php56\Rector\FunctionLike\AddDefaultValueForUndefinedVariableRector;
 use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Php80\Rector\Catch_\RemoveUnusedVariableInCatchRector;
 use Rector\Php80\Rector\Class_\AnnotationToAttributeRector;
@@ -86,7 +84,6 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->skip([
         // rules
         // AddArrayDefaultToArrayPropertyRector::class,
-        // AddDefaultValueForUndefinedVariableRector::class,
         // AddSeeTestAnnotationRector::class,
         // CallableThisArrayToAnonymousFunctionRector::class,
         // ChangeAndIfToEarlyReturnRector::class,
@@ -96,7 +93,6 @@ return static function (RectorConfig $rectorConfig): void {
         // ReturnBinaryOrToEarlyReturnRector::class,
         // SimplifyBoolIdenticalTrueRector::class,
         // StaticClosureRector::class,
-        // UnSpreadOperatorRector::class,
 
         EncapsedStringsToSprintfRector::class,
         // InlineIfToExplicitIfRector::class,
@@ -136,9 +132,6 @@ return static function (RectorConfig $rectorConfig): void {
         // ],
         // ReturnEarlyIfVariableRector::class => [
         //     __DIR__.'/src/Support/EscapeArg.php',
-        // ],
-        // UnSpreadOperatorRector::class => [
-        //     __DIR__.'/src/Concerns/WithDumpable.php',
         // ],
 
         // paths
