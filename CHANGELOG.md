@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.4.0](https://github.com/guanguans/package-skeleton/compare/v2.3.0...v2.4.0) (2024-01-10)
+
+
+### Features
+
+* **composer:** add composer-fixer script ([227eaec](https://github.com/guanguans/package-skeleton/commit/227eaec5941a5d6dd5bd7d87e5ddecd69e63e2f5))
+
 ## [2.3.0](https://github.com/guanguans/package-skeleton/compare/v2.2.0...v2.3.0) (2023-12-30)
 
 
