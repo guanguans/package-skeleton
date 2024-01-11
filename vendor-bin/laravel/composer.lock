@@ -11342,16 +11342,16 @@
         },
         {
             "name": "stevebauman/location",
-            "version": "v7.1.1",
+            "version": "v7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stevebauman/location.git",
-                "reference": "d406651bd11e7ed7f2d2a7ccd28e134bbdc5d9cd"
+                "reference": "14a3a991f4c67c83dbde5dc90c624a9632e715b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stevebauman/location/zipball/d406651bd11e7ed7f2d2a7ccd28e134bbdc5d9cd",
-                "reference": "d406651bd11e7ed7f2d2a7ccd28e134bbdc5d9cd",
+                "url": "https://api.github.com/repos/stevebauman/location/zipball/14a3a991f4c67c83dbde5dc90c624a9632e715b9",
+                "reference": "14a3a991f4c67c83dbde5dc90c624a9632e715b9",
                 "shasum": ""
             },
             "require": {
@@ -11404,9 +11404,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stevebauman/location/issues",
-                "source": "https://github.com/stevebauman/location/tree/v7.1.1"
+                "source": "https://github.com/stevebauman/location/tree/v7.1.2"
             },
-            "time": "2023-12-26T13:52:35+00:00"
+            "time": "2024-01-10T22:07:18+00:00"
         },
         {
             "name": "stillat/blade-directives",
@@ -18478,16 +18478,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "14.1.5",
+            "version": "14.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "422cab5cf4490a10cfa3ca2775d075feabfaa9e1"
+                "reference": "d9e7ec373c1c38c635602dffcdfc9dcdea8be7d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/422cab5cf4490a10cfa3ca2775d075feabfaa9e1",
-                "reference": "422cab5cf4490a10cfa3ca2775d075feabfaa9e1",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/d9e7ec373c1c38c635602dffcdfc9dcdea8be7d7",
+                "reference": "d9e7ec373c1c38c635602dffcdfc9dcdea8be7d7",
                 "shasum": ""
             },
             "require": {
@@ -18534,7 +18534,7 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2024-01-03T02:03:55+00:00"
+            "time": "2024-01-10T07:17:08+00:00"
         },
         {
             "name": "laravel-lang/publisher",
