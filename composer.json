@@ -326,6 +326,7 @@
         "blastcloud/guzzler": "*",
         "brainmaestro/composer-git-hooks": "*",
         "brianium/paratest": "*",
+        "captainhook/captainhook": "*",
         "code-lts/doctum": "*",
         "composer/package-versions-deprecated": "*",
         "degraciamathieu/php-arguments-detector": "*",

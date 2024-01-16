@@ -1123,16 +1123,16 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "f9301a5b2fb1216b2b08f02ba04dc45423db6bff"
+                "reference": "2930cd5ef353871c821d5c43ed030d39ac8cfe65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/f9301a5b2fb1216b2b08f02ba04dc45423db6bff",
-                "reference": "f9301a5b2fb1216b2b08f02ba04dc45423db6bff",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/2930cd5ef353871c821d5c43ed030d39ac8cfe65",
+                "reference": "2930cd5ef353871c821d5c43ed030d39ac8cfe65",
                 "shasum": ""
             },
             "require": {
@@ -1194,7 +1194,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/2.0.8"
+                "source": "https://github.com/doctrine/inflector/tree/2.0.9"
             },
             "funding": [
                 {
@@ -1210,7 +1210,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-16T13:40:37+00:00"
+            "time": "2024-01-15T18:05:13+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -2989,16 +2989,16 @@
         },
         {
             "name": "guanguans/laravel-exception-notify",
-            "version": "3.5.1",
+            "version": "3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guanguans/laravel-exception-notify.git",
-                "reference": "64b2bdca1d5e0b03265b5b642caa85b3b5721d89"
+                "reference": "b30ac1107ec5a627b8ed7083105697e67a248e8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guanguans/laravel-exception-notify/zipball/64b2bdca1d5e0b03265b5b642caa85b3b5721d89",
-                "reference": "64b2bdca1d5e0b03265b5b642caa85b3b5721d89",
+                "url": "https://api.github.com/repos/guanguans/laravel-exception-notify/zipball/b30ac1107ec5a627b8ed7083105697e67a248e8d",
+                "reference": "b30ac1107ec5a627b8ed7083105697e67a248e8d",
                 "shasum": ""
             },
             "require": {
@@ -3025,7 +3025,7 @@
                 "phpstan/phpstan": "^1.10",
                 "phpstan/phpstan-deprecation-rules": "^1.1",
                 "rector/rector": "^0.19",
-                "vimeo/psalm": "^5.18"
+                "vimeo/psalm": "^5.19"
             },
             "type": "library",
             "extra": {
@@ -3121,7 +3121,7 @@
                     "type": "wechat"
                 }
             ],
-            "time": "2024-01-09T03:54:22+00:00"
+            "time": "2024-01-11T08:19:37+00:00"
         },
         {
             "name": "guanguans/notify",
@@ -18342,16 +18342,16 @@
         },
         {
             "name": "laravel-lang/attributes",
-            "version": "2.9.1",
+            "version": "2.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/attributes.git",
-                "reference": "f846e8cd2079082725b4f2066fe5595aeea10183"
+                "reference": "871cc7aec0aba1e676235605c322903bedc85167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/attributes/zipball/f846e8cd2079082725b4f2066fe5595aeea10183",
-                "reference": "f846e8cd2079082725b4f2066fe5595aeea10183",
+                "url": "https://api.github.com/repos/Laravel-Lang/attributes/zipball/871cc7aec0aba1e676235605c322903bedc85167",
+                "reference": "871cc7aec0aba1e676235605c322903bedc85167",
                 "shasum": ""
             },
             "require": {
@@ -18405,9 +18405,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Lang/attributes/issues",
-                "source": "https://github.com/Laravel-Lang/attributes/tree/2.9.1"
+                "source": "https://github.com/Laravel-Lang/attributes/tree/2.9.2"
             },
-            "time": "2024-01-02T09:45:55+00:00"
+            "time": "2024-01-13T14:39:47+00:00"
         },
         {
             "name": "laravel-lang/http-statuses",
@@ -18478,16 +18478,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "14.2.0",
+            "version": "14.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "d9e7ec373c1c38c635602dffcdfc9dcdea8be7d7"
+                "reference": "91902b62fa61ad65e4450683f70dfeb3aed01381"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/d9e7ec373c1c38c635602dffcdfc9dcdea8be7d7",
-                "reference": "d9e7ec373c1c38c635602dffcdfc9dcdea8be7d7",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/91902b62fa61ad65e4450683f70dfeb3aed01381",
+                "reference": "91902b62fa61ad65e4450683f70dfeb3aed01381",
                 "shasum": ""
             },
             "require": {
@@ -18534,7 +18534,7 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2024-01-10T07:17:08+00:00"
+            "time": "2024-01-15T12:48:27+00:00"
         },
         {
             "name": "laravel-lang/publisher",
@@ -19674,16 +19674,16 @@
         },
         {
             "name": "phparkitect/phparkitect",
-            "version": "0.3.26",
+            "version": "0.3.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phparkitect/arkitect.git",
-                "reference": "040715e30c853aa7a9bac11894a323689012c5cf"
+                "reference": "cc7b3a07908cd1f96fe25aae8b1b7f579a7cd5a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phparkitect/arkitect/zipball/040715e30c853aa7a9bac11894a323689012c5cf",
-                "reference": "040715e30c853aa7a9bac11894a323689012c5cf",
+                "url": "https://api.github.com/repos/phparkitect/arkitect/zipball/cc7b3a07908cd1f96fe25aae8b1b7f579a7cd5a6",
+                "reference": "cc7b3a07908cd1f96fe25aae8b1b7f579a7cd5a6",
                 "shasum": ""
             },
             "require": {
@@ -19741,7 +19741,7 @@
             "description": "Enforce architectural constraints in your PHP applications",
             "support": {
                 "issues": "https://github.com/phparkitect/arkitect/issues",
-                "source": "https://github.com/phparkitect/arkitect/tree/0.3.26"
+                "source": "https://github.com/phparkitect/arkitect/tree/0.3.27"
             },
             "funding": [
                 {
@@ -19753,7 +19753,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-22T15:55:46+00:00"
+            "time": "2024-01-15T13:06:26+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -19810,16 +19810,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.7.3",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "3219c6ee25c9ea71e3d9bbaf39c67c9ebd499419"
+                "reference": "fad452781b3d774e3337b0c0b245dd8e5a4455fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/3219c6ee25c9ea71e3d9bbaf39c67c9ebd499419",
-                "reference": "3219c6ee25c9ea71e3d9bbaf39c67c9ebd499419",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/fad452781b3d774e3337b0c0b245dd8e5a4455fc",
+                "reference": "fad452781b3d774e3337b0c0b245dd8e5a4455fc",
                 "shasum": ""
             },
             "require": {
@@ -19862,9 +19862,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.3"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.8.0"
             },
-            "time": "2023-08-12T11:01:26+00:00"
+            "time": "2024-01-11T11:49:22+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
