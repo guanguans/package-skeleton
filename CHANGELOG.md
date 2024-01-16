@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.6.0](https://github.com/guanguans/package-skeleton/compare/v2.5.0...v2.6.0) (2024-01-16)
+
+
+### Features
+
+* **composer.json:** add captainhook/captainhook dependency ([4e1ad55](https://github.com/guanguans/package-skeleton/commit/4e1ad5584ff41470148641cb9d4a44533bc881f1))
+
 ## [Unreleased]
 
 ### Refactor
