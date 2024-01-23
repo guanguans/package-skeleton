@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.7.0](https://github.com/guanguans/package-skeleton/compare/v2.6.0...v2.7.0) (2024-01-23)
+
+
+### Features
+
+* **deps:** Add tomasvotruba/bladestan, tomasvotruba/cognitive-complexity, and tomasvotruba/type-coverage dependencies ([892a085](https://github.com/guanguans/package-skeleton/commit/892a085d7711b4dd624a25b67f1e3caf8a0fcf51))
+* **deps:** Add tomasvotruba/unused-public dependency ([b00c495](https://github.com/guanguans/package-skeleton/commit/b00c4955953ba56137dc1217fba74c974dd15e56))
+
 ## [2.6.0](https://github.com/guanguans/package-skeleton/compare/v2.5.0...v2.6.0) (2024-01-16)
 
 
