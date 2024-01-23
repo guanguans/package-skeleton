@@ -28,3 +28,8 @@ parameters:
         strictCalls: false
         switchConditionsMatchingType: false
         noVariableVariables: false
+
+    unused_public:
+        methods: true
+        properties: true
+        constants: true
