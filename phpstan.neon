@@ -33,3 +33,16 @@ parameters:
         methods: true
         properties: true
         constants: true
+
+    cognitive_complexity:
+        class: 50
+        function: 8
+
+    type_coverage:
+        return_type: 50
+        param_type: 30
+        property_type: 70
+
+    bladestan:
+        template_paths:
+            - resources/views
