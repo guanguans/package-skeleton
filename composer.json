@@ -143,6 +143,7 @@
         "knplabs/packagist-api": "*",
         "krak/fn": "*",
         "kriswallsmith/assetic": "*",
+        "kriswallsmith/buzz": "*",
         "lambdish/phunctional": "*",
         "laminas/laminas-code": "*",
         "laracasts/utilities": "*",
