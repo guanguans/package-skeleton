@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.8.0](https://github.com/guanguans/package-skeleton/compare/v2.7.0...v2.8.0) (2024-01-25)
+
+
+### Features
+
+* **deps:** Add kriswallsmith/buzz dependency ([3ccbed8](https://github.com/guanguans/package-skeleton/commit/3ccbed827dbb004f0af06e1c0f1cacc0e158bc01))
+
 ## [2.7.0](https://github.com/guanguans/package-skeleton/compare/v2.6.0...v2.7.0) (2024-01-23)
 
 
