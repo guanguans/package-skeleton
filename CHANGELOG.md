@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.9.0](https://github.com/guanguans/package-skeleton/compare/v2.8.0...v2.9.0) (2024-01-30)
+
+
+### Features
+
+* **deps:** add systemctl-php and composer-fixer-php dependencies ([8c8c6f9](https://github.com/guanguans/package-skeleton/commit/8c8c6f975f389ab2da3f3d235dadb5bfb92d0c07))
+
 ## [2.8.0](https://github.com/guanguans/package-skeleton/compare/v2.7.0...v2.8.0) (2024-01-25)
 
 
