@@ -107,6 +107,7 @@
         "hyperf/composer-plugin": "*",
         "iamcal/php-emoji": "*",
         "icanboogie/inflector": "*",
+        "icanhazstring/systemctl-php": "*",
         "ihor/nspl": "*",
         "illuminate/collections": "*",
         "illuminate/conditionable": "*",
@@ -514,6 +515,7 @@
             "Composer\\Config::disableProcessTimeout",
             "@php ./composer-fixer"
         ],
+        "composer-fixer-php": "@php ./bin/composer-fixer.php",
         "composer-normalize": "@composer normalize --dry-run --diff --ansi -v",
         "composer-parallel": "@composer parallel --ansi -v",
         "composer-parallel-checks": "@composer-parallel composer-validate md-lint lint style-lint test psalm",

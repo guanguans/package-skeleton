@@ -5473,16 +5473,16 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "b6a5854368533df0295c5761a0253656a2e52d9e"
+                "reference": "ce0f4d1e8a6f4eb0ddff33f57c69c50fd09f4301"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/b6a5854368533df0295c5761a0253656a2e52d9e",
-                "reference": "b6a5854368533df0295c5761a0253656a2e52d9e",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ce0f4d1e8a6f4eb0ddff33f57c69c50fd09f4301",
+                "reference": "ce0f4d1e8a6f4eb0ddff33f57c69c50fd09f4301",
                 "shasum": ""
             },
             "require": {
@@ -5513,7 +5513,7 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
-                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.14.0"
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.15.0"
             },
             "funding": [
                 {
@@ -5525,7 +5525,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-17T14:13:20+00:00"
+            "time": "2024-01-28T23:22:08+00:00"
         },
         {
             "name": "league/pipeline",
@@ -11343,16 +11343,16 @@
         },
         {
             "name": "stevebauman/location",
-            "version": "v7.1.3",
+            "version": "v7.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stevebauman/location.git",
-                "reference": "53daf2b6389866922bd6e1e34ae8e342b453f37f"
+                "reference": "b9cadaf84322d19c08deac82ffded86c7a07dfb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stevebauman/location/zipball/53daf2b6389866922bd6e1e34ae8e342b453f37f",
-                "reference": "53daf2b6389866922bd6e1e34ae8e342b453f37f",
+                "url": "https://api.github.com/repos/stevebauman/location/zipball/b9cadaf84322d19c08deac82ffded86c7a07dfb0",
+                "reference": "b9cadaf84322d19c08deac82ffded86c7a07dfb0",
                 "shasum": ""
             },
             "require": {
@@ -11405,9 +11405,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stevebauman/location/issues",
-                "source": "https://github.com/stevebauman/location/tree/v7.1.3"
+                "source": "https://github.com/stevebauman/location/tree/v7.1.4"
             },
-            "time": "2024-01-22T19:18:11+00:00"
+            "time": "2024-01-29T04:42:48+00:00"
         },
         {
             "name": "stillat/blade-directives",
@@ -16928,16 +16928,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "3.7.3",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "ce594cbc39a4866c544f1a970d285ff0548221ad"
+                "reference": "d244f2e6e6bf32bff5174e6729b57214923ecec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/ce594cbc39a4866c544f1a970d285ff0548221ad",
-                "reference": "ce594cbc39a4866c544f1a970d285ff0548221ad",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/d244f2e6e6bf32bff5174e6729b57214923ecec9",
+                "reference": "d244f2e6e6bf32bff5174e6729b57214923ecec9",
                 "shasum": ""
             },
             "require": {
@@ -17021,7 +17021,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/3.7.3"
+                "source": "https://github.com/doctrine/dbal/tree/3.8.0"
             },
             "funding": [
                 {
@@ -17037,7 +17037,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-21T07:53:09+00:00"
+            "time": "2024-01-25T21:44:02+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -18341,16 +18341,16 @@
         },
         {
             "name": "laravel-lang/attributes",
-            "version": "2.9.3",
+            "version": "2.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/attributes.git",
-                "reference": "23dab894b9b6b5fe0d3eb47daf7d9335a9e82eb0"
+                "reference": "398008ea9df5f568a7195c47f9853d983161e478"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/attributes/zipball/23dab894b9b6b5fe0d3eb47daf7d9335a9e82eb0",
-                "reference": "23dab894b9b6b5fe0d3eb47daf7d9335a9e82eb0",
+                "url": "https://api.github.com/repos/Laravel-Lang/attributes/zipball/398008ea9df5f568a7195c47f9853d983161e478",
+                "reference": "398008ea9df5f568a7195c47f9853d983161e478",
                 "shasum": ""
             },
             "require": {
@@ -18404,9 +18404,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Lang/attributes/issues",
-                "source": "https://github.com/Laravel-Lang/attributes/tree/2.9.3"
+                "source": "https://github.com/Laravel-Lang/attributes/tree/2.9.4"
             },
-            "time": "2024-01-23T11:18:46+00:00"
+            "time": "2024-01-25T00:41:17+00:00"
         },
         {
             "name": "laravel-lang/http-statuses",
@@ -18477,16 +18477,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "14.2.6",
+            "version": "14.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "8d2218b3bccca3208970eb335c7a962820822aa4"
+                "reference": "8bd1b6548cbd6234c6fa9e48f45d776db3e41101"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/8d2218b3bccca3208970eb335c7a962820822aa4",
-                "reference": "8d2218b3bccca3208970eb335c7a962820822aa4",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/8bd1b6548cbd6234c6fa9e48f45d776db3e41101",
+                "reference": "8bd1b6548cbd6234c6fa9e48f45d776db3e41101",
                 "shasum": ""
             },
             "require": {
@@ -18533,7 +18533,7 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2024-01-23T17:39:47+00:00"
+            "time": "2024-01-26T02:14:21+00:00"
         },
         {
             "name": "laravel-lang/publisher",
