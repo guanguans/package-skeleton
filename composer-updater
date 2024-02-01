@@ -4,7 +4,7 @@
 declare(strict_types=1);
 
 /**
- * This file is part of the guanguans/laravel-exception-notify.
+ * This file is part of the guanguans/package-skeleton.
  *
  * (c) guanguans <ityaozm@gmail.com>
  *
@@ -24,7 +24,7 @@ use Symfony\Component\Process\Process;
 require __DIR__.'/vendor/autoload.php';
 
 /** @noinspection PhpUnhandledExceptionInspection */
-$status = (new SingleCommandApplication)
+$status = (new SingleCommandApplication())
     ->setName('Composer Updater')
     ->addOption('composer-json-path', null, InputOption::VALUE_OPTIONAL)
     ->addOption('highest-php-binary', null, InputOption::VALUE_REQUIRED)
@@ -36,7 +36,7 @@ $status = (new SingleCommandApplication)
         assert($this instanceof SingleCommandApplication);
         assert((bool) $input->getOption('highest-php-binary'));
 
-        (new class(
+        (new class (
             $input->getOption('composer-json-path') ?: __DIR__.'/composer.json',
             $input->getOption('highest-php-binary'),
             $input->getOption('composer-binary'),
@@ -44,7 +44,6 @@ $status = (new SingleCommandApplication)
             $input->getOption('except-dependency-versions'),
             new SymfonyStyle($input, $output),
         ) {
-            private string $composerJsonPath;
             private string $highestComposerBinary;
             private string $composerBinary;
             private array $exceptPackages;
@@ -55,7 +54,7 @@ $status = (new SingleCommandApplication)
              * @noinspection ParameterDefaultsNullInspection
              */
             public function __construct(
-                string $composerJsonPath,
+                private string $composerJsonPath,
                 ?string $highestPhpBinary = null,
                 ?string $composerBinary = null,
                 array $exceptPackages = [],
@@ -65,7 +64,6 @@ $status = (new SingleCommandApplication)
                 assert_options(ASSERT_BAIL, 1);
                 assert((bool) $composerJsonPath);
 
-                $this->composerJsonPath = $composerJsonPath;
                 $this->highestComposerBinary = $this->getComposerBinary($composerBinary, $highestPhpBinary);
                 $this->composerBinary = $this->getComposerBinary($composerBinary);
                 $this->exceptPackages = array_merge([
@@ -78,7 +76,7 @@ $status = (new SingleCommandApplication)
                     '*@*',
                     // '*|*',
                 ], $exceptDependencyVersions);
-                $this->symfonyStyle = $symfonyStyle ?? new SymfonyStyle(new ArgvInput, new ConsoleOutput);
+                $this->symfonyStyle = $symfonyStyle ?? new SymfonyStyle(new ArgvInput(), new ConsoleOutput());
             }
 
             public function __invoke(): void
@@ -202,23 +200,22 @@ $status = (new SingleCommandApplication)
             {
                 return sprintf(
                     '%s %s',
-                    $phpBinary ?? (new PhpExecutableFinder)->find(),
-                    $composerBinary ?? (new Symfony\Component\Process\ExecutableFinder)->find('composer')
+                    $phpBinary ?? (new PhpExecutableFinder())->find(),
+                    $composerBinary ?? (new Symfony\Component\Process\ExecutableFinder())->find('composer')
                 );
             }
 
             /**
-             * @param array|string $command
              * @param mixed $input The input as stream resource, scalar or \Traversable, or null for no input
              *
              * @noinspection MissingParameterTypeDeclarationInspection
              * @noinspection PhpSameParameterValueInspection
              */
             private function mustRunCommand(
-                $command,
+                array|string $command,
                 ?string $cwd = null,
                 ?array $env = null,
-                $input = null,
+                mixed $input = null,
                 ?float $timeout = 60
             ): Process {
                 $process = is_string($command)
@@ -231,7 +228,7 @@ $status = (new SingleCommandApplication)
                     ->setWorkingDirectory(dirname($this->composerJsonPath))
                     ->setEnv(['COMPOSER_MEMORY_LIMIT' => -1])
                     ->mustRun(function (string $type, string $buffer): void {
-                        $this->symfonyStyle->isVerbose() and $this->symfonyStyle->write($buffer);
+                        $this->symfonyStyle->isVerbose() && $this->symfonyStyle->write($buffer);
                     });
             }
 
@@ -246,13 +243,11 @@ $status = (new SingleCommandApplication)
             }
 
             /**
-             * @param array|string $pattern
-             *
              * @noinspection SuspiciousLoopInspection
              * @noinspection ComparisonScalarOrderInspection
              * @noinspection MissingParameterTypeDeclarationInspection
              */
-            private function strIs($pattern, string $value): bool
+            private function strIs(array|string $pattern, string $value): bool
             {
                 $patterns = (array) $pattern;
                 if (empty($patterns)) {

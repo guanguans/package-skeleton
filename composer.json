@@ -511,10 +511,6 @@
         "composer-bin-all-update": "@composer bin all update --ansi -v",
         "composer-check-platform-reqs": "@composer check-platform-reqs --lock --ansi -v",
         "composer-diff": "@php ./vendor/bin/composer-diff --ansi -v",
-        "composer-fixer": [
-            "Composer\\Config::disableProcessTimeout",
-            "@php ./composer-fixer"
-        ],
         "composer-fixer-php": "@php ./bin/composer-fixer.php",
         "composer-normalize": "@composer normalize --dry-run --diff --ansi -v",
         "composer-parallel": "@composer parallel --ansi -v",

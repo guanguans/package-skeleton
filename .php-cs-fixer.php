@@ -87,7 +87,7 @@ $finder = Finder::create()
     ->append(glob(__DIR__.'/{.*,*}.php', GLOB_BRACE))
     ->append([
         __DIR__.'/bin/composer-fixer.php',
-        // __DIR__.'/composer-updater',
+        __DIR__.'/composer-updater',
     ])
     ->notPath([
         'bootstrap/*',
@@ -326,9 +326,10 @@ return (new Config())
             ],
         ],
         'statement_indentation' => true,
-        // 'class_definition' => [
-        //     'inline_constructor_arguments' => false,
-        // ],
+        'class_definition' => [
+            'inline_constructor_arguments' => false,
+            'space_before_parenthesis' => true,
+        ],
 
         // https://github.com/kubawerlos/php-cs-fixer-custom-fixers
         CommentSurroundedBySpacesFixer::name() => true,
