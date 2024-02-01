@@ -58,7 +58,7 @@ expect()->extend('between', function (int $min, int $max): Expectation {
  */
 
 /**
- * @throws \ReflectionException
+ * @throws ReflectionException
  */
 function class_namespace(object|string $class): string
 {

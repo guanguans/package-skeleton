@@ -25,7 +25,7 @@ use Guanguans\PackageSkeleton\PackageSkeleton;
  */
 final class PackageSkeletonBench
 {
-    /** @var \Guanguans\PackageSkeleton\PackageSkeleton */
+    /** @var PackageSkeleton */
     private $packageSkeleton;
 
     public function setUp(): void

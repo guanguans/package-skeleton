@@ -11,6 +11,7 @@ declare(strict_types=1);
  * This source file is subject to the MIT license that is bundled.
  */
 
+use Illuminate\Support\Stringable;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -60,7 +61,7 @@ collect(
 
                 /** @noinspection ToStringSimplificationInspection */
                 $command = str("COMPOSER_MEMORY_LIMIT=-1 composer require $hydratedPackagist -W --ansi -v")
-                    ->when('require-dev' === $env, static fn (Illuminate\Support\Stringable $command) => $command->append(' --dev'))
+                    ->when('require-dev' === $env, static fn (Stringable $command) => $command->append(' --dev'))
                     ->__toString();
                 $symfonyStyle->note($command);
                 Process::fromShellCommandline($command, $splFileInfo->getPath(), ['COMPOSER_MEMORY_LIMIT' => -1])

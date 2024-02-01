@@ -14,6 +14,7 @@ namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Orchestra\Testbench\TestCase;
 use Spatie\Snapshots\MatchesSnapshots;
 
 /**
@@ -23,7 +24,7 @@ use Spatie\Snapshots\MatchesSnapshots;
  *
  * @small
  */
-class LaravelTestCase extends \Orchestra\Testbench\TestCase
+class LaravelTestCase extends TestCase
 {
     use ArraySubsetAsserts;
     use MatchesSnapshots;
