@@ -397,7 +397,8 @@
         "vimeo/psalm": "*",
         "webmozarts/strict-phpunit": "*",
         "wikimedia/composer-merge-plugin": "*",
-        "worksome/pretty-pest": "*"
+        "worksome/pretty-pest": "*",
+        "xepozz/internal-mocker": "*"
     },
     "replace": {},
     "conflict": {},
