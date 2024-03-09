@@ -26,6 +26,7 @@ use Spatie\Snapshots\MatchesSnapshots;
 class TestCase extends \PHPUnit\Framework\TestCase
 {
     use ArraySubsetAsserts;
+    use Faker;
     use MatchesSnapshots;
     use PHPMock;
 
