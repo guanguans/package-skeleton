@@ -337,6 +337,7 @@
         "ergebnis/composer-normalize": "*",
         "ergebnis/license": "*",
         "ergebnis/phpstan-rules": "*",
+        "ergebnis/phpunit-slow-test-detector": "*",
         "friendsofphp/php-cs-fixer": "*",
         "guanguans/ai-commit": "*",
         "guanguans/monorepo-builder-worker": "*",

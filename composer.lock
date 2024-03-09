@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3470877a33e19d0c9b613ba8e405292b",
+    "content-hash": "0ede2d63c7522b0158431cf6681e60d5",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -32453,6 +32453,73 @@
                 "source": "https://github.com/ergebnis/phpstan-rules"
             },
             "time": "2023-08-17T10:28:37+00:00"
+        },
+        {
+            "name": "ergebnis/phpunit-slow-test-detector",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ergebnis/phpunit-slow-test-detector.git",
+                "reference": "2f671af5c1589b38d5f0c7289681bf49a65b86a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ergebnis/phpunit-slow-test-detector/zipball/2f671af5c1589b38d5f0c7289681bf49a65b86a3",
+                "reference": "2f671af5c1589b38d5f0c7289681bf49a65b86a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
+                "phpunit/phpunit": "^7.5.0 || ^8.5.19 || ^9.0.0 || ^10.0.0 || ^11.0.0"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.42.0",
+                "ergebnis/data-provider": "^3.2.0",
+                "ergebnis/license": "^2.4.0",
+                "ergebnis/php-cs-fixer-config": "^6.21.0",
+                "fakerphp/faker": "^1.23.1",
+                "psalm/plugin-phpunit": "~0.18.4",
+                "rector/rector": "~0.19.8",
+                "vimeo/psalm": "^5.21.1"
+            },
+            "type": "library",
+            "extra": {
+                "composer-normalize": {
+                    "indent-size": 2,
+                    "indent-style": "space"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ergebnis\\PHPUnit\\SlowTestDetector\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com",
+                    "homepage": "https://localheinz.com"
+                }
+            ],
+            "description": "Provides facilities for detecting slow tests in phpunit/phpunit.",
+            "homepage": "https://github.com/ergebnis/phpunit-slow-test-detector",
+            "keywords": [
+                "detector",
+                "extension",
+                "phpunit",
+                "slow",
+                "test"
+            ],
+            "support": {
+                "issues": "https://github.com/ergebnis/phpunit-slow-test-detector/issues",
+                "security": "https://github.com/ergebnis/phpunit-slow-test-detector/blob/main/.github/SECURITY.md",
+                "source": "https://github.com/ergebnis/phpunit-slow-test-detector"
+            },
+            "time": "2024-02-05T16:21:43+00:00"
         },
         {
             "name": "erusev/parsedown",

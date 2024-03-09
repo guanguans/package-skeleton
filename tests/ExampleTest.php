@@ -10,6 +10,8 @@ declare(strict_types=1);
  * This source file is subject to the MIT license that is bundled.
  */
 
+namespace Guanguans\PackageSkeletonTests;
+
 it('to be string.', function ($movie): void {
     expect($movie)->toBeString();
 })->group(__DIR__, __FILE__)->with('movies');

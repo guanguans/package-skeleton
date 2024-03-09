@@ -33,6 +33,22 @@
       <exclude>vendor/</exclude>
     </testsuite>
   </testsuites>
+  <extensions>
+    <!--<extension class="Ergebnis\PHPUnit\SlowTestDetector\Extension"/>-->
+    <!--<bootstrap class="Ergebnis\PHPUnit\SlowTestDetector\Extension"/>-->
+    <extension class="Ergebnis\PHPUnit\SlowTestDetector\Extension">
+      <arguments>
+        <array>
+          <element key="maximum-count">
+            <integer>3</integer>
+          </element>
+          <element key="maximum-duration">
+            <integer>250</integer>
+          </element>
+        </array>
+      </arguments>
+    </extension>
+  </extensions>
   <listeners>
     <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
       <arguments>
