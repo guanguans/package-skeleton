@@ -475,7 +475,11 @@
         "phpstan": {
             "includes": []
         },
-        "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper"
+        "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper",
+        "composer-normalize": {
+            "indent-size": 4,
+            "indent-style": "space"
+        }
     },
     "scripts": {
         "post-install-cmd": [
