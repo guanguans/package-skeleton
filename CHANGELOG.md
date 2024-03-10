@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.10.0](https://github.com/guanguans/package-skeleton/compare/v2.9.0...v2.10.0) (2024-03-09)
+
+
+### Features
+
+* **tests:** Add Faker trait to TestCase ([a7c249f](https://github.com/guanguans/package-skeleton/commit/a7c249f8c90924123e400aac2c3451949afff03a))
+
 ## [2.9.0](https://github.com/guanguans/package-skeleton/compare/v2.8.0...v2.9.0) (2024-01-30)
 
 
