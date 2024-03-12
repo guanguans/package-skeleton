@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.11.0](https://github.com/guanguans/package-skeleton/compare/v2.10.0...v2.11.0) (2024-03-12)
+
+
+### Features
+
+* **deps:** Add symfony/clock dependency ([c2db378](https://github.com/guanguans/package-skeleton/commit/c2db3784d54c8e5a7a5f046cb03c8148fe9350d4))
+
 ## [2.10.0](https://github.com/guanguans/package-skeleton/compare/v2.9.0...v2.10.0) (2024-03-09)
 
 
