@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v5.5.2",
+            "version": "v5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "35c29cd9fd5bc47eae5238feaabee95b2d7efe3c"
+                "reference": "f01aab0069ae20bb2419eb491281fa9c89051807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/35c29cd9fd5bc47eae5238feaabee95b2d7efe3c",
-                "reference": "35c29cd9fd5bc47eae5238feaabee95b2d7efe3c",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/f01aab0069ae20bb2419eb491281fa9c89051807",
+                "reference": "f01aab0069ae20bb2419eb491281fa9c89051807",
                 "shasum": ""
             },
             "type": "library",
@@ -59,7 +59,7 @@
             ],
             "support": {
                 "issues": "https://github.com/kartik-v/bootstrap-fileinput/issues",
-                "source": "https://github.com/kartik-v/bootstrap-fileinput/tree/v5.5.2"
+                "source": "https://github.com/kartik-v/bootstrap-fileinput/tree/v5.5.3"
             },
             "funding": [
                 {
@@ -67,7 +67,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-10-13T06:16:39+00:00"
+            "time": "2024-03-11T07:28:01+00:00"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",

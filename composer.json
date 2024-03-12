@@ -389,6 +389,7 @@
         "spatie/phpunit-snapshot-assertions": "*",
         "spatie/phpunit-watcher": "*",
         "staabm/phpstan-baseline-analysis": "*",
+        "symfony/clock": "*",
         "symfony/var-dumper": "*",
         "symplify/monorepo-builder": "*",
         "tomasvotruba/bladestan": "*",
@@ -464,6 +465,10 @@
         "branch-alias": {
             "dev-main": "2.x-dev"
         },
+        "composer-normalize": {
+            "indent-size": 4,
+            "indent-style": "space"
+        },
         "hooks": {
             "post-merge": [
                 "composer checks"
@@ -475,11 +480,7 @@
         "phpstan": {
             "includes": []
         },
-        "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper",
-        "composer-normalize": {
-            "indent-size": 4,
-            "indent-style": "space"
-        }
+        "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper"
     },
     "scripts": {
         "post-install-cmd": [

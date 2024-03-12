@@ -2015,25 +2015,25 @@
         },
         {
             "name": "f9webltd/laravel-api-response-helpers",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/f9webltd/laravel-api-response-helpers.git",
-                "reference": "dbb734fcc878009bf542eaba020716691cfffeb5"
+                "reference": "2e30e76b9e0c83a533baeebb52f9d2f6c033f3cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/f9webltd/laravel-api-response-helpers/zipball/dbb734fcc878009bf542eaba020716691cfffeb5",
-                "reference": "dbb734fcc878009bf542eaba020716691cfffeb5",
+                "url": "https://api.github.com/repos/f9webltd/laravel-api-response-helpers/zipball/2e30e76b9e0c83a533baeebb52f9d2f6c033f3cd",
+                "reference": "2e30e76b9e0c83a533baeebb52f9d2f6c033f3cd",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^8.12|^9.0|^10.0",
+                "illuminate/support": "^8.12|^9.0|^10.0|^11.0",
                 "php": "^8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^6.23|^7.0|^8.0",
-                "phpunit/phpunit": "^9.4"
+                "orchestra/testbench": "^6.23|^7.0|^8.0|^9.0",
+                "phpunit/phpunit": "^9.4|^10.1"
             },
             "type": "library",
             "autoload": {
@@ -2062,9 +2062,9 @@
             ],
             "support": {
                 "issues": "https://github.com/f9webltd/laravel-api-response-helpers/issues",
-                "source": "https://github.com/f9webltd/laravel-api-response-helpers/tree/2.0.0"
+                "source": "https://github.com/f9webltd/laravel-api-response-helpers/tree/2.0.1"
             },
-            "time": "2023-10-16T12:09:59+00:00"
+            "time": "2024-03-10T13:11:45+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -16285,16 +16285,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "aaf6ed5ccd27c23f79a545e351b4d7842a99d0bc"
+                "reference": "b826edb791571ab1eaf281eb1bd6e181a1192adc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/aaf6ed5ccd27c23f79a545e351b4d7842a99d0bc",
-                "reference": "aaf6ed5ccd27c23f79a545e351b4d7842a99d0bc",
+                "url": "https://api.github.com/repos/composer/composer/zipball/b826edb791571ab1eaf281eb1bd6e181a1192adc",
+                "reference": "b826edb791571ab1eaf281eb1bd6e181a1192adc",
                 "shasum": ""
             },
             "require": {
@@ -16379,7 +16379,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.1"
+                "source": "https://github.com/composer/composer/tree/2.7.2"
             },
             "funding": [
                 {
@@ -16395,7 +16395,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-09T14:26:28+00:00"
+            "time": "2024-03-11T16:12:18+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -17232,16 +17232,16 @@
         },
         {
             "name": "dragon-code/contracts",
-            "version": "2.22.0",
+            "version": "2.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TheDragonCode/contracts.git",
-                "reference": "5c4a9653dd5985151adcb56790bd56645edddae3"
+                "reference": "44dbad923f152e0dc2699fbac2d33b65dd6a8f7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TheDragonCode/contracts/zipball/5c4a9653dd5985151adcb56790bd56645edddae3",
-                "reference": "5c4a9653dd5985151adcb56790bd56645edddae3",
+                "url": "https://api.github.com/repos/TheDragonCode/contracts/zipball/44dbad923f152e0dc2699fbac2d33b65dd6a8f7d",
+                "reference": "44dbad923f152e0dc2699fbac2d33b65dd6a8f7d",
                 "shasum": ""
             },
             "require": {
@@ -17254,7 +17254,7 @@
                 "andrey-helldar/contracts": "*"
             },
             "require-dev": {
-                "illuminate/database": "^10.0",
+                "illuminate/database": "^10.0 || ^11.0",
                 "phpdocumentor/reflection-docblock": "^5.0"
             },
             "type": "library",
@@ -17271,7 +17271,7 @@
                 {
                     "name": "Andrey Helldar",
                     "email": "helldar@dragon-code.pro",
-                    "homepage": "https://github.com/andrey-helldar"
+                    "homepage": "https://dragon-code.pro"
                 }
             ],
             "description": "A set of contracts for any project",
@@ -17296,7 +17296,7 @@
                     "type": "yoomoney"
                 }
             ],
-            "time": "2023-12-09T12:44:43+00:00"
+            "time": "2024-03-11T20:15:12+00:00"
         },
         {
             "name": "dragon-code/pretty-array",
@@ -18393,16 +18393,16 @@
         },
         {
             "name": "laravel-lang/http-statuses",
-            "version": "3.8.1",
+            "version": "3.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/http-statuses.git",
-                "reference": "28b90d88cc1e5efe69687e95da23c2016d9f78d7"
+                "reference": "b408ea74292df2e4fbec2be93858a3e697189b29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/http-statuses/zipball/28b90d88cc1e5efe69687e95da23c2016d9f78d7",
-                "reference": "28b90d88cc1e5efe69687e95da23c2016d9f78d7",
+                "url": "https://api.github.com/repos/Laravel-Lang/http-statuses/zipball/b408ea74292df2e4fbec2be93858a3e697189b29",
+                "reference": "b408ea74292df2e4fbec2be93858a3e697189b29",
                 "shasum": ""
             },
             "require": {
@@ -18454,22 +18454,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Lang/http-statuses/issues",
-                "source": "https://github.com/Laravel-Lang/http-statuses/tree/3.8.1"
+                "source": "https://github.com/Laravel-Lang/http-statuses/tree/3.8.2"
             },
-            "time": "2024-02-11T08:58:31+00:00"
+            "time": "2024-03-11T01:33:17+00:00"
         },
         {
             "name": "laravel-lang/lang",
-            "version": "14.3.7",
+            "version": "14.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "bd2410edc56ba1292d24d68525acec38f1e56e18"
+                "reference": "215f2b900b33876982c18f7e2924f898ac07fa7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/bd2410edc56ba1292d24d68525acec38f1e56e18",
-                "reference": "bd2410edc56ba1292d24d68525acec38f1e56e18",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/215f2b900b33876982c18f7e2924f898ac07fa7e",
+                "reference": "215f2b900b33876982c18f7e2924f898ac07fa7e",
                 "shasum": ""
             },
             "require": {
@@ -18516,7 +18516,7 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2024-03-05T06:20:58+00:00"
+            "time": "2024-03-11T06:59:42+00:00"
         },
         {
             "name": "laravel-lang/publisher",
