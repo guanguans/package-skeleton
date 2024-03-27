@@ -336,6 +336,7 @@
         "ekino/phpstan-banned-code": "*",
         "ergebnis/composer-normalize": "*",
         "ergebnis/license": "*",
+        "ergebnis/php-cs-fixer-config": "dev-main",
         "ergebnis/phpstan-rules": "*",
         "ergebnis/phpunit-slow-test-detector": "*",
         "friendsofphp/php-cs-fixer": "*",
