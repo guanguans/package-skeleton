@@ -18,13 +18,11 @@ use phpmock\phpunit\PHPMock;
 use Spatie\Snapshots\MatchesSnapshots;
 
 /**
- * @internal
- *
  * @coversNothing
  *
  * @small
  */
-final class TestCase extends \PHPUnit\Framework\TestCase
+class TestCase extends \PHPUnit\Framework\TestCase
 {
     use ArraySubsetAsserts;
     use Faker;

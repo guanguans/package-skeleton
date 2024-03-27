@@ -56,14 +56,13 @@ expect()->extend('between', function (int $min, int $max): Expectation {
 | project that you don't want to repeat in every file. Here you can also expose helpers as
 | global functions to help you to reduce the number of lines of code in your test files.
 |
-*/
+ */
 /**
  * @throws ReflectionException
- * @param object|string $class
  */
-function class_namespace($class): string
+function class_namespace(object|string $class): string
 {
-    $class = \is_object($class) ? get_class($class) : $class;
+    $class = \is_object($class) ? \get_class($class) : $class;
 
     return (new ReflectionClass($class))->getNamespaceName();
 }

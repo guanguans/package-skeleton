@@ -19,13 +19,11 @@ use Orchestra\Testbench\TestCase;
 use Spatie\Snapshots\MatchesSnapshots;
 
 /**
- * @internal
- *
  * @coversNothing
  *
  * @small
  */
-final class LaravelTestCase extends TestCase
+class LaravelTestCase extends TestCase
 {
     use ArraySubsetAsserts;
     use MatchesSnapshots;
@@ -63,14 +61,6 @@ final class LaravelTestCase extends TestCase
         \Mockery::close();
     }
 
-    /**
-     * Run extra tear down code.
-     */
-    private function finish(): void
-    {
-        // call more tear down methods
-    }
-
     protected function getPackageProviders($app)
     {
         return [
@@ -84,5 +74,13 @@ final class LaravelTestCase extends TestCase
 
         // $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
         // $migration->up();
+    }
+
+    /**
+     * Run extra tear down code.
+     */
+    private function finish(): void
+    {
+        // call more tear down methods
     }
 }

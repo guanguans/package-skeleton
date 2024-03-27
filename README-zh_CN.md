@@ -2,6 +2,7 @@
 
 [简体中文](README-zh_CN.md) | [ENGLISH](README.md)
 
+> [!NOTE]
 > 一个 PHP 软件包模板存储库。- A PHP package template repository。
 
 [![tests](https://github.com/guanguans/package-skeleton/workflows/tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
