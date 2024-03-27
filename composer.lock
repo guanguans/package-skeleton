@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd6cad01af3ac15e49fcd0bcabcd20cb",
+    "content-hash": "7d679d84213f04685b9e52752c4bd1f2",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -39531,6 +39531,64 @@
                 "source": "https://github.com/Seldaek/signal-handler/tree/2.0.2"
             },
             "time": "2023-09-03T09:24:00+00:00"
+        },
+        {
+            "name": "shipmonk/name-collision-detector",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shipmonk-rnd/name-collision-detector.git",
+                "reference": "e8c8267a9a3774450b64f4cbf0bb035108e78f07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shipmonk-rnd/name-collision-detector/zipball/e8c8267a9a3774450b64f4cbf0bb035108e78f07",
+                "reference": "e8c8267a9a3774450b64f4cbf0bb035108e78f07",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "nette/schema": "^1.1.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "editorconfig-checker/editorconfig-checker": "^10.3.0",
+                "ergebnis/composer-normalize": "^2.19",
+                "phpstan/phpstan": "^1.8.7",
+                "phpstan/phpstan-phpunit": "^1.1.1",
+                "phpstan/phpstan-strict-rules": "^1.2.3",
+                "phpunit/phpunit": "^8.5.28 || ^9.5.20",
+                "shipmonk/composer-dependency-analyser": "^1.0.0",
+                "slevomat/coding-standard": "^8.0.1"
+            },
+            "bin": [
+                "bin/detect-collisions"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ShipMonk\\NameCollision\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple tool to find ambiguous classes or any other name duplicates within your project.",
+            "keywords": [
+                "ambiguous",
+                "autoload",
+                "autoloading",
+                "classname",
+                "collision",
+                "namespace"
+            ],
+            "support": {
+                "issues": "https://github.com/shipmonk-rnd/name-collision-detector/issues",
+                "source": "https://github.com/shipmonk-rnd/name-collision-detector/tree/2.1.1"
+            },
+            "time": "2024-03-01T13:26:32+00:00"
         },
         {
             "name": "spatie/array-to-xml",

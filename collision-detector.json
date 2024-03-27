@@ -1,0 +1,12 @@
+{
+    "scanPaths": [
+        "src",
+        "tests"
+    ],
+    "excludePaths": [
+    ],
+    "fileExtensions": [
+        "php"
+    ],
+    "ignoreParseFailures": false
+}
