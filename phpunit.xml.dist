@@ -8,15 +8,15 @@
   convertErrorsToExceptions="true"
   convertNoticesToExceptions="true"
   convertWarningsToExceptions="true"
-  executionOrder="depends,defects"
-  printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer"
   processIsolation="false"
-  resolveDependencies="true"
   stopOnFailure="false"
   verbose="true"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
 >
+  <!--executionOrder="depends,defects"-->
+  <!--resolveDependencies="true"-->
+  <!--printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer"-->
   <!--testdox="true"-->
   <!--executionOrder="random"-->
   <coverage>

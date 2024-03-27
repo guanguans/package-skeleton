@@ -31,18 +31,12 @@ uses(TestCase::class)
 |
  */
 
-expect()->extend('toBeOne', fn () => $this->toBe(1));
+expect()->extend('toBetween', fn (int $min, int $max): Expectation => expect($this->value)
+    ->toBeGreaterThanOrEqual($min)
+    ->toBeLessThanOrEqual($max));
 
-expect()->extend('assert', function (Closure $assertions): Expectation {
+expect()->extend('assertCallback', function (Closure $assertions): Expectation {
     $assertions($this->value);
-
-    return $this;
-});
-
-expect()->extend('between', function (int $min, int $max): Expectation {
-    expect($this->value)
-        ->toBeGreaterThanOrEqual($min)
-        ->toBeLessThanOrEqual($max);
 
     return $this;
 });
