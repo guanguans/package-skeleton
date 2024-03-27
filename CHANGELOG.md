@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.12.0](https://github.com/guanguans/package-skeleton/compare/v2.11.0...v2.12.0) (2024-03-27)
+
+
+### Features
+
+* **collision-detector:** Add collision detector configuration file and update composer.json ([a76a237](https://github.com/guanguans/package-skeleton/commit/a76a237e64306af2ce69db4db0254a3dca66d95b))
+* **composer-dependency-analyser:** Add shipmonk/composer-dependency-analyser package ([658fbce](https://github.com/guanguans/package-skeleton/commit/658fbce7c9c57b334ab86ebf6c92cb4669f5958f))
+* **deps:** Add shipmonk/dead-code-detector to composer.json ([4b5936b](https://github.com/guanguans/package-skeleton/commit/4b5936bc75985208b12b9a82159c8b11ade751dd))
+
 ## [2.11.0](https://github.com/guanguans/package-skeleton/compare/v2.10.0...v2.11.0) (2024-03-12)
 
 
