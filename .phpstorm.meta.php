@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 /**
- * This file is part of the guanguans/package-skeleton.
+ * Copyright (c) 2021-2024 guanguans<ityaozm@gmail.com>
  *
- * (c) guanguans <ityaozm@gmail.com>
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  *
- * This source file is subject to the MIT license that is bundled.
+ * @see https://github.com/guanguans/package-skeleton
  */
 
 namespace PHPSTORM_META;
@@ -22,35 +23,35 @@ use Psr\Container\ContainerInterface;
 /**
  * PhpStorm Meta file, to provide autocomplete information for PhpStorm.
  */
-override(new \Illuminate\Contracts\Container\Container(), map([
+override(new \Illuminate\Contracts\Container\Container, map([
     '' => '@',
     Dispatcher::class => Dispatcher::class,
     'db' => DatabaseManager::class,
     'view.finder' => FileViewFinder::class,
 ]));
 
-override((new Container())->makeWith(0), map([
+override((new Container)->makeWith(0), map([
     '' => '@',
     Dispatcher::class => Dispatcher::class,
     'db' => DatabaseManager::class,
     'view.finder' => FileViewFinder::class,
 ]));
 
-override((new \Illuminate\Contracts\Container\Container())->get(0), map([
+override((new \Illuminate\Contracts\Container\Container)->get(0), map([
     '' => '@',
     Dispatcher::class => Dispatcher::class,
     'db' => DatabaseManager::class,
     'view.finder' => FileViewFinder::class,
 ]));
 
-override((new \Illuminate\Contracts\Container\Container())->make(0), map([
+override((new \Illuminate\Contracts\Container\Container)->make(0), map([
     '' => '@',
     Dispatcher::class => Dispatcher::class,
     'db' => DatabaseManager::class,
     'view.finder' => FileViewFinder::class,
 ]));
 
-override((new \Illuminate\Contracts\Container\Container())->makeWith(0), map([
+override((new \Illuminate\Contracts\Container\Container)->makeWith(0), map([
     '' => '@',
     Dispatcher::class => Dispatcher::class,
     'db' => DatabaseManager::class,
@@ -90,7 +91,7 @@ override(resolve(0), map([
     'view.finder' => FileViewFinder::class,
 ]));
 
-override((new ContainerInterface())->get(0), map([
+override((new ContainerInterface)->get(0), map([
     '' => '@',
     Dispatcher::class => Dispatcher::class,
     'db' => DatabaseManager::class,

@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 /**
- * This file is part of the guanguans/package-skeleton.
+ * Copyright (c) 2021-2024 guanguans<ityaozm@gmail.com>
  *
- * (c) guanguans <ityaozm@gmail.com>
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  *
- * This source file is subject to the MIT license that is bundled.
+ * @see https://github.com/guanguans/package-skeleton
  */
 
 namespace Guanguans\PackageSkeletonTests;
@@ -22,7 +23,7 @@ trait Faker
         /** @var array<string, Generator> $fakers */
         static $fakers = [];
 
-        if (! \array_key_exists($locale, $fakers)) {
+        if (!\array_key_exists($locale, $fakers)) {
             $faker = Factory::create($locale);
 
             $faker->seed(9001);

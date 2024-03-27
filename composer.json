@@ -583,7 +583,7 @@
         "release-patch-dry-run": "@release-patch --dry-run",
         "roave-infection-static-analysis-plugin": "@php ./vendor/bin/roave-infection-static-analysis-plugin --psalm-config=psalm.xml.dist",
         "roave-no-leaks": "@php ./vendor/bin/roave-no-leaks",
-        "style-fix": "@php ./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.php --diff --ansi -v",
+        "style-fix": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --show-progress=dots --diff --ansi -v",
         "style-lint": "@style-fix --dry-run",
         "test": "@pest",
         "test-coverage": "@pest-coverage",

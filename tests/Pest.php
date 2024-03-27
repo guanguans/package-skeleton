@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 /**
- * This file is part of the guanguans/package-skeleton.
+ * Copyright (c) 2021-2024 guanguans<ityaozm@gmail.com>
  *
- * (c) guanguans <ityaozm@gmail.com>
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  *
- * This source file is subject to the MIT license that is bundled.
+ * @see https://github.com/guanguans/package-skeleton
  */
 
 use Guanguans\PackageSkeletonTests\TestCase;
@@ -62,7 +63,7 @@ expect()->extend('between', function (int $min, int $max): Expectation {
  */
 function class_namespace(object|string $class): string
 {
-    $class = is_object($class) ? $class::class : $class;
+    $class = \is_object($class) ? $class::class : $class;
 
     return (new ReflectionClass($class))->getNamespaceName();
 }

@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 /**
- * This file is part of the guanguans/package-skeleton.
+ * Copyright (c) 2021-2024 guanguans<ityaozm@gmail.com>
  *
- * (c) guanguans <ityaozm@gmail.com>
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  *
- * This source file is subject to the MIT license that is bundled.
+ * @see https://github.com/guanguans/package-skeleton
  */
 
 use Ergebnis\License;
@@ -84,7 +85,7 @@ $finder = Finder::create()
         'docs/',
         'vendor/',
     ])
-    ->append(glob(__DIR__.'/{.*,*}.php', GLOB_BRACE))
+    ->append(glob(__DIR__.'/{.*,*}.php', \GLOB_BRACE))
     ->append([
         __DIR__.'/bin/composer-fixer.php',
         __DIR__.'/composer-updater',
@@ -105,13 +106,13 @@ $finder = Finder::create()
 
 // dd(json_encode($header, JSON_UNESCAPED_SLASHES));
 
-return (new Config())
+return (new Config)
     ->setFinder($finder)
     ->setRiskyAllowed(true)
     ->setUsingCache(true)
     ->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
-    ->registerCustomFixers(new Fixers())
-    ->registerCustomFixers(new PedroTroller\CS\Fixer\Fixers())
+    ->registerCustomFixers(new Fixers)
+    ->registerCustomFixers(new PedroTroller\CS\Fixer\Fixers)
     ->setRules([
         // '@PHP70Migration' => true,
         // '@PHP70Migration:risky' => true,

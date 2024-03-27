@@ -4,11 +4,12 @@
 declare(strict_types=1);
 
 /**
- * This file is part of the guanguans/package-skeleton.
+ * Copyright (c) 2021-2024 guanguans<ityaozm@gmail.com>
  *
- * (c) guanguans <ityaozm@gmail.com>
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  *
- * This source file is subject to the MIT license that is bundled.
+ * @see https://github.com/guanguans/package-skeleton
  */
 
 use Illuminate\Support\Stringable;
@@ -34,24 +35,25 @@ collect(
 )
     ->each(static function (SplFileInfo $splFileInfo): void {
         /** @noinspection PhpUnhandledExceptionInspection */
-        collect(json_decode($splFileInfo->getContents(), true, 512, JSON_THROW_ON_ERROR))
+        collect(json_decode($splFileInfo->getContents(), true, 512, \JSON_THROW_ON_ERROR))
             ->only(['require', 'require-dev'])
             ->each(static function ($packagist, $env) use ($splFileInfo): void {
-                $symfonyStyle = new SymfonyStyle(new ArgvInput(), new ConsoleOutput());
+                $symfonyStyle = new SymfonyStyle(new ArgvInput, new ConsoleOutput);
                 $symfonyStyle->note(sprintf('The composer file(%s) %s updating...', $splFileInfo->getRealPath(), $env));
 
                 $hydratedPackagist = collect($packagist)
-                    ->filter(static fn ($version, $package) => ! in_array(
+                    ->filter(static fn ($version, $package) => !\in_array(
                         $version,
                         ['*', 'dev-main', 'dev-master'],
                         true
-                    ) && ! in_array(
+                    ) && !\in_array(
                         $package,
                         ['php', 'elasticquent/elasticquent'],
                         true
                     ))
                     ->map(static fn ($version, $package) => "$package:'*'")
                     ->implode(' ');
+
                 if (empty($hydratedPackagist)) {
                     $symfonyStyle->note(sprintf('The composer file(%s) %s nothing to update.', $splFileInfo->getRealPath(), $env));
                     $symfonyStyle->newLine();
