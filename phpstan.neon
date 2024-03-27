@@ -1,6 +1,6 @@
 includes:
     - phpstan-baseline.neon
-    - vendor/roave/no-floaters/rules.neon
+#    - vendor/roave/no-floaters/rules.neon
 #    - vendor/phpstan/phpstan-strict-rules/rules.neon
 #    - vendor/ergebnis/phpstan-rules/rules.neon
 #    - vendor/ekino/phpstan-banned-code/extension.neon
@@ -10,39 +10,25 @@ parameters:
     paths:
         - src
     tmpDir: build/phpstan
-    checkOctaneCompatibility: true
-    checkModelProperties: true
+#    checkOctaneCompatibility: true
+#    checkModelProperties: true
     checkMissingIterableValueType: true
-    disallowFloatsEverywhere: true
+#    disallowFloatsEverywhere: true
 
-    strictRules:
-        allRules: false
-        booleansInConditions: false
-        uselessCast: false
-        requireParentConstructorCall: false
-        disallowedConstructs: false
-        overwriteVariablesWithLoop: false
-        closureUsesThis: false
-        matchingInheritedMethodNames: false
-        numericOperandsInArithmeticOperators: false
-        strictCalls: false
-        switchConditionsMatchingType: false
-        noVariableVariables: false
+#    strictRules:
+#        allRules: false
+#        booleansInConditions: false
+#        uselessCast: false
+#        requireParentConstructorCall: false
+#        disallowedConstructs: false
+#        overwriteVariablesWithLoop: false
+#        closureUsesThis: false
+#        matchingInheritedMethodNames: false
+#        numericOperandsInArithmeticOperators: false
+#        strictCalls: false
+#        switchConditionsMatchingType: false
+#        noVariableVariables: false
 
-    unused_public:
-        methods: true
-        properties: true
-        constants: true
-
-    cognitive_complexity:
-        class: 50
-        function: 8
-
-    type_coverage:
-        return_type: 50
-        param_type: 30
-        property_type: 70
-
-    bladestan:
-        template_paths:
-            - resources/views
+    ignoreErrors:
+        - "#^Unsafe usage of new static\\(\\)\\.$#"
+        - "#^Method Guanguans\\\\Notify\\\\Foundation\\\\.*Rector\\:\\:refactor\\(\\) should return 1\\|2\\|3\\|4\\|array\\<PhpParser\\\\Node\\>\\|PhpParser\\\\Node\\|null but empty return statement found\\.$#"

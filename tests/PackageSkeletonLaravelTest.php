@@ -24,10 +24,9 @@ use Guanguans\PackageSkeleton\PackageSkeleton;
  */
 final class PackageSkeletonLaravelTest extends LaravelTestCase
 {
-    #[RequiresPhpExtension('pgsql')]
     public function testTest(): void
     {
-        self::assertTrue(PackageSkeleton::test());
+        $this->assertTrue(PackageSkeleton::test());
         self::markTestIncomplete('This test has not been implemented yet.');
         self::markTestSkipped('The PostgreSQL extension is not available');
     }

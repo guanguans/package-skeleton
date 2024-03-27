@@ -15,7 +15,7 @@ namespace Guanguans\PackageSkeleton;
 
 use UpdateHelper\UpdateHelperInterface;
 
-class UpdateHelper implements UpdateHelperInterface
+final class UpdateHelper implements UpdateHelperInterface
 {
     public function check(\UpdateHelper\UpdateHelper $updateHelper): void
     {

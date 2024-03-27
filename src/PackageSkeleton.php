@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeleton;
 
-class PackageSkeleton
+final class PackageSkeleton
 {
     public static function test(): bool
     {

@@ -46,7 +46,7 @@ return $config
 
     // add extra path to scan
     // for multiple paths at once, use addPathsToScan()
-    ->addPathToScan(__DIR__.'/build', isDev: false)
+    ->addPathToScan(__DIR__.'/build', false)
 
     // exclude path from scanning
     // for multiple paths at once, use addPathsToExclude()

@@ -1,50 +1,80 @@
 {
-    "$schema": "vendor/infection/infection/resources/schema.json",
-    "source": {
-        "directories": [
-            "src"
-        ],
-        "excludes": [
-            "UpdateHelper.php"
-        ]
-    },
+    "ignoreMsiWithNoMutations": true,
     "logs": {
-        "html": "build/infection.html",
-        "summary": "build/infection.log",
-        "text": "php://stderr",
-        "stryker": {
-            "report": "main"
-        }
+        "github": false,
+        "html": "build/infection/infection.html",
+        "text": "build/infection/infection.text"
     },
-    "timeout": 60,
-    "phpUnit": {
-        "configDir": "./"
-    },
-    "tmpDir": "build",
+    "minCoveredMsi": 80,
+    "minMsi": 80,
     "mutators": {
+        "@default": true,
+        "@function_signature": true,
         "global-ignore": [
-            "FooClass::__construct"
+            "Client::__construct"
         ],
         "global-ignoreSourceCodeByRegex": [
             "Assert::.*"
         ],
-        "@default": true,
-        "@function_signature": false,
-        "TrueValue": {
+        "IncrementInteger": {
             "ignore": [
-                "NameSpace\\*\\SourceClass::create",
-                "Full\\NameSpaced\\Class"
+                "Guanguans\\Notify\\Foundation\\Concerns\\Dumpable::dd"
             ],
             "ignoreSourceCodeByRegex": [
-                "\\$this->logger.*"
+                ".*"
             ]
         },
-        "MethodCallRemoval": {
-            "ignore": [
-                "AnotherClass::doSomething::63"
-            ]
-        }
+        "ArrayItem": false,
+        "ArrayItemRemoval": false,
+        "ArrayOneItem": false,
+        "AssignCoalesce": false,
+        "Assignment": false,
+        "BitwiseOr": false,
+        "CastString": false,
+        "Coalesce": false,
+        "Concat": false,
+        "ConcatOperandRemoval": false,
+        "DecrementInteger": false,
+        "FalseValue": false,
+        "Foreach_": false,
+        "FunctionCallRemoval": false,
+        "GreaterThanOrEqualTo": false,
+        "Identical": false,
+        "InstanceOf_": false,
+        "LessThan": false,
+        "LessThanNegotiation": false,
+        "LogicalAnd": false,
+        "LogicalNot": false,
+        "LogicalOr": false,
+        "MethodCallRemoval": false,
+        "NotIdentical": false,
+        "Plus": false,
+        "ProtectedVisibility": false,
+        "PublicVisibility": false,
+        "Ternary": false,
+        "This": false,
+        "TrueValue": false,
+        "UnwrapArrayMerge": false,
+        "UnwrapArrayPad": false,
+        "UnwrapArrayReduce": false,
+        "UnwrapArrayUnique": false,
+        "UnwrapLtrim": false,
+        "UnwrapStrToLower": false,
+        "UnwrapSubstr": false,
+        "While_": false
     },
-    "minMsi": 80,
-    "minCoveredMsi": 80
+    "phpUnit": {
+        "configDir": "./"
+    },
+    "source": {
+        "directories": [
+            "src/Foundation"
+        ],
+        "excludes": [
+            "Rectors",
+            "Support"
+        ]
+    },
+    "testFramework": "pest",
+    "timeout": 10
 }

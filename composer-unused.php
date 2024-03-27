@@ -16,10 +16,7 @@ use ComposerUnused\ComposerUnused\Configuration\NamedFilter;
 use ComposerUnused\ComposerUnused\Configuration\PatternFilter;
 use Webmozart\Glob\Glob;
 
-return static fn (Configuration $config): Configuration => $config
+return static fn (Configuration $configuration): Configuration => $configuration
     ->addNamedFilter(NamedFilter::fromString('symfony/config'))
     ->addPatternFilter(PatternFilter::fromString('/symfony\/.*/'))
-    ->setAdditionalFilesFor('icanhazstring/composer-unused', [
-        __FILE__,
-        ...Glob::glob(__DIR__.'/config/*.php'),
-    ]);
+    ->setAdditionalFilesFor('icanhazstring/composer-unused', array_merge([__FILE__], Glob::glob(__DIR__.'/config/*.php')));

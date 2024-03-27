@@ -66,7 +66,7 @@ final class LaravelTestCase extends TestCase
     /**
      * Run extra tear down code.
      */
-    protected function finish(): void
+    private function finish(): void
     {
         // call more tear down methods
     }
