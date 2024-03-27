@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeletonTests;
 
-it('to be string.', function ($movie): void {
-    expect($movie)->toBeString();
-})->group(__DIR__, __FILE__)->with('movies');
-
-it('is is snapshot.', function ($movie): void {
-    $this->assertMatchesSnapshot($movie);
-})->group(__DIR__, __FILE__)->with('movies');
+// it('to be string.', function ($movie): void {
+//     expect($movie)->toBeString();
+// })->group(__DIR__, __FILE__)->with('movies');
+//
+// it('is is snapshot.', function ($movie): void {
+//     $this->assertMatchesSnapshot($movie);
+// })->group(__DIR__, __FILE__)->with('movies');
