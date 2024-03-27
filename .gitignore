@@ -17,3 +17,4 @@ tests.php
 node_modules/
 package-lock.json
 .ai-commit.json
+/eza.png

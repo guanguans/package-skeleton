@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da19bd118d771f2c97903add219f5a39",
+    "content-hash": "d43276a3a35a6e16c4b4059728056630",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -39594,6 +39594,64 @@
                 "source": "https://github.com/shipmonk-rnd/composer-dependency-analyser/tree/1.4.0"
             },
             "time": "2024-03-19T15:39:35+00:00"
+        },
+        {
+            "name": "shipmonk/dead-code-detector",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shipmonk-rnd/dead-code-detector.git",
+                "reference": "ec6b79e6382c8c71343ecfd163af71c45e9e20c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shipmonk-rnd/dead-code-detector/zipball/ec6b79e6382c8c71343ecfd163af71c45e9e20c0",
+                "reference": "ec6b79e6382c8c71343ecfd163af71c45e9e20c0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "phpstan/phpstan": "^1.10.30"
+            },
+            "require-dev": {
+                "editorconfig-checker/editorconfig-checker": "^10.3.0",
+                "ergebnis/composer-normalize": "^2.28",
+                "phpstan/phpstan-phpunit": "^1.1.1",
+                "phpstan/phpstan-strict-rules": "^1.2.3",
+                "phpunit/phpunit": "^9.5.20",
+                "shipmonk/name-collision-detector": "^2.0.0",
+                "shipmonk/phpstan-rules": "^2.11",
+                "slevomat/coding-standard": "^8.0.1"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "rules.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ShipMonk\\PHPStan\\DeadCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan rules and collectors to find dead and unused code",
+            "keywords": [
+                "PHPStan",
+                "dead code",
+                "static analysis",
+                "unused code"
+            ],
+            "support": {
+                "issues": "https://github.com/shipmonk-rnd/dead-code-detector/issues",
+                "source": "https://github.com/shipmonk-rnd/dead-code-detector/tree/0.1.0"
+            },
+            "time": "2023-12-28T09:23:19+00:00"
         },
         {
             "name": "shipmonk/name-collision-detector",
