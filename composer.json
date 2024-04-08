@@ -88,6 +88,7 @@
         "fidry/cpu-core-counter": "*",
         "fig/link-util": "*",
         "fightbulc/moment": "*",
+        "foxy/foxy": "*",
         "fp4php/functional": "*",
         "fruitcake/php-cors": "*",
         "functional-php/fantasy-land": "*",
@@ -450,7 +451,8 @@
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
             "veewee/composer-run-parallel": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "foxy/foxy": true
         },
         "apcu-autoloader": true,
         "classmap-authoritative": false,

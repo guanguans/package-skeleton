@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b405ad9aff80f7c811fa29789c4770ce",
+    "content-hash": "e241a07e650696e02546d916f555b270",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -5723,6 +5723,80 @@
                 "source": "https://github.com/fightbulc/moment.php/tree/1.34"
             },
             "time": "2023-01-26T21:18:59+00:00"
+        },
+        {
+            "name": "foxy/foxy",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fxpio/foxy.git",
+                "reference": "9b835b9fd02f81a9fc4d3de777bd08385509a5e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fxpio/foxy/zipball/9b835b9fd02f81a9fc4d3de777bd08385509a5e3",
+                "reference": "9b835b9fd02f81a9fc4d3de777bd08385509a5e3",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1|^2.0",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "composer/composer": "^1.5.0|^2.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Foxy\\Foxy",
+                "branch-alias": {
+                    "dev-main": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Foxy\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Pluchino",
+                    "email": "francois.pluchino@gmail.com"
+                }
+            ],
+            "description": "Fast, reliable, and secure NPM/Yarn/pnpm bridge for Composer",
+            "homepage": "https://github.com/fxpio/foxy",
+            "keywords": [
+                "Bridge",
+                "asset",
+                "composer",
+                "dependency manager",
+                "nodejs",
+                "npm",
+                "package",
+                "yarn"
+            ],
+            "support": {
+                "issues": "https://github.com/fxpio/foxy/issues",
+                "source": "https://github.com/fxpio/foxy/tree/v1.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/francoispluchino",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/francoispluchino",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-03-28T19:17:52+00:00"
         },
         {
             "name": "fp4php/functional",
