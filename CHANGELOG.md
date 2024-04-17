@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.13.0](https://github.com/guanguans/package-skeleton/compare/v2.12.0...v2.13.0) (2024-04-17)
+
+
+### Features
+
+* **deps:** Add php-static-analysis/attributes, php-static-analysis/rector-rule, rector/swiss-knife, and foxy ([8172e0c](https://github.com/guanguans/package-skeleton/commit/8172e0c5337091e90bc3c0dd8d83c2b64c16eeb0))
+
 ## [2.12.0](https://github.com/guanguans/package-skeleton/compare/v2.11.0...v2.12.0) (2024-03-27)
 
 
