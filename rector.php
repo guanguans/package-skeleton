@@ -12,6 +12,7 @@ declare(strict_types=1);
  */
 
 use Ergebnis\Rector\Rules\Arrays\SortAssociativeArrayByKeyRector;
+use PhpStaticAnalysis\RectorRule\Set\PhpStaticAnalysisSetList;
 use Rector\CodeQuality\Rector\FuncCall\CompactToVariablesRector;
 use Rector\CodeQuality\Rector\If_\ExplicitBoolCompareRector;
 use Rector\CodeQuality\Rector\LogicalAnd\LogicalToBooleanRector;
@@ -134,6 +135,7 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         DowngradeLevelSetList::DOWN_TO_PHP_74,
         LevelSetList::UP_TO_PHP_74,
+        PhpStaticAnalysisSetList::ANNOTATIONS_TO_ATTRIBUTES,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
         SetList::DEAD_CODE,
