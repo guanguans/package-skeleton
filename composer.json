@@ -597,7 +597,7 @@
         "sk-finalize-classes": "@sk finalize-classes ./src ./tests",
         "sk-finalize-classes-dry-run": "@sk-finalize-classes --dry-run",
         "sk-find-multi-classes": "@sk find-multi-classes ./src ./tests",
-        "sk-namespace-to-psr-4": "@sk namespace-to-psr-4 ./tests --namespace-root=Guanguans\\PackageSkeletonTests\\",
+        "sk-namespace-to-psr-4": "@sk namespace-to-psr-4 ./tests --namespace-root=Guanguans\\PackageSkeletonTests",
         "style-fix": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --show-progress=dots --diff --ansi -v",
         "style-lint": "@style-fix --dry-run",
         "test": "@pest",
