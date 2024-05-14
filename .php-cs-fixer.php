@@ -187,10 +187,11 @@ return Config\Factory::fromRuleSet($ruleSet)
                 '.build/',
                 '.chglog/',
                 '.github/',
+                '__snapshots__/',
                 'build/',
                 'docs/',
+                'node_modules/',
                 'vendor-bin/',
-                '__snapshots__/',
             ])
             ->append(glob(__DIR__.'/{*,.*}.php', \GLOB_BRACE))
             ->append([
