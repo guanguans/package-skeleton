@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dd3644d03be361d5847e85edeb03e6a",
+    "content-hash": "8cff7ac169dfc0625b92a8a64420685e",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -35508,6 +35508,83 @@
             ],
             "abandoned": "larastan/larastan",
             "time": "2022-01-20T19:33:48+00:00"
+        },
+        {
+            "name": "nunomaduro/patrol",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nunomaduro/patrol.git",
+                "reference": "a10de934850b2785f82574e9f774aa80d75f3b7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nunomaduro/patrol/zipball/a10de934850b2785f82574e9f774aa80d75f3b7b",
+                "reference": "a10de934850b2785f82574e9f774aa80d75f3b7b",
+                "shasum": ""
+            },
+            "require": {
+                "composer/semver": "^3.2.5",
+                "guzzlehttp/guzzle": "^7.2.0",
+                "php": "^8.0",
+                "psr/http-client": "^1.0.1",
+                "symfony/console": "^5.3.0|^6.0",
+                "symfony/process": "^5.3.0|^6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0.0",
+                "pestphp/pest": "^1.5.0",
+                "phpstan/phpstan": "^0.12.85",
+                "symfony/var-dumper": "^5.2.6|^6.0"
+            },
+            "bin": [
+                "bin/patrol"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "./src/Support/Functions.php"
+                ],
+                "psr-4": {
+                    "NunoMaduro\\Patrol\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "An elegant command-line tool that keeps your PHP Project's dependencies in check",
+            "keywords": [
+                "composer",
+                "dependencies",
+                "patrol",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/nunomaduro/patrol/issues",
+                "source": "https://github.com/nunomaduro/patrol/tree/v1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/paypalme/enunomaduro",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-01-13T14:46:46+00:00"
         },
         {
             "name": "nyholm/nsa",
