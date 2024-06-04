@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Guanguans\PackageSkeletonTests;
 
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+use Eris\TestTrait;
 use phpmock\phpunit\PHPMock;
 use Spatie\Snapshots\MatchesSnapshots;
 
@@ -28,6 +29,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     use Faker;
     use MatchesSnapshots;
     use PHPMock;
+    use TestTrait;
 
     /**
      * This method is called before the first test of this test class is run.

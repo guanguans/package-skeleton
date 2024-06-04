@@ -342,6 +342,7 @@
         "ergebnis/phpstan-rules": "*",
         "ergebnis/phpunit-slow-test-detector": "*",
         "friendsofphp/php-cs-fixer": "*",
+        "giorgiosironi/eris": "*",
         "guanguans/ai-commit": "*",
         "guanguans/monorepo-builder-worker": "*",
         "humbug/php-scoper": "*",
