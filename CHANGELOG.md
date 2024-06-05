@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.15.0](https://github.com/guanguans/package-skeleton/compare/v2.14.0...v2.15.0) (2024-06-05)
+
+
+### Features
+
+* **composer.json:** add ion-bazan/composer-diff and projektgopher/whisky ([693cb3f](https://github.com/guanguans/package-skeleton/commit/693cb3fe5f66c797f3a6af26c48b4afa39668e26))
+
 ## [2.14.0](https://github.com/guanguans/package-skeleton/compare/v2.13.0...v2.14.0) (2024-05-14)
 
 
