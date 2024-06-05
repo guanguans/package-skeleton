@@ -29,6 +29,10 @@ parameters:
 #        switchConditionsMatchingType: false
 #        noVariableVariables: false
 
+    type_coverage:
+            return: 100
+            param: 100
+            property: 100
+
     ignoreErrors:
-        - "#^Unsafe usage of new static\\(\\)\\.$#"
-        - "#^Method Guanguans\\\\Notify\\\\Foundation\\\\.*Rector\\:\\:refactor\\(\\) should return 1\\|2\\|3\\|4\\|array\\<PhpParser\\\\Node\\>\\|PhpParser\\\\Node\\|null but empty return statement found\\.$#"
+#        - "#^Unsafe usage of new static\\(\\)\\.$#"

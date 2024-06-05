@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9123fcaad7bfda43f31ffbac4874f59c",
+    "content-hash": "c7c794da69634a11dbd517f9059e5bcf",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -8068,6 +8068,79 @@
                 }
             ],
             "time": "2024-01-27T19:34:18+00:00"
+        },
+        {
+            "name": "ion-bazan/composer-diff",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/IonBazan/composer-diff.git",
+                "reference": "d7f3cd5333c760d5bdfe0178571c99f52979bb9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/IonBazan/composer-diff/zipball/d7f3cd5333c760d5bdfe0178571c99f52979bb9f",
+                "reference": "d7f3cd5333c760d5bdfe0178571c99f52979bb9f",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "ext-json": "*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1 || ^2.0",
+                "symfony/console": "^2.3 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0",
+                "symfony/phpunit-bridge": "^4.2 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "composer/composer": "To use the binary without composer runtime",
+                "symfony/console": "To use the binary without composer runtime"
+            },
+            "bin": [
+                "composer-diff"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "class": "IonBazan\\ComposerDiff\\Composer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "IonBazan\\ComposerDiff\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                }
+            ],
+            "description": "Compares composer.lock changes and generates Markdown report so you can use it in PR description.",
+            "keywords": [
+                "PullRequest",
+                "composer",
+                "composer.lock",
+                "diff",
+                "github",
+                "markdown",
+                "packages",
+                "packagist"
+            ],
+            "support": {
+                "issues": "https://github.com/IonBazan/composer-diff/issues",
+                "source": "https://github.com/IonBazan/composer-diff/tree/v1.9.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/IonBazan",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-26T11:05:06+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -37903,6 +37976,70 @@
             "time": "2021-02-27T17:30:03+00:00"
         },
         {
+            "name": "projektgopher/whisky",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ProjektGopher/whisky.git",
+                "reference": "e7ba47e436ccb0ae197daaf8a4b3cc646ff3feee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ProjektGopher/whisky/zipball/e7ba47e436ccb0ae197daaf8a4b3cc646ff3feee",
+                "reference": "e7ba47e436ccb0ae197daaf8a4b3cc646ff3feee",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.9",
+                "laravel-zero/framework": "^10.1.2",
+                "laravel/pint": "^1.10",
+                "mockery/mockery": "^1.6.7",
+                "nunomaduro/termwind": "^1.15.1",
+                "pestphp/pest": "^2.9",
+                "pestphp/pest-plugin-type-coverage": "^2.0",
+                "swaggest/json-schema": "^0.12.41"
+            },
+            "bin": [
+                "builds/whisky"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "ProjektGopher\\Whisky\\": "app/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Len Woodward",
+                    "email": "Len@ProjektGopher.com"
+                }
+            ],
+            "description": "A simple CLI tool for managing a project's git hooks across multiple members.",
+            "homepage": "https://github.com/ProjektGopher/whisky",
+            "keywords": [
+                "ProjektGopher",
+                "cli",
+                "dev",
+                "git",
+                "hooks",
+                "laravel",
+                "php",
+                "whisky"
+            ],
+            "support": {
+                "issues": "https://github.com/ProjektGopher/whisky/issues",
+                "source": "https://github.com/ProjektGopher/whisky"
+            },
+            "time": "2024-05-24T18:44:03+00:00"
+        },
+        {
             "name": "psalm/plugin-laravel",
             "version": "v2.0.2",
             "source": {
@@ -41250,17 +41387,56 @@
             "time": "2024-01-03T13:13:16+00:00"
         },
         {
-            "name": "tomasvotruba/type-coverage",
-            "version": "0.2.1",
+            "name": "tomasvotruba/phpstan-bodyscan",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TomasVotruba/type-coverage.git",
-                "reference": "a152ac431b2312ec173f3093a628ff988b7ed10f"
+                "url": "https://github.com/TomasVotruba/phpstan-bodyscan.git",
+                "reference": "927930561178955dfad3a89d88ef65f3eaa4b26f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/a152ac431b2312ec173f3093a628ff988b7ed10f",
-                "reference": "a152ac431b2312ec173f3093a628ff988b7ed10f",
+                "url": "https://api.github.com/repos/TomasVotruba/phpstan-bodyscan/zipball/927930561178955dfad3a89d88ef65f3eaa4b26f",
+                "reference": "927930561178955dfad3a89d88ef65f3eaa4b26f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "bin": [
+                "bin/phpstan-bodyscan",
+                "bin/phpstan-bodyscan.php"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Get error count for each PHPStan level",
+            "support": {
+                "issues": "https://github.com/TomasVotruba/phpstan-bodyscan/issues",
+                "source": "https://github.com/TomasVotruba/phpstan-bodyscan/tree/0.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-20T02:31:45+00:00"
+        },
+        {
+            "name": "tomasvotruba/type-coverage",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TomasVotruba/type-coverage.git",
+                "reference": "efd97d9553fe2d2c21f08d9bd3d3af63564f07ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/efd97d9553fe2d2c21f08d9bd3d3af63564f07ff",
+                "reference": "efd97d9553fe2d2c21f08d9bd3d3af63564f07ff",
                 "shasum": ""
             },
             "require": {
@@ -41292,7 +41468,7 @@
             ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/type-coverage/issues",
-                "source": "https://github.com/TomasVotruba/type-coverage/tree/0.2.1"
+                "source": "https://github.com/TomasVotruba/type-coverage/tree/0.3.0"
             },
             "funding": [
                 {
@@ -41304,7 +41480,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-27T10:33:51+00:00"
+            "time": "2024-05-20T00:46:47+00:00"
         },
         {
             "name": "tomasvotruba/unused-public",
