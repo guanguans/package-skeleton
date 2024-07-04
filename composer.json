@@ -393,6 +393,7 @@
         "roave/no-floaters": "*",
         "roave/no-leaks": "*",
         "roave/security-advisories": "*",
+        "savinmikhail/comments-density": "*",
         "shipmonk/composer-dependency-analyser": "*",
         "shipmonk/dead-code-detector": "*",
         "shipmonk/name-collision-detector": "*",
@@ -460,6 +461,7 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "savinmikhail/comments-density": true,
             "veewee/composer-run-parallel": true,
             "wikimedia/composer-merge-plugin": true
         },
@@ -531,6 +533,7 @@
             "@style-lint",
             "@test"
         ],
+        "comments-density": "@php ./vendor/bin/comments_density analyze:comments --ansi -v",
         "composer-bin-all-update": "@composer bin all update --ansi -v",
         "composer-check-platform-reqs": "@composer check-platform-reqs --lock --ansi -v",
         "composer-dependency-analyser": "@php ./vendor/bin/composer-dependency-analyser --config=composer-dependency-analyser.php --show-all-usages --verbose",

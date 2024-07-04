@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7c794da69634a11dbd517f9059e5bcf",
+    "content-hash": "98e6ab60547963c48f4550db31c2537c",
     "packages": [
         {
             "name": "aacotroneo/laravel-saml2",
@@ -39215,6 +39215,118 @@
                 }
             ],
             "time": "2023-10-08T11:56:54+00:00"
+        },
+        {
+            "name": "savinmikhail/comments-density",
+            "version": "v0.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/savinmikhail/Comments-Density.git",
+                "reference": "73e70e4dbf51a26061ea960edfbd4cf35dd41b24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/savinmikhail/Comments-Density/zipball/73e70e4dbf51a26061ea960edfbd4cf35dd41b24",
+                "reference": "73e70e4dbf51a26061ea960edfbd4cf35dd41b24",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "*",
+                "php": ">=7.4",
+                "savinmikhail/primitive_wrappers": "^1.2",
+                "symfony/console": "^5.4",
+                "symfony/yaml": "^5.4"
+            },
+            "require-dev": {
+                "composer/composer": "^2.7",
+                "mockery/mockery": "^1.6",
+                "phpmd/phpmd": "^2.15",
+                "phpro/grumphp": "^1.13",
+                "phpunit/phpunit": "^9.6",
+                "rector/rector": "^1.1",
+                "squizlabs/php_codesniffer": "^3.10",
+                "symfony/var-dumper": "^5.4"
+            },
+            "bin": [
+                "bin/comments_density"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "class": "SavinMikhail\\CommentsDensity\\Composer\\CommentsDensityPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "SavinMikhail\\CommentsDensity\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Savin Mikhail",
+                    "email": "mikhail.d.savin@gmail.com"
+                }
+            ],
+            "description": "CommentDensityAnalyzer is a tool designed to analyze the comment density and quality in source code files in php. It helps maintain and improve the quality of code documentation by evaluating different types of comments and providing insights into their effectiveness and appropriateness.",
+            "keywords": [
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/savinmikhail/Comments-Density/issues",
+                "source": "https://github.com/savinmikhail/Comments-Density/tree/v0.4.8"
+            },
+            "time": "2024-07-02T13:45:14+00:00"
+        },
+        {
+            "name": "savinmikhail/primitive_wrappers",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/savinmikhail/primitive_wrappers.git",
+                "reference": "b92cf5c7263ac2536f306a515897c70e76aa2e6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/savinmikhail/primitive_wrappers/zipball/b92cf5c7263ac2536f306a515897c70e76aa2e6d",
+                "reference": "b92cf5c7263ac2536f306a515897c70e76aa2e6d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phan/phan": "^5.4",
+                "phpmd/phpmd": "^2.15",
+                "phpro/grumphp": "^2.5",
+                "phpunit/phpunit": "^11.1",
+                "rector/rector": "^1.1",
+                "squizlabs/php_codesniffer": "^3.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mikhail\\PrimitiveWrappers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Savin Mikhail",
+                    "email": "mikhail.d.savin@gmail.com"
+                }
+            ],
+            "description": "The object wrappers and static helpers for php primitive types",
+            "support": {
+                "issues": "https://github.com/savinmikhail/primitive_wrappers/issues",
+                "source": "https://github.com/savinmikhail/primitive_wrappers/tree/v1.2.0"
+            },
+            "time": "2024-06-29T07:41:52+00:00"
         },
         {
             "name": "sebastian/code-unit",
