@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
 <a name="unreleased"></a>
+## [2.16.0](https://github.com/guanguans/package-skeleton/compare/v2.15.0...v2.16.0) (2024-07-04)
+
+
+### Features
+
+* **composer:** Add comments-density package to composer.json ([f197a8a](https://github.com/guanguans/package-skeleton/commit/f197a8a2a8905bcd7e51af2cd36beeadd364f8dd))
+
 ## [2.15.0](https://github.com/guanguans/package-skeleton/compare/v2.14.0...v2.15.0) (2024-06-05)
 
 
