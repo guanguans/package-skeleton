@@ -1,9 +1,0 @@
-{
-    "require": {
-        "php": ">=8.1",
-        "kartik-v/yii2-widgets": "*"
-    },
-    "config": {
-        "sort-packages": true
-    }
-}
