@@ -11,11 +11,6 @@
 /.lintmdrc               export-ignore
 /.phplint.yml            export-ignore
 /CHANGELOG.md            export-ignore
-/composer.json           export-ignore
-/composer.lock           export-ignore
-/LICENSE                 export-ignore
 /phpbench.json           export-ignore
 /phpunit.xml.dist        export-ignore
 /psalm.xml.dist          export-ignore
-/README.md               export-ignore
-/README-zh_CN.md         export-ignore

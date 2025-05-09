@@ -34,9 +34,9 @@ return new Doctum(
         'title' => 'API',
         // 'favicon' => 'https://www.guanguans.cn/coole/static/favicon.png',
         // 'build_dir' => __DIR__.'/docs/api/%version%',
-        // 'cache_dir' => __DIR__.'/build/doctum/api/%version%',
+        // 'cache_dir' => __DIR__.'/.build/doctum/api/%version%',
         'build_dir' => __DIR__.'/docs/api/',
-        'cache_dir' => __DIR__.'/build/doctum/api/',
+        'cache_dir' => __DIR__.'/.build/doctum/api/',
         'default_opened_level' => 2,
         'footer_link' => [
             'href' => 'https://github.com/guanguans/package-skeleton',

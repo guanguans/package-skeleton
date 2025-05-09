@@ -52,7 +52,7 @@
     },
     "exclude": [
         ".github/",
-        "build/",
+        ".build/",
         "docs/",
         "var/",
         "vendor/",
