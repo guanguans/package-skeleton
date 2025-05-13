@@ -6,7 +6,6 @@
         "binarytorch/larecipe": "*",
         "cviebrock/eloquent-sluggable": "*",
         "dyrynda/laravel-cascade-soft-deletes": "*",
-        "embed/embed": "*",
         "fntneves/laravel-transactional-events": "*",
         "goldspecdigital/laravel-eloquent-uuid": "*",
         "gordalina/cachetool": "*",
@@ -28,13 +27,7 @@
         "wnx/laravel-stats": "*"
     },
     "require-dev": {
-        "bennett-treptow/laravel-migration-generator": "*",
-        "defstudio/pest-plugin-laravel-expectations": "*",
-        "krlove/eloquent-model-generator": "*",
-        "lanin/laravel-api-debugger": "*",
-        "laracademy/generators": "*",
-        "laracasts/generators": "*",
-        "laragear/meta-testing": "*"
+        "defstudio/pest-plugin-laravel-expectations": "*"
     },
     "config": {
         "allow-plugins": {
