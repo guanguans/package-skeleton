@@ -39,7 +39,7 @@ collect(
             ->only(['require', 'require-dev'])
             ->each(static function ($packagist, $env) use ($splFileInfo): void {
                 $symfonyStyle = new SymfonyStyle(new ArgvInput, new ConsoleOutput);
-                $symfonyStyle->note(sprintf('The composer file(%s) %s updating...', $splFileInfo->getRealPath(), $env));
+                $symfonyStyle->note(\sprintf('The composer file(%s) %s updating...', $splFileInfo->getRealPath(), $env));
 
                 $hydratedPackagist = collect($packagist)
                     ->filter(static fn ($version, $package) => !\in_array(
@@ -55,7 +55,7 @@ collect(
                     ->implode(' ');
 
                 if (empty($hydratedPackagist)) {
-                    $symfonyStyle->note(sprintf('The composer file(%s) %s nothing to update.', $splFileInfo->getRealPath(), $env));
+                    $symfonyStyle->note(\sprintf('The composer file(%s) %s nothing to update.', $splFileInfo->getRealPath(), $env));
                     $symfonyStyle->newLine();
 
                     return;
@@ -71,7 +71,7 @@ collect(
                         $symfonyStyle->write($buffer);
                     });
 
-                $symfonyStyle->note(sprintf('The composer file(%s) %s updated.', $splFileInfo->getRealPath(), $env));
+                $symfonyStyle->note(\sprintf('The composer file(%s) %s updated.', $splFileInfo->getRealPath(), $env));
                 $symfonyStyle->newLine();
             });
     });

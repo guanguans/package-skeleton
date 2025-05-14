@@ -16,39 +16,18 @@
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](https://packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](https://packagist.org/packages/guanguans/package-skeleton)
 
-## Features
+## Feature
 
-* Integrated [brainmaestro/composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks) - Git hooks
-* Integrated [brianium/paratest](https://github.com/paratestphp/paratest) - Parallel testing for PHPUnit
-* Integrated [codedungeon/phpunit-result-printer](https://github.com/mikeerickson/phpunit-pretty-result-printer) - PHPUnit Pretty Result Printer
-* Integrated [dg/bypass-finals](https://github.com/rdohms/dg/bypass-finals) - Unit test assistant package
-* Integrated [dms/phpunit-arraysubset-asserts](https://github.com/rdohms/phpunit-arraysubset-asserts) - Unit test assistant package
-* Integrated [sebastianbergmann/phpunit](https://github.com/sebastianbergmann/phpunit) - Unit test
-* Integrated [bovigo/vfsStream](https://github.com/bovigo/vfsStream) - Unit test assistant package
-* Integrated [mockery/mockery](https://github.com/mockery/mockery) - Mock
-* Integrated [Nyholm/NSA](https://github.com/Nyholm/NSA) - Unit test assistant package
-* Integrated [phpbench/phpbench](https://github.com/phpbench/phpbench) - Benchmarks  
-* Integrated [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) - Coding standard check
-* Integrated [johnkary/phpunit-speedtrap](https://github.com/johnkary/phpunit-speedtrap) - Reports on slow-running tests in your PHPUnit test suite
-* Integrated [overtrue/phplint](https://github.com/overtrue/phplint) - Grammar check
-* Integrated [symplify/monorepo-builder](https://github.com/symplify/monorepo-builder) - Monorepo
-* Integrated [vimeo/psalm](https://github.com/vimeo/psalm) - Static check
-* Integrated [lint-md/lint-md](https://github.com/lint-md/lint-md) - Markdown grammar check
-* Integrated [povils/phpmnd](https://github.com/povils/phpmnd) - PHP Magic Number Detector
-* Integrated ...
-* With IDE helper file
-* With `github/pages` docsify [documentation site](https://guanguans.github.io/package-skeleton/)
-* With common badge icons
-* With Chinese and English `README.md` file
+* ...
 
 ## Requirement
 
-* PHP >= 7.2
+* PHP >= 8.0
 
 ## Installation
 
 ```bash
-composer require guanguans/package-skeleton --prefer-dist -vvv
+composer require guanguans/package-skeleton --ansi -v
 ```
 
 ## Usage
