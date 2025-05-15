@@ -1,0 +1,10 @@
+{
+    "require": {
+        "foxy/foxy": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "foxy/foxy": true
+        }
+    }
+}

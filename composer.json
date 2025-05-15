@@ -10,7 +10,6 @@
         "PHP",
         "skeleton"
     ],
-    "readme": "README.md",
     "authors": [
         {
             "name": "guanguans",
@@ -33,13 +32,9 @@
     "require": {
         "php": ">=8.2",
         "ajthinking/archetype": "*",
-        "alecrabbit/php-console-spinner": "*",
-        "asm89/stack-cors": "*",
-        "bluem/tree": "*",
         "brick/math": "*",
         "broadway/broadway": "*",
         "cboden/ratchet": "*",
-        "chippyash/monad": "*",
         "classpreloader/classpreloader": "*",
         "cocur/slugify": "*",
         "consolidation/robo": "*",
@@ -49,16 +44,12 @@
         "doctrine/deprecations": "*",
         "doctrine/instantiator": "*",
         "doctrine/sql-formatter": "*",
-        "dragonmantank/cron-expression": "*",
         "drupol/phpermutations": "*",
         "egulias/email-validator": "*",
         "enshrined/svg-sanitize": "*",
         "ezyang/htmlpurifier": "*",
         "fidry/cpu-core-counter": "*",
-        "foxy/foxy": "*",
-        "fp4php/functional": "*",
         "functional-php/fantasy-land": "*",
-        "gordalina/cachetool": "*",
         "graham-campbell/manager": "*",
         "hamcrest/hamcrest-php": "*",
         "hidehalo/nanoid-php": "*",
@@ -78,9 +69,7 @@
         "knplabs/github-api": "*",
         "knplabs/knp-snappy": "*",
         "knplabs/packagist-api": "*",
-        "krak/fn": "*",
         "kriswallsmith/buzz": "*",
-        "lambdish/phunctional": "*",
         "league/mime-type-detection": "*",
         "lstrojny/functional-php": "*",
         "marcj/topsort": "*",
@@ -102,12 +91,9 @@
         "php-pm/php-pm": "*",
         "phpdocumentor/reflection-docblock": "*",
         "phpdocumentor/type-resolver": "*",
-        "phpmd/phpmd": "*",
-        "phpmetrics/phpmetrics": "*",
         "phpmyadmin/sql-parser": "*",
         "phpoption/phpoption": "*",
         "phpunit/php-invoker": "*",
-        "react/event-loop": "*",
         "relay/relay": "*",
         "revolt/event-loop": "*",
         "riverline/multipart-parser": "*",
@@ -127,7 +113,6 @@
         "theseer/tokenizer": "*",
         "tijsverkoyen/css-to-inline-styles": "*",
         "tuupola/callable-handler": "*",
-        "utopia-php/domains": "*",
         "voku/portable-ascii": "*",
         "webimpress/safe-writer": "*",
         "widmogrod/php-functional": "*",
@@ -161,7 +146,7 @@
         "icanhazstring/composer-unused": "*",
         "infection/extension-installer": "*",
         "infection/infection": "*",
-        "jbzoo/composer-diff": "*",
+        "ion-bazan/composer-diff": "*",
         "jetbrains/phpstorm-attributes": "*",
         "johnkary/phpunit-speedtrap": "*",
         "kylekatarnls/update-helper": "*",
@@ -177,6 +162,8 @@
         "php-static-analysis/rector-rule": "*",
         "phparkitect/phparkitect": "*",
         "phpbench/phpbench": "*",
+        "phpmd/phpmd": "*",
+        "phpmetrics/phpmetrics": "*",
         "phpstan/extension-installer": "*",
         "phpstan/phpstan": "*",
         "phpstan/phpstan-deprecation-rules": "*",
@@ -196,6 +183,7 @@
         "shipmonk/name-collision-detector": "*",
         "spatie/pest-plugin-snapshots": "*",
         "staabm/phpstan-baseline-analysis": "*",
+        "symfony/thanks": "*",
         "tomasvotruba/bladestan": "*",
         "tomasvotruba/cognitive-complexity": "*",
         "tomasvotruba/phpstan-bodyscan": "*",
@@ -232,7 +220,6 @@
             "composer/package-versions-deprecated": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "ergebnis/composer-normalize": true,
-            "foxy/foxy": true,
             "hyperf/composer-plugin": true,
             "infection/extension-installer": true,
             "ion-bazan/composer-diff": true,
@@ -242,6 +229,7 @@
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
             "savinmikhail/comments-density": true,
+            "symfony/thanks": true,
             "veewee/composer-run-parallel": true,
             "wikimedia/composer-merge-plugin": true
         },
@@ -274,20 +262,15 @@
                 "composer checks"
             ]
         },
-        "phpstan": {
-            "includes": []
-        },
         "update-helper": "Guanguans\\PackageSkeleton\\UpdateHelper"
     },
     "scripts": {
         "post-install-cmd": [
-            "@cghooks add --ignore-lock",
-            "@cghooks update",
-            "@composer-bin-all-update"
+            "@cghooks add --ignore-lock"
         ],
         "post-update-cmd": [
             "@cghooks update",
-            "@composer-bin-all-update"
+            "@composer-diff"
         ],
         "post-autoload-dump": [
             "UpdateHelper\\UpdateHelper::check"
@@ -300,7 +283,7 @@
         "ai-commit-github-models": "@ai-commit --generator=github_models_cli",
         "ai-commit-github-models-no-verify": "@ai-commit-github-models --no-verify",
         "ai-commit-no-verify": "@ai-commit --no-verify",
-        "benchmark": "@php ./vendor/bin/phpbench run --retry-threshold=3 --iterations=15 --revs=1000 --warmup=2 --ansi -v",
+        "benchmark": "@php ./vendor/bin/phpbench run --report=aggregate --ansi -v",
         "cghooks": "@php ./vendor/bin/cghooks --ansi -v",
         "changelog": "@php ./vendor/bin/conventional-changelog --ansi -v",
         "changelog-keep": "@php ./vendor/bin/keep-a-changelog",
@@ -322,7 +305,7 @@
         "composer-bin-all-update": "@composer bin all update --ansi -v",
         "composer-check-platform-reqs": "@composer check-platform-reqs --lock --ansi -v",
         "composer-dependency-analyser": "@php ./vendor/bin/composer-dependency-analyser --config=composer-dependency-analyser.php --show-all-usages --verbose",
-        "composer-diff": "@php ./vendor/bin/composer-diff --ansi -v",
+        "composer-diff": "@composer diff --with-platform --ansi -v",
         "composer-fixer-php": "@php ./bin/composer-fixer.php",
         "composer-normalize": "@composer normalize --dry-run --diff --ansi -v",
         "composer-parallel": "@composer parallel --ansi -v",
@@ -457,5 +440,6 @@
         "pest-migrate-configuration": [
             "test-migrate-configuration"
         ]
-    }
+    },
+    "$schema": "https://getcomposer.org/schema.json"
 }
