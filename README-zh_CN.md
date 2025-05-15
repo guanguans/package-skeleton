@@ -7,7 +7,6 @@
 
 [![tests](https://github.com/guanguans/package-skeleton/workflows/tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
 [![check & fix styling](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
-[![psalm](https://github.com/guanguans/package-skeleton/actions/workflows/psalm.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/psalm.yml)
 [![rector](https://github.com/guanguans/package-skeleton/actions/workflows/rector.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/rector.yml)
 [![codecov](https://codecov.io/gh/guanguans/package-skeleton/branch/main/graph/badge.svg?token=URGFAWS6S4)](https://codecov.io/gh/guanguans/package-skeleton)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](https://packagist.org/packages/guanguans/package-skeleton)

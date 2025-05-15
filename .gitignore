@@ -20,3 +20,4 @@ package-lock.json
 /eza.png
 bodyscan-log.txt
 gitleaks*.json
+composer.lock

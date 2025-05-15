@@ -1,0 +1,9 @@
+{
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "code-lts/doctum": "^5.5",
+        "degraciamathieu/php-arguments-detector": "^0.5.0"
+    }
+}
