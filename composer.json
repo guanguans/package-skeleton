@@ -196,7 +196,6 @@
         "shipmonk/name-collision-detector": "*",
         "spatie/pest-plugin-snapshots": "*",
         "staabm/phpstan-baseline-analysis": "*",
-        "symfony/clock": "*",
         "tomasvotruba/bladestan": "*",
         "tomasvotruba/cognitive-complexity": "*",
         "tomasvotruba/phpstan-bodyscan": "*",

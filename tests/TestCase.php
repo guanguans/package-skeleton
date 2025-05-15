@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeletonTests;
 
+use BlastCloud\Guzzler\UsesGuzzler;
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Eris\TestTrait;
 use phpmock\phpunit\PHPMock;
@@ -30,6 +31,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     use MatchesSnapshots;
     use PHPMock;
     use TestTrait;
+    use UsesGuzzler;
 
     /**
      * This method is called before the first test of this test class is run.
