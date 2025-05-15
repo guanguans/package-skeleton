@@ -1,19 +1,16 @@
 directories:
   - "src"
-  - "vendor/guanguans"
+  - "tests"
 exclude:
-  - "src/Comments"
+  - "src/bin"
 thresholds:
-  docBlock: 90
-  regular: 5
-  todo: 5
-  fixme: 5
-  missingDocBlock: 10
+  docBlock: 0
+  regular: 0
+  todo: 0
+  fixme: 0
+  missingDocBlock: 0
   Com/LoC: 0.1
-  CDS: 0.1
-only:
-  - 'todo'
-  - 'missingDocblock'
+  CDS: 0.5
 output:
-  type: "console" #  "console" or 'html'
+  type: "html" #  "console" or 'html'
   file: "output.html" # file path for HTML output

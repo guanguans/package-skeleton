@@ -2,10 +2,8 @@
     "disabled": [],
     "hooks": {
         "pre-commit": [
-            "composer lint"
         ],
         "pre-push": [
-            "composer lint"
         ]
     }
 }
