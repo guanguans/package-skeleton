@@ -6,12 +6,12 @@
 > A PHP package template repository. - 一个 PHP 软件包模板存储库。
 
 [![tests](https://github.com/guanguans/package-skeleton/workflows/tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
+[![phpstan](https://github.com/guanguans/package-skeleton/actions/workflows/phpstan.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/phpstan.yml)
 [![check & fix styling](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
 [![rector](https://github.com/guanguans/package-skeleton/actions/workflows/rector.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/rector.yml)
 [![codecov](https://codecov.io/gh/guanguans/package-skeleton/branch/main/graph/badge.svg?token=URGFAWS6S4)](https://codecov.io/gh/guanguans/package-skeleton)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](https://packagist.org/packages/guanguans/package-skeleton)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/package-skeleton)
-![GitHub repo size](https://img.shields.io/github/repo-size/guanguans/package-skeleton)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](https://packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](https://packagist.org/packages/guanguans/package-skeleton)
 

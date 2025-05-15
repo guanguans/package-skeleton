@@ -20,4 +20,5 @@ package-lock.json
 /eza.png
 bodyscan-log.txt
 gitleaks*.json
-composer.lock
+#composer.lock
+/vendor-bin/*/composer.lock

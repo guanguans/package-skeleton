@@ -1,5 +1,7 @@
 {
     "require": {
-        "awssat/tailwindo": "^3.0"
+    },
+    "suggest": {
+        "awssat/tailwindo": "Required if you want to use tailwindo."
     }
 }

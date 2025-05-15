@@ -1,17 +1,19 @@
-name: psalm
+name: phpstan
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '**.php'
-      - '.github/**.yml'
-      - '.github/**.yaml'
+      - '*.neon'
       - '*.xml'
       - '*.xml.dist'
+      - '.github/**.yaml'
+      - '.github/**.yml'
 
 jobs:
-  psalm:
-    name: psalm
+  phpstan:
+    name: phpstan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,9 +21,11 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: '8.2'
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
           coverage: none
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cache composer dependencies
         uses: actions/cache@v4
@@ -31,6 +35,7 @@ jobs:
 
       - name: Run composer install
         run: composer install --no-interaction --prefer-dist --ansi -v
+        continue-on-error: true
 
-      - name: Run psalm
-        run: composer psalm
+      - name: Run phpstan
+        run: composer phpstan

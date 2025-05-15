@@ -129,6 +129,7 @@
         "blastcloud/guzzler": "^2.2",
         "brainmaestro/composer-git-hooks": "^3.0",
         "brianium/paratest": "^6.11 || ^7.0",
+        "dg/bypass-finals": "^1.9",
         "dms/phpunit-arraysubset-asserts": "^0.5",
         "ekino/phpstan-banned-code": "^3.0",
         "ergebnis/composer-normalize": "^2.47",
@@ -136,6 +137,7 @@
         "ergebnis/php-cs-fixer-config": "dev-main",
         "ergebnis/phpstan-rules": "^2.8",
         "ergebnis/phpunit-slow-test-detector": "^2.19",
+        "ergebnis/rector-rules": "^1.4",
         "friendsofphp/php-cs-fixer": "^3.75",
         "giorgiosironi/eris": "^1.0",
         "guanguans/ai-commit": "^1.15",
@@ -168,11 +170,13 @@
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
         "phpstan/phpstan-strict-rules": "^2.0",
+        "phpstan/phpstan-webmozart-assert": "^2.0",
         "povils/phpmnd": "^3.6",
         "projektgopher/whisky": "^0.7",
         "rector/jack": "^0.1",
         "rector/rector": "^2.0",
         "rector/swiss-knife": "^2.2",
+        "rector/type-perfect": "^2.1",
         "roave/infection-static-analysis-plugin": "^1.36",
         "roave/no-floaters": "^1.13",
         "roave/no-leaks": "^1.5",
@@ -180,17 +184,24 @@
         "shipmonk/composer-dependency-analyser": "^1.8",
         "shipmonk/dead-code-detector": "^0.11",
         "shipmonk/name-collision-detector": "^2.1",
+        "shipmonk/phpstan-baseline-per-identifier": "^2.1",
         "spatie/pest-plugin-snapshots": "^1.1 || ^2.0",
+        "spaze/phpstan-disallowed-calls": "^4.5",
         "staabm/phpstan-baseline-analysis": "^0.13",
+        "staabm/phpstan-todo-by": "^0.2",
         "symfony/thanks": "^1.4",
+        "symplify/phpstan-extensions": "^12.0",
+        "symplify/phpstan-rules": "^14.6",
         "tomasvotruba/bladestan": "^0.8",
+        "tomasvotruba/class-leak": "^2.0",
         "tomasvotruba/cognitive-complexity": "^1.0",
         "tomasvotruba/phpstan-bodyscan": "^1.0",
         "tomasvotruba/type-coverage": "^2.0",
         "tomasvotruba/unused-public": "^2.0",
         "webmozarts/strict-phpunit": "^7.14",
         "worksome/pretty-pest": "^0.2",
-        "xepozz/internal-mocker": "^1.4"
+        "xepozz/internal-mocker": "^1.4",
+        "yamadashy/phpstan-friendly-formatter": "^1.2"
     },
     "repositories": {
         "facade-documenter": {
@@ -242,7 +253,7 @@
     },
     "extra": {
         "bamarni-bin": {
-            "bin-links": true,
+            "bin-links": false,
             "forward-command": false,
             "target-directory": "vendor-bin"
         },
@@ -296,7 +307,9 @@
             "@yaml-lint",
             "@style-lint",
             "@sk-finalize-classes-dry-run",
-            "@test"
+            "@test",
+            "@rector-dry-run",
+            "@phpstan"
         ],
         "comments-density": "@php ./vendor/bin/comments_density analyze:comments --ansi -v",
         "composer-bin-all-update": "@composer bin all update --ansi -v",
@@ -311,7 +324,7 @@
         "composer-require-checker-json": "@php ./vendor/bin/composer-require-checker check --config-file=composer-require-checker.json composer.json --ansi -v --output=json | jq",
         "composer-unused": "@php ./vendor/bin/composer-unused --ansi -v",
         "composer-unused-checker": "@php ./vendor/bin/composer-unused --ansi -v",
-        "composer-updater": "@php ./composer-updater --highest-php-binary=/opt/homebrew/opt/php@8.3/bin/php --except-packages=pestphp/pest-plugin-laravel --ansi",
+        "composer-updater": "@php ./composer-updater --highest-php-binary=/opt/homebrew/opt/php@8.4/bin/php --except-packages=pestphp/pest-plugin-laravel --ansi",
         "composer-updater-bin": [
             "@composer-updater --composer-json-path=vendor-bin/php-parser4/composer.json",
             "@composer-updater --composer-json-path=vendor-bin/retryl/composer.json",
@@ -370,9 +383,14 @@
         "phpmd": "@php ./vendor/bin/phpmd src/ ansi cleancode,codesize,controversial,design,naming,unusedcode --suffixes=php",
         "phpmetrics": "@php ./vendor/bin/phpmetrics --report-html=./.build/phpmetrics/ ./src/",
         "phpmnd": "@php ./vendor/bin/phpmnd ./src/ --exclude=./vendor/ --non-zero-exit-on-violation --ansi -v",
-        "phpstan": "@php ./vendor/bin/phpstan analyse --xdebug --ansi -vv",
+        "phpstan": "@php ./vendor/bin/phpstan analyse --ansi -v",
         "phpstan-baseline": "@phpstan --generate-baseline --allow-empty-baseline",
         "phpstan-bodyscan": "@php ./vendor/bin/phpstan-bodyscan --ansi -v",
+        "phpstan-split-baseline": [
+            "@phpstan --generate-baseline=baselines/loader.neon --allow-empty-baseline",
+            "find baselines/ -type f -not -name loader.neon -delete",
+            "@php ./vendor/bin/split-phpstan-baseline baselines/loader.neon"
+        ],
         "pint": "@php ./vendor/bin/pint --ansi -v",
         "pint-dirty": "@pint --dirty",
         "pint-dirty-test": "@pint-dirty --test --bail",
@@ -385,7 +403,8 @@
             "@putenv PHP80=/opt/homebrew/opt/php@8.0/bin/php",
             "@putenv PHP81=/opt/homebrew/opt/php@8.1/bin/php",
             "@putenv PHP82=/opt/homebrew/opt/php@8.2/bin/php",
-            "@putenv PHP83=/opt/homebrew/opt/php@8.3/bin/php"
+            "@putenv PHP83=/opt/homebrew/opt/php@8.3/bin/php",
+            "@putenv PHP84=/opt/homebrew/opt/php@8.4/bin/php"
         ],
         "rector": "@php ./vendor/bin/rector --ansi -v",
         "rector-dry-run": "@rector --dry-run",

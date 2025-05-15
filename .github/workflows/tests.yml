@@ -6,10 +6,10 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        php: [ 8.1 ]
+        php: [ 8.2 ]
         dependency-version: [ prefer-stable ]
 
     name: P${{ matrix.php }} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
@@ -33,9 +33,13 @@ jobs:
 
       - name: Install dependencies
         run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --ansi -v
+        continue-on-error: true
+
+      - name: Reinstall dependencies
+        run: composer install --prefer-dist --no-interaction --ansi -v
 
       - name: Execute tests
-        run: composer test-c
+        run: composer test-coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
