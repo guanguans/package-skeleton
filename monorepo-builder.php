@@ -50,7 +50,7 @@ return static function (MBConfig $mbConfig): void {
         CreateGithubReleaseReleaseWorker::class,
         // SetNextMutualDependenciesReleaseWorker::class,
         // UpdateBranchAliasReleaseWorker::class,
-        PushNextDevReleaseWorker::class,
+        // PushNextDevReleaseWorker::class,
     ]);
 
     EnvironmentChecker::checks($workers);
