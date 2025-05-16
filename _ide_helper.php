@@ -11,8 +11,8 @@ declare(strict_types=1);
  * @see https://github.com/guanguans/package-skeleton
  */
 
-namespace A {
+namespace Foo {
 }
 
-namespace B {
+namespace Bar {
 }

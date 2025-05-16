@@ -1,5 +1,7 @@
 <?php
 
+/** @noinspection PhpUnusedAliasInspection */
+
 declare(strict_types=1);
 
 /**
@@ -28,7 +30,8 @@ use Symplify\MonorepoBuilder\Release\ReleaseWorker\UpdateReplaceReleaseWorker;
 
 return static function (MBConfig $mbConfig): void {
     require __DIR__.'/vendor/autoload.php';
-    $mbConfig->defaultBranch('master');
+    $mbConfig->defaultBranch('main');
+    MBConfig::disableDefaultWorkers();
 
     /**
      * release workers - in order to execute.
