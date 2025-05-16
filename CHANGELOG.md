@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 
+<a name="3.3.0"></a>
+## [3.3.0] - 2025-05-17
+
 <a name="3.2.0"></a>
 ## [3.2.0] - 2025-05-17
 
@@ -543,7 +546,8 @@ All notable changes to this project will be documented in this file.
 - Update CI config files ([0e789fc](https://github.com/guanguans/package-skeleton/commit/0e789fc))
 
 
-[Unreleased]: https://github.com/guanguans/package-skeleton/compare/3.2.0...HEAD
+[Unreleased]: https://github.com/guanguans/package-skeleton/compare/3.3.0...HEAD
+[3.3.0]: https://github.com/guanguans/package-skeleton/compare/3.2.0...3.3.0
 [3.2.0]: https://github.com/guanguans/package-skeleton/compare/3.1.0...3.2.0
 [3.1.0]: https://github.com/guanguans/package-skeleton/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/guanguans/package-skeleton/compare/v2.16.0...3.0.0
