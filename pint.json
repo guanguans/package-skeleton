@@ -1,71 +1,134 @@
 {
-    "preset": "symfony",
+    "preset": "laravel",
     "rules": {
-        "@DoctrineAnnotation": true,
-        "@PHP80Migration:risky": true,
-        "@PHPUnit84Migration:risky": true,
-        "@PSR12:risky": true,
-        "@Symfony": true,
-        "header_comment" : {
-            "header": "This file is part of the guanguans/package-skeleton.\n\n(c) guanguans <ityaozm@gmail.com>\n\nThis source file is subject to the MIT license that is bundled.",
-            "comment_type": "PHPDoc"
+        "blank_line_between_import_groups": false,
+        "braces_position": {
+            "allow_single_line_anonymous_functions": false,
+            "allow_single_line_empty_anonymous_classes": false,
+            "anonymous_classes_opening_brace": "same_line",
+            "anonymous_functions_opening_brace": "same_line",
+            "classes_opening_brace": "next_line_unless_newline_at_signature_end",
+            "control_structures_opening_brace": "same_line",
+            "functions_opening_brace": "next_line_unless_newline_at_signature_end"
         },
-        "blank_line_before_statement": {
-            "statements": [
-                "break",
-                "continue",
-                "declare",
+        "class_attributes_separation": {
+            "elements": {
+                "case": "only_if_meta",
+                "const": "only_if_meta",
+                "method": "one",
+                "property": "only_if_meta",
+                "trait_import": "none"
+            }
+        },
+        "class_definition": {
+            "inline_constructor_arguments": false,
+            "multi_line_extends_each_single_line": false,
+            "single_item_single_line": false,
+            "single_line": false,
+            "space_before_parenthesis": false
+        },
+        "header_comment": {
+            "comment_type": "PHPDoc",
+            "header": "Copyright (c) 2021-2025 guanguans<ityaozm@gmail.com>\n\nFor the full copyright and license information, please view\nthe LICENSE file that was distributed with this source code.\n\n@see https://github.com/guanguans/package-skeleton",
+            "location": "after_declare_strict",
+            "separate": "both"
+        },
+        "increment_style": {
+            "style": "pre"
+        },
+        "not_operator_with_successor_space": false,
+        "ordered_traits": {
+            "case_sensitive": true
+        },
+        "php_unit_method_casing": {
+            "case": "camel_case"
+        },
+        "phpdoc_align": {
+            "align": "left",
+            "spacing": 1,
+            "tags": [
+                "method",
+                "param",
+                "property",
+                "property-read",
+                "property-write",
                 "return",
-                "throw",
-                "try"
+                "throws",
+                "type",
+                "var"
             ]
         },
-        "comment_to_phpdoc": {
-            "ignored_tags": []
-        },
-        "declare_strict_types": true,
-        "method_argument_space": {
-            "on_multiline": "ensure_fully_multiline"
-        },
-        "not_operator_with_successor_space": true,
-        "no_useless_return": true,
-        "no_useless_else": true,
-        "is_null": true,
-        "return_assignment": true,
-        "multiline_comment_opening_closing": true,
-        "align_multiline_comment": {
-            "comment_type": "phpdocs_only"
-        },
-        "phpdoc_to_comment": [],
-        "phpdoc_var_annotation_correct_order": true,
-        "php_unit_construct": {
-            "assertions": [
-                "assertEquals",
-                "assertSame",
-                "assertNotEquals",
-                "assertNotSame"
+        "phpdoc_order": {
+            "order": [
+                "noinspection",
+                "phan-suppress",
+                "phpcsSuppress",
+                "phpstan-ignore",
+                "psalm-suppress",
+                "deprecated",
+                "internal",
+                "covers",
+                "uses",
+                "dataProvider",
+                "param",
+                "throws",
+                "return"
             ]
         },
-        "array_indentation": true,
-        "method_chaining_indentation": true,
-        "statement_indentation": true
+        "phpdoc_separation": {
+            "groups": [
+                [
+                    "deprecated"
+                ],
+                [
+                    "link",
+                    "see",
+                    "since"
+                ],
+                [
+                    "author",
+                    "copyright",
+                    "license"
+                ],
+                [
+                    "category",
+                    "package",
+                    "subpackage"
+                ],
+                [
+                    "property",
+                    "property-read",
+                    "property-write"
+                ]
+            ],
+            "skip_unlisted_annotations": false
+        },
+        "yoda_style": {
+            "always_move_variable": true,
+            "equal": true,
+            "identical": true,
+            "less_and_greater": true
+        }
     },
+    "cache-file": ".build/pint/.pint.cache",
     "exclude": [
-        ".github/",
         ".build/",
-        "docs/",
-        "var/",
+        ".github/",
+        "baselines/",
+        "node_modules/",
+        "storage/",
+        "stubs/",
         "vendor/",
-        "node_modules"
-    ],
-    "notName": [
-        "_ide_helper_actions.php",
-        "_ide_helper_models.php",
-        "_ide_helper.php",
-        ".phpstorm.meta.php",
-        "*.blade.php"
+        "vendor-bin/"
     ],
     "notPath": [
-        "path/to/excluded-file.php"
+        "foo/bar.php"
+    ],
+    "notName": [
+        "*.blade.php",
+        ".phpstorm.meta.php",
+        "_ide_helper.php",
+        "_ide_helper_actions.php",
+        "_ide_helper_models.php"
     ]
 }

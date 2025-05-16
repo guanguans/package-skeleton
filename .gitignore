@@ -10,9 +10,10 @@ vendor/
 /*.zip
 /laravel
 /tests.*
+bodyscan-log.txt
 clover.xml
 composer.lock
+eza.png
+mutation-report.html
 phpunit.xml
 psalm.xml
-bodyscan-log.txt
-eza.png

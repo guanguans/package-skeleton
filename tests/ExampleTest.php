@@ -19,10 +19,16 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeletonTests;
 
-// it('to be string.', function ($movie): void {
-//     expect($movie)->toBeString();
-// })->group(__DIR__, __FILE__)->with('movies');
-//
-// it('is is snapshot.', function ($movie): void {
-//     $this->assertMatchesSnapshot($movie);
-// })->group(__DIR__, __FILE__)->with('movies');
+use Guanguans\PackageSkeleton\PackageSkeleton;
+
+it('to be string.', function ($movie): void {
+    expect($movie)->toBeString();
+})->group(__DIR__, __FILE__)->with('movies');
+
+it('is is snapshot.', function ($movie): void {
+    expect($movie)->toMatchSnapshot();
+})->group(__DIR__, __FILE__)->with('movies');
+
+it('is is example', function (): void {
+    expect(PackageSkeleton::test())->toBeTrue();
+})->group(__DIR__, __FILE__);
