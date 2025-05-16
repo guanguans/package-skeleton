@@ -37,5 +37,8 @@ jobs:
         run: composer install --no-interaction --prefer-dist --ansi -v
         continue-on-error: true
 
+      - name: Reinstall dependencies
+        run: composer install --prefer-dist --no-interaction --ansi -v
+
       - name: Run phpstan
         run: composer phpstan

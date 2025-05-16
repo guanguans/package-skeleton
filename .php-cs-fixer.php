@@ -27,6 +27,11 @@ use PhpCsFixerCustomFixers\Fixer\AbstractFixer;
 
 return Factory::fromRuleSet(Php80::create()
     ->withHeader(
+        /**
+         * @see https://github.com/spdx/license-list-data/tree/main/text
+         * @see https://spdx.org/licenses
+         * @see https://www.tldrlegal.com
+         */
         (static function (): string {
             $mit = MIT::text(
                 __DIR__.'/LICENSE',

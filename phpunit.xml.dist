@@ -11,9 +11,18 @@
   <!--printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printers\DefaultPrinter"-->
   <!--printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printers\ReportablePrinter"-->
   <testsuites>
-    <testsuite name="Guanguans Test Suite">
+    <testsuite name="All">
       <directory>tests/</directory>
       <exclude>vendor/</exclude>
+    </testsuite>
+    <testsuite name="Unit">
+      <directory>tests/Unit</directory>
+    </testsuite>
+    <testsuite name="Feature">
+      <directory>tests/Feature</directory>
+    </testsuite>
+    <testsuite name="Arch">
+      <directory>tests/Arch</directory>
     </testsuite>
   </testsuites>
   <source>
