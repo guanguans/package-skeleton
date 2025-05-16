@@ -8,7 +8,6 @@
         "vendor/",
         "vendor-bin/",
         "./CHANGELOG.md"
-
     ],
     "rules": {
         "space-around-alphabet": 2,
