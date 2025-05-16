@@ -35,6 +35,7 @@ return (new Configuration)
     )
     ->ignoreErrors([
         ErrorType::UNUSED_DEPENDENCY,
+        ErrorType::SHADOW_DEPENDENCY,
     ])
     ->ignoreErrorsOnPackages(
         [

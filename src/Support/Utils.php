@@ -11,12 +11,6 @@ declare(strict_types=1);
  * @see https://github.com/guanguans/package-skeleton
  */
 
-namespace Guanguans\PackageSkeleton;
+namespace Guanguans\PackageSkeleton\Support;
 
-final class PackageSkeleton
-{
-    public function testing(): bool
-    {
-        return true;
-    }
-}
+final class Utils {}

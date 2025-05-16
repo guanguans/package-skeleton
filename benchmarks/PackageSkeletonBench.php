@@ -1,5 +1,7 @@
 <?php
 
+/** @noinspection PhpUnused */
+
 declare(strict_types=1);
 
 /**
@@ -14,16 +16,11 @@ declare(strict_types=1);
 namespace Guanguans\PackageSkeleton\Tests\Benchmark;
 
 use Guanguans\PackageSkeleton\PackageSkeleton;
+use PhpBench\Attributes\BeforeMethods;
+use PhpBench\Attributes\Revs;
 
-/**
- * @beforeMethods({"setUp"})
- *
- * @warmup(2)
- *
- * @revs(1000)
- *
- * @iterations(15)
- */
+#[BeforeMethods('setUp')]
+#[Revs(10000)]
 final class PackageSkeletonBench
 {
     private PackageSkeleton $packageSkeleton;
@@ -33,9 +30,8 @@ final class PackageSkeletonBench
         $this->packageSkeleton = new PackageSkeleton;
     }
 
-    public function benchTest(): void
+    public function benchTesting(): void
     {
-        // $this->packageSkeleton->test();
-        PackageSkeleton::test();
+        $this->packageSkeleton->testing();
     }
 }

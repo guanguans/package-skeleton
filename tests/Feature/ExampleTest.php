@@ -17,23 +17,17 @@ declare(strict_types=1);
  * @see https://github.com/guanguans/package-skeleton
  */
 
-namespace Guanguans\PackageSkeletonTests;
+namespace Guanguans\PackageSkeletonTests\Feature;
 
 use Guanguans\PackageSkeleton\PackageSkeleton;
+use Guanguans\PackageSkeletonTests\LaravelTestCase;
 
-/**
- * @internal
- *
- * @coversNothing
- *
- * @small
- */
-final class PackageSkeletonLaravelTest extends LaravelTestCase
+final class ExampleTest extends LaravelTestCase
 {
-    public function testTest(): void
+    public function testItIsTestingExample(): void
     {
-        self::assertTrue(PackageSkeleton::test());
-        self::markTestIncomplete('This test has not been implemented yet.');
-        self::markTestSkipped('The PostgreSQL extension is not available');
+        // self::markTestIncomplete('This test has not been implemented yet.');
+        // self::markTestSkipped('The PostgreSQL extension is not available');
+        self::assertTrue((new PackageSkeleton)->testing());
     }
 }

@@ -16,27 +16,20 @@ declare(strict_types=1);
  *
  * @see https://github.com/guanguans/package-skeleton
  */
-
-namespace Guanguans\PackageSkeletonTests;
-
-use Faker\Factory;
-use Faker\Generator;
-
-trait Faker
-{
-    final protected static function faker(string $locale = 'en_US'): Generator
-    {
-        /** @var array<string, Generator> $fakers */
-        static $fakers = [];
-
-        if (!\array_key_exists($locale, $fakers)) {
-            $faker = Factory::create($locale);
-
-            $faker->seed(9001);
-
-            $fakers[$locale] = $faker;
-        }
-
-        return $fakers[$locale];
-    }
-}
+// arch('will not use debugging functions')
+//     ->skip()
+//     ->expect([
+//         'dd',
+//         'die',
+//         'dump',
+//         'echo',
+//         'exit',
+//         'print',
+//         'print_r',
+//         'printf',
+//         'ray',
+//         'var_dump',
+//         'var_export',
+//         'vprintf',
+//     ])
+//     ->each->not->toBeUsed();

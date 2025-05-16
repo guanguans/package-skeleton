@@ -35,6 +35,8 @@ use Rector\DowngradePhp81\Rector\Array_\DowngradeArraySpreadStringKeyRector;
 use Rector\EarlyReturn\Rector\Return_\ReturnBinaryOrToEarlyReturnRector;
 use Rector\NodeTypeResolver\PHPStan\Scope\Contract\NodeVisitor\ScopeResolverNodeVisitorInterface;
 use Rector\Php73\Rector\FuncCall\JsonThrowOnErrorRector;
+use Rector\Php80\Rector\Class_\AnnotationToAttributeRector;
+use Rector\Php80\ValueObject\AnnotationToAttribute;
 use Rector\PHPUnit\CodeQuality\Rector\Class_\AddSeeTestAnnotationRector;
 use Rector\PHPUnit\CodeQuality\Rector\Class_\PreferPHPUnitThisCallRector;
 use Rector\PHPUnit\Set\PHPUnitSetList;
@@ -44,9 +46,11 @@ use Rector\Transform\Rector\FuncCall\FuncCallToStaticCallRector;
 use Rector\Transform\ValueObject\FuncCallToStaticCall;
 use Rector\ValueObject\PhpVersion;
 use Symplify\MonorepoBuilder\Release\Contract\ReleaseWorker\ReleaseWorkerInterface;
+use function Guanguans\PackageSkeleton\Support\classes;
 
 return RectorConfig::configure()
     ->withPaths([
+        __DIR__.'/benchmarks/',
         __DIR__.'/src/',
         __DIR__.'/tests/',
         ...glob(__DIR__.'/{*,.*}.php', \GLOB_BRACE),
@@ -111,10 +115,10 @@ return RectorConfig::configure()
         'PhpPossiblePolymorphicInvocationInspection',
     ])
     ->withConfiguredRule(NewExceptionToNewAnonymousExtendsExceptionImplementsRector::class, [
-        'Guanguans\MonorepoBuilderWorker\Contracts\ThrowableContract',
+        'Guanguans\PackageSkeleton\Contracts\ThrowableContract',
     ])
     ->withConfiguredRule(RemoveNamespaceRector::class, [
-        'Guanguans\MonorepoBuilderWorkerTests',
+        'Guanguans\PackageSkeletonTests',
     ])
     // ->registerService(className: ParentConnectingVisitor::class, tag: ScopeResolverNodeVisitorInterface::class)
     // ->withConfiguredRule(RenameToPsrNameRector::class, [
@@ -143,12 +147,26 @@ return RectorConfig::configure()
             ],
             static function (array $carry, string $func): array {
                 /** @see https://github.com/laravel/framework/blob/11.x/src/Illuminate/Support/functions.php */
-                $carry[$func] = "Guanguans\\MonorepoBuilderWorker\\Support\\$func";
+                $carry[$func] = "Guanguans\\PackageSkeleton\\Support\\$func";
 
                 return $carry;
             },
             []
         )
+    )
+    ->withConfiguredRule(
+        AnnotationToAttributeRector::class,
+        classes(static fn (string $file, string $class): bool => str_starts_with($class, 'PhpBench\Attributes'))
+            ->filter(static fn (ReflectionClass $reflectionClass): bool => $reflectionClass->isInstantiable())
+            // ->keys()
+            // ->dd()
+            ->map(static fn (ReflectionClass $reflectionClass): AnnotationToAttribute => new AnnotationToAttribute(
+                $reflectionClass->getShortName(),
+                $reflectionClass->getName(),
+                [],
+                true
+            ))
+            ->all(),
     )
     ->withSkip([
         DisallowedEmptyRuleFixerRector::class,
@@ -167,11 +185,13 @@ return RectorConfig::configure()
         ],
         StaticClosureRector::class => $staticClosureSkipPaths,
         SortAssociativeArrayByKeyRector::class => [
+            __DIR__.'/benchmarks',
             __DIR__.'/src',
             __DIR__.'/tests',
             __DIR__.'/doctum.php',
         ],
         AddNoinspectionsDocCommentToDeclareRector::class => [
+            __DIR__.'/benchmarks/',
             __DIR__.'/src/',
             ...glob(__DIR__.'/{*,.*}.php', \GLOB_BRACE),
         ],
@@ -179,9 +199,11 @@ return RectorConfig::configure()
             __DIR__.'/src/Support/Rectors/',
         ],
         RemoveNamespaceRector::class => [
+            __DIR__.'/benchmarks/',
             __DIR__.'/src/',
             ...glob(__DIR__.'/{*,.*}.php', \GLOB_BRACE),
-            __DIR__.'/tests/Faker.php',
+            __DIR__.'/tests/Feature/ExampleTest.php',
+            __DIR__.'/tests/LaravelTestCase.php',
             __DIR__.'/tests/TestCase.php',
         ],
     ]);

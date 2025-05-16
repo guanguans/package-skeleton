@@ -86,12 +86,12 @@ parameters:
 #        - identifier: symplify.noDynamicName
 #        - identifier: typePerfect.noMixedMethodCaller
 #        - identifier: argument.templateType
-#        - identifier: argument.type
+        - identifier: argument.type
 #        - identifier: binaryOp.invalid
-#        - identifier: method.nonObject
-#        - identifier: missingType.generics
+        - identifier: method.nonObject
+        - identifier: missingType.generics
 #        - identifier: missingType.iterableValue
-#        - identifier: return.type
+        - identifier: return.type
 #        - identifier: return.void
 #        - identifier: shipmonk.deadMethod
 #        - identifier: symplify.explicitTraitSuffixName

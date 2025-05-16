@@ -6,6 +6,11 @@
 /** @noinspection PhpUndefinedClassInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection StaticClosureCanBeUsedInspection */
+/** @noinspection MethodVisibilityInspection */
+/** @noinspection PhpMissingParentCallCommonInspection */
+/** @noinspection PhpUnusedAliasInspection */
+/** @noinspection PhpVoidFunctionResultUsedInspection */
+/** @noinspection SqlResolve */
 declare(strict_types=1);
 
 /**
@@ -19,74 +24,46 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeletonTests;
 
-use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase;
-use Spatie\Snapshots\MatchesSnapshots;
+use phpmock\phpunit\PHPMock;
+use Symfony\Component\VarDumper\Test\VarDumperTestTrait;
 
-/**
- * @coversNothing
- *
- * @small
- */
 class LaravelTestCase extends TestCase
 {
-    use ArraySubsetAsserts;
-    use MatchesSnapshots;
+    // use DatabaseTransactions;
+    // use InteractsWithViews;
+    // use LazilyRefreshDatabase;
+    // use MockeryPHPUnitIntegration;
+    // use PHPMock;
+    // use RefreshDatabase;
+    // use VarDumperTestTrait;
+    // use WithWorkbench;
 
-    /**
-     * This method is called before the first test of this test class is run.
-     */
-    public static function setUpBeforeClass(): void {}
-
-    /**
-     * This method is called after the last test of this test class is run.
-     */
-    public static function tearDownAfterClass(): void {}
-
-    /**
-     * This method is called before each test.
-     */
-    protected function setUp(): void
+    protected function getApplicationTimezone(mixed $app): string
     {
-        parent::setUp();
-
-        // \DG\BypassFinals::enable();
-
-        Factory::guessFactoryNamesUsing(
-            static fn ($modelName): string => 'Guanguans\\PackageSkeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        return 'Asia/Shanghai';
     }
 
-    /**
-     * This method is called after each test.
-     */
-    protected function tearDown(): void
-    {
-        $this->finish();
-        \Mockery::close();
-    }
-
-    protected function getPackageProviders($app)
+    protected function getPackageAliases(mixed $app): array
     {
         return [
-            // SkeletonServiceProvider::class,
         ];
     }
 
-    protected function getEnvironmentSetUp($app): void
+    protected function defineEnvironment(mixed $app): void
     {
-        config()->set('database.default', 'testing');
+        tap($app->make(Repository::class), function (Repository $repository): void {
+            $repository->set('app.key', 'base64:UZ5sDPZSB7DSLKY+DYlU8G/V1e/qW+Ag0WF03VNxiSg=');
 
-        // $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        // $migration->up();
-    }
-
-    /**
-     * Run extra tear down code.
-     */
-    private function finish(): void
-    {
-        // call more tear down methods
+            $repository->set('database.default', 'sqlite');
+            $repository->set('database.connections.sqlite.database', ':memory:');
+        });
     }
 }

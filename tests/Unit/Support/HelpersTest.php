@@ -6,6 +6,10 @@
 /** @noinspection PhpUndefinedClassInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection StaticClosureCanBeUsedInspection */
+/** @noinspection LaravelFunctionsInspection */
+/** @noinspection PhpInternalEntityUsedInspection */
+/** @noinspection PhpVoidFunctionResultUsedInspection */
+/** @noinspection SqlResolve */
 declare(strict_types=1);
 
 /**
@@ -17,21 +21,11 @@ declare(strict_types=1);
  * @see https://github.com/guanguans/package-skeleton
  */
 
-namespace Guanguans\PackageSkeletonTests;
+use Illuminate\Support\Str;
+use function Guanguans\PackageSkeleton\Support\classes;
 
-// arch('will not use debugging functions')
-//     ->expect([
-//         'echo',
-//         'print',
-//         'die',
-//         'exit',
-//         'printf',
-//         'vprintf',
-//         'var_dump',
-//         'dump',
-//         'dd',
-//         'ray',
-//         'print_r',
-//         'var_export',
-//     ])
-//     ->each->not->toBeUsed();
+it('can get classes', function (): void {
+    expect(
+        classes(fn (string $file, string $class): bool => Str::of($class)->startsWith('Rector'))
+    )->toBeCollection();
+})->group(__DIR__, __FILE__);

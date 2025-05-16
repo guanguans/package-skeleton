@@ -17,18 +17,16 @@ declare(strict_types=1);
  * @see https://github.com/guanguans/package-skeleton
  */
 
-namespace Guanguans\PackageSkeletonTests;
-
 use Guanguans\PackageSkeleton\PackageSkeleton;
 
-it('to be string.', function ($movie): void {
+it('is movie', function (string $movie): void {
     expect($movie)->toBeString();
 })->group(__DIR__, __FILE__)->with('movies');
 
-it('is is snapshot.', function ($movie): void {
+it('is snapshot movie', function ($movie): void {
     expect($movie)->toMatchSnapshot();
 })->group(__DIR__, __FILE__)->with('movies');
 
-it('is is example', function (): void {
-    expect(PackageSkeleton::test())->toBeTrue();
+it('is testing example', function (): void {
+    expect(new PackageSkeleton)->testing()->toBeTrue();
 })->group(__DIR__, __FILE__);

@@ -3,6 +3,6 @@
 parameters:
     ignoreErrors:
         -
-            message: '#^Unused Guanguans\\PackageSkeleton\\PackageSkeleton\:\:test$#'
+            message: '#^Unused Guanguans\\PackageSkeleton\\PackageSkeleton\:\:testing$#'
             count: 1
             path: ../src/PackageSkeleton.php

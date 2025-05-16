@@ -6,6 +6,11 @@
 /** @noinspection PhpUndefinedClassInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection StaticClosureCanBeUsedInspection */
+/** @noinspection PhpInconsistentReturnPointsInspection */
+/** @noinspection PhpInternalEntityUsedInspection */
+/** @noinspection PhpUnused */
+/** @noinspection PhpVoidFunctionResultUsedInspection */
+/** @noinspection SqlResolve */
 declare(strict_types=1);
 
 /**
@@ -17,15 +22,30 @@ declare(strict_types=1);
  * @see https://github.com/guanguans/package-skeleton
  */
 
+use Faker\Factory;
 use Guanguans\PackageSkeletonTests\TestCase;
+use Illuminate\Support\Facades\Artisan;
 use Pest\Expectation;
 
 uses(TestCase::class)
     ->beforeAll(function (): void {})
-    ->beforeEach(function (): void {})
+    ->beforeEach(function (): void {
+        // links([
+        //     __DIR__.'/../'.basename($target = __DIR__.'/../vendor/orchestra/testbench-core/laravel') => $target,
+        // ]);
+
+        // /** @var \Guanguans\PackageSkeletonTests\TestCase $this */
+        // $this->defineEnvironment(app());
+    })
     ->afterEach(function (): void {})
     ->afterAll(function (): void {})
-    ->in(__DIR__, __DIR__.'/Feature', __DIR__.'/Unit');
+    ->in(
+        __DIR__,
+        // __DIR__.'/Arch',
+        // __DIR__.'/Feature',
+        // __DIR__.'/Unit'
+    );
+
 /*
 |--------------------------------------------------------------------------
 | Expectations
@@ -57,6 +77,7 @@ expect()->extend('assertCallback', function (Closure $assertions): Expectation {
 | global functions to help you to reduce the number of lines of code in your test files.
 |
  */
+
 /**
  * @throws ReflectionException
  */
@@ -69,5 +90,41 @@ function class_namespace(object|string $class): string
 
 function fixtures_path(string $path = ''): string
 {
-    return __DIR__.'/Fixtures'.($path ? \DIRECTORY_SEPARATOR.$path : $path);
+    return __DIR__.\DIRECTORY_SEPARATOR.'Fixtures'.($path ? \DIRECTORY_SEPARATOR.$path : $path);
+}
+
+function faker(string $locale = Factory::DEFAULT_LOCALE): Generator
+{
+    return fake($locale);
+}
+
+// function fake(string $locale = Factory::DEFAULT_LOCALE): Generator
+// {
+//     return Factory::create($locale);
+// }
+
+function running_in_github_action(): bool
+{
+    return getenv('GITHUB_ACTIONS') === 'true';
+}
+
+/**
+ * @see \Illuminate\Foundation\Console\StorageLinkCommand
+ */
+function links(array $links, array $parameters = []): int
+{
+    $originalLinks = config('filesystems.links', []);
+
+    config()->set('filesystems.links', $links);
+
+    $status = Artisan::call('storage:link', $parameters + [
+        '--ansi' => true,
+        '--verbose' => true,
+    ]);
+
+    config()->set('filesystems.links', $originalLinks);
+
+    // echo Artisan::output();
+
+    return $status;
 }
