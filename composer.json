@@ -127,6 +127,7 @@
         "azjezz/psl": "^3.3",
         "bamarni/composer-bin-plugin": "^1.8",
         "behat/behat": "^3.22",
+        "bellangelo/phpstan-migration-rules": "v0.4.3",
         "blastcloud/guzzler": "^2.2",
         "brainmaestro/composer-git-hooks": "^3.0",
         "brianium/paratest": "^6.11 || ^7.0",
