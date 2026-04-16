@@ -15,16 +15,10 @@ use ShipMonk\ComposerDependencyAnalyser\Config\Configuration;
 use ShipMonk\ComposerDependencyAnalyser\Config\ErrorType;
 
 return (new Configuration)
-    ->addPathsToScan(
-        [
-            // __DIR__.'/config',
-            __DIR__.'/src',
-        ],
-        false
-    )
+    ->addPathsToScan([__DIR__.'/config'], false)
     ->addPathsToExclude([
         __DIR__.'/tests',
-        // __DIR__.'/src/Support/Rectors',
+        __DIR__.'/src/Support/',
     ])
     /** @see \ShipMonk\ComposerDependencyAnalyser\Analyser::CORE_EXTENSIONS */
     ->ignoreErrorsOnExtensions(
@@ -32,31 +26,4 @@ return (new Configuration)
             // 'ext-pdo',
         ],
         [ErrorType::SHADOW_DEPENDENCY]
-    )
-    ->ignoreErrors([
-        ErrorType::UNUSED_DEPENDENCY,
-        ErrorType::SHADOW_DEPENDENCY,
-    ])
-    ->ignoreErrorsOnPackages(
-        [
-            // 'nesbot/carbon',
-            // 'symfony/console',
-            // 'symfony/http-foundation',
-            // 'symfony/var-dumper',
-        ],
-        [ErrorType::SHADOW_DEPENDENCY]
-    )
-    ->ignoreErrorsOnPackagesAndPaths(
-        [
-            // 'barryvdh/laravel-debugbar',
-            // 'php-debugbar/php-debugbar',
-        ],
-        [__DIR__.'/src/Outputs/DebugBarOutput.php'],
-        [ErrorType::DEV_DEPENDENCY_IN_PROD]
-    )
-    ->ignoreErrorsOnPackages(
-        [
-            // 'guanguans/ai-commit',
-        ],
-        [ErrorType::DEV_DEPENDENCY_IN_PROD]
     );

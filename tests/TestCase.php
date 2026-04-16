@@ -1,5 +1,7 @@
 <?php
 
+/** @noinspection PhpMissingParentCallCommonInspection */
+
 /** @noinspection AnonymousFunctionStaticInspection */
 /** @noinspection NullPointerExceptionInspection */
 /** @noinspection PhpPossiblePolymorphicInvocationInspection */
@@ -20,30 +22,15 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeletonTests;
 
-use BlastCloud\Guzzler\UsesGuzzler;
-use DG\BypassFinals;
-use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
-use Eris\TestTrait;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use phpmock\phpunit\PHPMock;
-use Spatie\Snapshots\MatchesSnapshots;
 use Symfony\Component\VarDumper\Test\VarDumperTestTrait;
 
-/**
- * @coversNothing
- *
- * @small
- */
 class TestCase extends \PHPUnit\Framework\TestCase
 {
-    // use ArraySubsetAsserts;
-    // use MatchesSnapshots;
-    // use PHPMock;
-    // use TestTrait;
-    // use UsesGuzzler;
-    // use VarDumperTestTrait;
-
     use MockeryPHPUnitIntegration;
+    use PHPMock;
+    use VarDumperTestTrait;
 
     /**
      * This method is called before the first test of this test class is run.
@@ -60,23 +47,28 @@ class TestCase extends \PHPUnit\Framework\TestCase
      */
     protected function setUp(): void
     {
-        BypassFinals::enable(bypassReadOnly: false);
+        // \DG\BypassFinals::enable(bypassReadOnly: false);
     }
+
+    /**
+     * Performs assertions shared by all tests of a test case.
+     *
+     * This method is called between setUp() and test.
+     */
+    protected function assertPreConditions(): void {}
+
+    // /**
+    //  * Performs assertions shared by all tests of a test case.
+    //  *
+    //  * This method is called between test and tearDown().
+    //  *
+    //  * @see \Mockery\Adapter\Phpunit\MockeryPHPUnitIntegrationAssertPostConditions::assertPostConditions()
+    //  * @see \Mockery\Adapter\Phpunit\MockeryTestCase
+    //  */
+    // protected function assertPostConditions(): void {}
 
     /**
      * This method is called after each test.
      */
-    protected function tearDown(): void
-    {
-        $this->finish();
-        $this->closeMockery();
-    }
-
-    /**
-     * Run extra tear down code.
-     */
-    protected function finish(): void
-    {
-        // call more tear down methods
-    }
+    protected function tearDown(): void {}
 }

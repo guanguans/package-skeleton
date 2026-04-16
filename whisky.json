@@ -1,9 +1,0 @@
-{
-    "disabled": [],
-    "hooks": {
-        "pre-commit": [
-        ],
-        "pre-push": [
-        ]
-    }
-}

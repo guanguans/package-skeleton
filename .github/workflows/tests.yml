@@ -14,9 +14,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest ]
-        php: [ 8.5 ]
-        dependency-version: [ prefer-stable ]
+        os: [ubuntu-latest]
+        php: [8.5]
+        dependency-version: [prefer-stable]
 
     name: P${{ matrix.php }} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
 

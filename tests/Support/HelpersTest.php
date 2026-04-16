@@ -6,6 +6,10 @@
 /** @noinspection PhpUndefinedClassInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection StaticClosureCanBeUsedInspection */
+/** @noinspection LaravelFunctionsInspection */
+/** @noinspection PhpInternalEntityUsedInspection */
+/** @noinspection PhpVoidFunctionResultUsedInspection */
+/** @noinspection SqlResolve */
 declare(strict_types=1);
 
 /**
@@ -16,20 +20,3 @@ declare(strict_types=1);
  *
  * @see https://github.com/guanguans/package-skeleton
  */
-// arch('will not use debugging functions')
-//     ->skip()
-//     ->expect([
-//         'dd',
-//         'die',
-//         'dump',
-//         'echo',
-//         'exit',
-//         'print',
-//         'print_r',
-//         'printf',
-//         'ray',
-//         'var_dump',
-//         'var_export',
-//         'vprintf',
-//     ])
-//     ->each->not->toBeUsed();
