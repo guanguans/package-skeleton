@@ -306,6 +306,5 @@ return Factory::fromRuleSet(Php80::create()
                         __DIR__.'/_ide_helper_models.php',
                     ], true)
                 ),
-                __DIR__.'/composer-updater',
             ])
     );

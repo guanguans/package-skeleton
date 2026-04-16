@@ -50,7 +50,6 @@
 /CHANGELOG-*.md                     export-ignore
 /CHANGELOG.md                       export-ignore
 /composer-dependency-analyser.php   export-ignore
-/composer-updater                   export-ignore
 /monorepo-builder.php               export-ignore
 /phpbench.json                      export-ignore
 /phpstan.neon                       export-ignore

@@ -1,7 +1,0 @@
-{
-    "require": {
-    },
-    "suggest": {
-        "awssat/tailwindo": "Required if you want to use tailwindo."
-    }
-}

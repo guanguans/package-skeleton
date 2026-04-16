@@ -54,7 +54,6 @@ return RectorConfig::configure()
         __DIR__.'/src/',
         __DIR__.'/tests/',
         ...glob(__DIR__.'/{*,.*}.php', \GLOB_BRACE),
-        __DIR__.'/composer-updater',
     ])
     ->withRootFiles()
     // ->withSkipPath(__DIR__.'/tests.php')

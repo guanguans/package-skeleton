@@ -1,19 +1,19 @@
 .build/
 .history/
 .idea/
+tests/Browser/Screenshots/
 vendor/
+
+/vendor-bin/*/*
+!/vendor-bin/*/composer.json
 
 .DS_Store
 .env
-.php-cs-fixer.cache
-.phpunit.result.cache
+.php-cs-fixer.php
 /*.zip
 /laravel
 /tests.*
-bodyscan-log.txt
-clover.xml
 composer.lock
-eza.png
-mutation-report.html
+phpbench.json
+phpstan.neon
 phpunit.xml
-psalm.xml
