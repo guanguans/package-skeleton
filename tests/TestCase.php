@@ -8,6 +8,7 @@
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpVoidFunctionResultUsedInspection */
 /** @noinspection StaticClosureCanBeUsedInspection */
+/** @noinspection OverrideMissingInspection */
 /** @noinspection PhpMissingParentCallCommonInspection */
 /** @noinspection PhpUnusedAliasInspection */
 declare(strict_types=1);

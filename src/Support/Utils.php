@@ -13,4 +13,11 @@ declare(strict_types=1);
 
 namespace Guanguans\PackageSkeleton\Support;
 
-final class Utils {}
+final class Utils
+{
+    /**
+     * @see \PhpCsFixer\Hasher
+     * @see \PhpCsFixer\Utils
+     */
+    private function __construct() {}
+}

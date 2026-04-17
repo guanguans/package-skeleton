@@ -45,6 +45,7 @@
       <!--<directory>src/Support/Rector/</directory>-->
       <file>src/Support/ComposerScripts.php</file>
       <file>src/Support/helpers.php</file>
+      <file>src/Support/Utils.php</file>
     </exclude>
   </source>
 </phpunit>

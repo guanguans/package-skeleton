@@ -52,8 +52,8 @@ parameters:
     scanFiles:
 #        - vendor/composer/InstalledVersions.php
     excludePaths:
-#        - src/Support/Rectors/
-#        - src/Support/ComposerScripts.php
+#        - src/Support/Rector/
+        - src/Support/ComposerScripts.php
         - tests/Fixtures/
         - *.blade.php
     tmpDir: .build/phpstan/

@@ -21,10 +21,6 @@ declare(strict_types=1);
 
 use Guanguans\PackageSkeleton\PackageSkeleton;
 
-it('is movie', function (string $movie): void {
-    expect($movie)->toBeString();
-})->group(__DIR__, __FILE__)->with('movies');
-
 it('is testing example', function (): void {
     expect(new PackageSkeleton)->testing()->toBeTrue();
 })->group(__DIR__, __FILE__);
