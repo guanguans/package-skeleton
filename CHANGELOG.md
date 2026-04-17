@@ -8,6 +8,38 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 
+<a name="4.0.0"></a>
+## [4.0.0] - 2026-04-17
+### 💅 Code Refactorings
+- **composer:** Move package dependencies from require to suggest ([bf852dc](https://github.com/guanguans/package-skeleton/commit/bf852dc))
+
+### 🤖 Continuous Integrations
+- **config:** Update github config files ([f4313df](https://github.com/guanguans/package-skeleton/commit/f4313df))
+- **config:** Update config files ([96e3c1e](https://github.com/guanguans/package-skeleton/commit/96e3c1e))
+- **config:** Update config files ([4dd1aca](https://github.com/guanguans/package-skeleton/commit/4dd1aca))
+
+### Pull Requests
+- Merge pull request [#250](https://github.com/guanguans/package-skeleton/issues/250) from guanguans/dependabot/github_actions/actions/upload-artifact-7
+- Merge pull request [#251](https://github.com/guanguans/package-skeleton/issues/251) from guanguans/dependabot/github_actions/release-drafter/release-drafter-7
+- Merge pull request [#249](https://github.com/guanguans/package-skeleton/issues/249) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.26.2
+- Merge pull request [#248](https://github.com/guanguans/package-skeleton/issues/248) from guanguans/dependabot/github_actions/laminas/automatic-releases-1.26.0
+- Merge pull request [#247](https://github.com/guanguans/package-skeleton/issues/247) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-2.5.0
+- Merge pull request [#244](https://github.com/guanguans/package-skeleton/issues/244) from guanguans/dependabot/github_actions/actions/upload-artifact-6
+- Merge pull request [#245](https://github.com/guanguans/package-skeleton/issues/245) from guanguans/dependabot/github_actions/actions/cache-5
+- Merge pull request [#243](https://github.com/guanguans/package-skeleton/issues/243) from guanguans/dependabot/github_actions/actions/checkout-6
+- Merge pull request [#242](https://github.com/guanguans/package-skeleton/issues/242) from guanguans/dependabot/github_actions/actions/upload-artifact-5
+- Merge pull request [#241](https://github.com/guanguans/package-skeleton/issues/241) from guanguans/dependabot/github_actions/actions/setup-node-6
+- Merge pull request [#240](https://github.com/guanguans/package-skeleton/issues/240) from guanguans/dependabot/github_actions/stefanzweifel/git-auto-commit-action-7
+- Merge pull request [#238](https://github.com/guanguans/package-skeleton/issues/238) from guanguans/dependabot/github_actions/actions/setup-node-5
+- Merge pull request [#239](https://github.com/guanguans/package-skeleton/issues/239) from guanguans/dependabot/github_actions/actions/labeler-6
+- Merge pull request [#237](https://github.com/guanguans/package-skeleton/issues/237) from guanguans/dependabot/github_actions/actions/stale-10
+- Merge pull request [#236](https://github.com/guanguans/package-skeleton/issues/236) from guanguans/dependabot/github_actions/actions/first-interaction-3
+- Merge pull request [#235](https://github.com/guanguans/package-skeleton/issues/235) from guanguans/dependabot/github_actions/actions/checkout-5
+- Merge pull request [#234](https://github.com/guanguans/package-skeleton/issues/234) from guanguans/dependabot/github_actions/super-linter/super-linter-8
+- Merge pull request [#233](https://github.com/guanguans/package-skeleton/issues/233) from guanguans/dependabot/github_actions/actions/first-interaction-2
+- Merge pull request [#232](https://github.com/guanguans/package-skeleton/issues/232) from guanguans/dependabot/github_actions/stefanzweifel/git-auto-commit-action-6
+
+
 <a name="3.5.0"></a>
 ## [3.5.0] - 2025-05-17
 ### 🤖 Continuous Integrations
@@ -555,7 +587,8 @@ All notable changes to this project will be documented in this file.
 - Update CI config files ([0e789fc](https://github.com/guanguans/package-skeleton/commit/0e789fc))
 
 
-[Unreleased]: https://github.com/guanguans/package-skeleton/compare/3.5.0...HEAD
+[Unreleased]: https://github.com/guanguans/package-skeleton/compare/4.0.0...HEAD
+[4.0.0]: https://github.com/guanguans/package-skeleton/compare/3.5.0...4.0.0
 [3.5.0]: https://github.com/guanguans/package-skeleton/compare/3.4.0...3.5.0
 [3.4.0]: https://github.com/guanguans/package-skeleton/compare/3.3.0...3.4.0
 [3.3.0]: https://github.com/guanguans/package-skeleton/compare/3.2.0...3.3.0
