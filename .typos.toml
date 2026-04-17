@@ -7,7 +7,6 @@
 ignore-hidden = false
 extend-exclude = [
   ".git/",
-  "docs/",
   "CHANGELOG.md",
 ]
 

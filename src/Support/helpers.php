@@ -12,3 +12,21 @@ declare(strict_types=1);
  */
 
 namespace Guanguans\PackageSkeleton\Support;
+
+if (!\function_exists('Guanguans\PackageSkeleton\Support\env_explode')) {
+    /**
+     * @param non-empty-string $delimiter
+     *
+     * @noinspection LaravelFunctionsInspection
+     */
+    function env_explode(string $key, mixed $default = null, string $delimiter = ',', int $limit = \PHP_INT_MAX): mixed
+    {
+        $env = env($key, $default);
+
+        if (\is_string($env)) {
+            return $env ? explode($delimiter, $env, $limit) : [];
+        }
+
+        return $env;
+    }
+}

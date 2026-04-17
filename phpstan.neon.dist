@@ -8,9 +8,10 @@ includes:
     - vendor/spaze/phpstan-disallowed-calls/disallowed-loose-calls.neon
 #    - vendor/spaze/phpstan-disallowed-calls/extension.neon
 
-#    - vendor-bin/larastan/vendor/larastan/larastan/extension.neon
 #    - vendor/ekino/phpstan-banned-code/extension.neon
 #    - vendor/ergebnis/phpstan-rules/rules.neon
+#    - vendor/canvural/larastan-strict-rules/rules.neon
+#    - vendor/larastan/vendor/larastan/larastan/extension.neon
 #    - vendor/phpstan/phpstan-strict-rules/rules.neon
 #    - vendor/roave/no-floaters/rules.neon
 #    - vendor/shipmonk/dead-code-detector/rules.neon
@@ -26,9 +27,10 @@ includes:
     - vendor/symplify/phpstan-rules/config/phpunit-rules.neon
 #    - vendor/symplify/phpstan-rules/config/rector-rules.neon
 #    - vendor/symplify/phpstan-rules/config/symfony-rules.neon
+#    - vendor/symplify/phpstan-rules/config/symfony-config-rules.neon
 
 services:
-    # https://github.com/guanguans/notify/security/code-scanning
+    # https://github.com/guanguans/package-skeleton/security/code-scanning
     # https://github.com/jbelien/phpstan-sarif-formatter
     errorFormatter.sarif:
         class: PHPStanSarifErrorFormatter\SarifErrorFormatter
@@ -43,17 +45,19 @@ services:
 
 parameters:
     paths:
-#        - config/
+        - config/
         - src/
     scanDirectories:
 #        - vendor/rector/rector/vendor/symplify/rule-doc-generator-contracts/
     scanFiles:
-        - vendor/composer/InstalledVersions.php
+#        - vendor/composer/InstalledVersions.php
     excludePaths:
+#        - src/Support/Rectors/
 #        - src/Support/ComposerScripts.php
         - tests/Fixtures/
+        - *.blade.php
     tmpDir: .build/phpstan/
-    phpVersion: 80200
+    phpVersion: 80500
     level: max
     editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
     errorFormat: friendly
@@ -70,9 +74,15 @@ parameters:
     ergebnis:
     guanguans:
 #        exceptionMustImplementNativeThrowable:
-#            nativeThrowable: Guanguans\MonorepoBuilderWorker\Contract\ThrowableContract
+#            nativeThrowable: Guanguans\PackageSkeleton\Contract\ThrowableContract
 #    sidzIgnoreNumericStrings: true
     sidzIgnoreMagicNumbers: [0.9, 1, 2, 3, 5, 100, 600, 512, 1024, 1000, 0o755]
+#    # larastan
+#    configDirectories:
+#        - config/
+#    checkOctaneCompatibility: true
+#    listenerPaths:
+#        - src/Listeners/
     cognitive_complexity:
         class: 42
         function: 8
@@ -101,9 +111,6 @@ parameters:
         template_paths:
 #            - resources/views/
     disallowedFunctionCalls:
-        -
-            function: 'env()'
-            message: 'use config() instead'
         -
             function: 'env_explode()'
             message: 'use config() instead'
@@ -173,13 +180,11 @@ parameters:
 #        - identifier: ergebnis.finalInAbstractClass
 #        - identifier: ergebnis.noExtends
 #        - identifier: ergebnis.noParameterWithNullableTypeDeclaration
-#        - identifier: ergebnis.noParameterWithNullDefaultValue
+        - identifier: ergebnis.noParameterWithNullDefaultValue
 #        - identifier: shipmonk.variableTypeOverwritten
 #        - identifier: symplify.explicitInterfaceSuffixName
 #        - identifier: symplify.explicitTraitSuffixName
 #        - identifier: symplify.forbiddenNode
 
 #        - identifier: argument.type
-#        - identifier: method.nonObject
-#        - identifier: missingType.generics
 #        - identifier: return.type

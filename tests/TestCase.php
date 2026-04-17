@@ -1,13 +1,14 @@
 <?php
 
-/** @noinspection PhpMissingParentCallCommonInspection */
-
 /** @noinspection AnonymousFunctionStaticInspection */
 /** @noinspection NullPointerExceptionInspection */
+/** @noinspection PhpFieldAssignmentTypeMismatchInspection */
 /** @noinspection PhpPossiblePolymorphicInvocationInspection */
 /** @noinspection PhpUndefinedClassInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpVoidFunctionResultUsedInspection */
 /** @noinspection StaticClosureCanBeUsedInspection */
+/** @noinspection PhpMissingParentCallCommonInspection */
 /** @noinspection PhpUnusedAliasInspection */
 declare(strict_types=1);
 

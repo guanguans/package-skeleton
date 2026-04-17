@@ -5,13 +5,11 @@
 > [!NOTE]
 > 一个 PHP 软件包模板存储库。- A PHP package template repository。
 
-[![tests](https://github.com/guanguans/package-skeleton/workflows/tests/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
-[![phpstan](https://github.com/guanguans/package-skeleton/actions/workflows/phpstan.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/phpstan.yml)
-[![check & fix styling](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions)
-[![rector](https://github.com/guanguans/package-skeleton/actions/workflows/rector.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/rector.yml)
+[![tests](https://github.com/guanguans/package-skeleton/actions/workflows/tests.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/tests.yml)
+[![php-cs-fixer](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/guanguans/package-skeleton/actions/workflows/php-cs-fixer.yml)
 [![codecov](https://codecov.io/gh/guanguans/package-skeleton/branch/main/graph/badge.svg?token=URGFAWS6S4)](https://codecov.io/gh/guanguans/package-skeleton)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/package-skeleton/v)](https://packagist.org/packages/guanguans/package-skeleton)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/package-skeleton)
+[![GitHub release (with filter)](https://img.shields.io/github/v/release/guanguans/package-skeleton)](https://github.com/guanguans/package-skeleton/releases)
 [![Total Downloads](https://poser.pugx.org/guanguans/package-skeleton/downloads)](https://packagist.org/packages/guanguans/package-skeleton)
 [![License](https://poser.pugx.org/guanguans/package-skeleton/license)](https://packagist.org/packages/guanguans/package-skeleton)
 
@@ -21,7 +19,7 @@
 
 ## 环境要求
 
-* PHP >= 8.0
+* PHP >= 8.5
 
 ## 安装
 
@@ -41,9 +39,11 @@ composer require guanguans/package-skeleton --ansi -v
 8. 执行 `$ composer install && composer dumpautoload`
 9. 执行 `$ rm .git/ && git init && git add . && git commit -m 'Build the basic skeleton'`
 
-## 测试
+## Composer 脚本
 
-```bash
+```shell
+composer checks:required
+composer php-cs-fixer:fix
 composer test
 ```
 
