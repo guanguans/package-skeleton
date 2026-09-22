@@ -8,6 +8,23 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 
+<a name="4.1.0"></a>
+## [4.1.0] - 2026-09-22
+### 📦 Builds
+- **deps:** Bump dependencies in composer.json ([da88e2b](https://github.com/guanguans/package-skeleton/commit/da88e2b))
+
+### Pull Requests
+- Merge pull request [#270](https://github.com/guanguans/package-skeleton/issues/270) from guanguans/dependabot/github_actions/github/codeql-action-4.38.1
+- Merge pull request [#269](https://github.com/guanguans/package-skeleton/issues/269) from guanguans/dependabot/github_actions/github/codeql-action-4.38.0
+- Merge pull request [#268](https://github.com/guanguans/package-skeleton/issues/268) from guanguans/dependabot/github_actions/github/codeql-action-4.37.9
+- Merge pull request [#267](https://github.com/guanguans/package-skeleton/issues/267) from guanguans/dependabot/github_actions/github/codeql-action-4.37.8
+- Merge pull request [#266](https://github.com/guanguans/package-skeleton/issues/266) from guanguans/dependabot/github_actions/github/codeql-action-4.37.7
+- Merge pull request [#265](https://github.com/guanguans/package-skeleton/issues/265) from guanguans/dependabot/github_actions/github/codeql-action-4.37.6
+- Merge pull request [#263](https://github.com/guanguans/package-skeleton/issues/263) from guanguans/dependabot/github_actions/github/codeql-action-4.37.4
+- Merge pull request [#262](https://github.com/guanguans/package-skeleton/issues/262) from guanguans/dependabot/github_actions/github/codeql-action-4.37.3
+- Merge pull request [#255](https://github.com/guanguans/package-skeleton/issues/255) from guanguans/dependabot/github_actions/dependabot/fetch-metadata-3.1.0
+
+
 <a name="4.0.0"></a>
 ## [4.0.0] - 2026-04-17
 ### 💅 Code Refactorings
@@ -587,7 +604,8 @@ All notable changes to this project will be documented in this file.
 - Update CI config files ([0e789fc](https://github.com/guanguans/package-skeleton/commit/0e789fc))
 
 
-[Unreleased]: https://github.com/guanguans/package-skeleton/compare/4.0.0...HEAD
+[Unreleased]: https://github.com/guanguans/package-skeleton/compare/4.1.0...HEAD
+[4.1.0]: https://github.com/guanguans/package-skeleton/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/guanguans/package-skeleton/compare/3.5.0...4.0.0
 [3.5.0]: https://github.com/guanguans/package-skeleton/compare/3.4.0...3.5.0
 [3.4.0]: https://github.com/guanguans/package-skeleton/compare/3.3.0...3.4.0
