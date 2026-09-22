@@ -1,7 +1,7 @@
 <?php
 
 /** @noinspection PhpUnhandledExceptionInspection */
-
+/** @noinspection PhpUnusedAliasInspection */
 declare(strict_types=1);
 
 /**
@@ -14,41 +14,29 @@ declare(strict_types=1);
  */
 
 use Ergebnis\Rector\Rules\Expressions\Arrays\SortAssociativeArrayByKeyRector;
-use Ergebnis\Rector\Rules\Faker\GeneratorPropertyFetchToMethodCallRector;
-use Ergebnis\Rector\Rules\Files\ReferenceNamespacedSymbolsRelativeToNamespacePrefixRector;
+use Guanguans\PhpCsFixerCustomFixers\Support\Utils;
 use Guanguans\RectorRules\Rector\File\AddNoinspectionDocblockToFileFirstStmtRector;
 use Guanguans\RectorRules\Rector\Name\RenameToConventionalCaseNameRector;
 use Guanguans\RectorRules\Set\SetList;
+use Pest\Rector\Set\PestSetList;
 use PhpParser\NodeVisitor\ParentConnectingVisitor;
-use Rector\CodeQuality\Rector\If_\ExplicitBoolCompareRector;
 use Rector\CodeQuality\Rector\LogicalAnd\LogicalToBooleanRector;
-use Rector\CodingStyle\Rector\ArrowFunction\StaticArrowFunctionRector;
+use Rector\CodingStyle\Rector\Assign\SplitDoubleAssignRector;
 use Rector\CodingStyle\Rector\ClassLike\NewlineBetweenClassLikeStmtsRector;
-use Rector\CodingStyle\Rector\Closure\StaticClosureRector;
-use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
-use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
-use Rector\CodingStyle\Rector\Enum_\EnumCaseToPascalCaseRector;
-use Rector\CodingStyle\Rector\FuncCall\ArraySpreadInsteadOfArrayMergeRector;
 use Rector\Config\RectorConfig;
-use Rector\EarlyReturn\Rector\If_\ChangeOrIfContinueToMultiContinueRector;
-use Rector\EarlyReturn\Rector\Return_\ReturnBinaryOrToEarlyReturnRector;
 use Rector\Naming\Rector\ClassMethod\RenameParamToMatchTypeRector;
-use Rector\Php73\Rector\FuncCall\JsonThrowOnErrorRector;
-use Rector\Php82\Rector\Param\AddSensitiveParameterAttributeRector;
 use Rector\PHPUnit\CodeQuality\Rector\Class_\PreferPHPUnitThisCallRector;
 use Rector\Renaming\Rector\FuncCall\RenameFunctionRector;
-use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
 use Rector\ValueObject\PhpVersion;
 use RectorLaravel\Rector\ArrayDimFetch\ArrayToArrGetRector;
-use RectorLaravel\Rector\Class_\FillablePropertyToFillableAttributeRector;
-use RectorLaravel\Rector\Class_\HiddenPropertyToHiddenAttributeRector;
 use RectorLaravel\Rector\Empty_\EmptyToBlankAndFilledFuncRector;
 use RectorLaravel\Rector\FuncCall\HelperFuncCallToFacadeClassRector;
 use RectorLaravel\Rector\If_\ThrowIfRector;
+use RectorLaravel\Rector\MethodCall\ValidationRuleArrayStringValueToArrayRector;
 use RectorLaravel\Rector\StaticCall\DispatchToHelperFunctionsRector;
-use RectorLaravel\Set\LaravelSetProvider;
-use RectorPest\Set\PestLevelSetList;
-use RectorPest\Set\PestSetList;
+use RectorLaravel\Rector\StaticCall\RequestStaticValidateToInjectRector;
+
+error_reporting(\E_ALL & ~\E_DEPRECATED & ~\E_USER_DEPRECATED);
 
 return RectorConfig::configure()
     ->withPaths([
@@ -56,21 +44,44 @@ return RectorConfig::configure()
         __DIR__.'/src/',
         __DIR__.'/tests/',
         // __DIR__.'/workbench/',
-        __DIR__.'/composer-bump',
+        ...Utils::defaultRootFiles(),
     ])
     ->withRootFiles()
-    ->withSkip(['*/Fixtures/*', __DIR__.'/_ide_helper.php', __DIR__.'/tests.php'])
+    ->withSkip(['*/Fixtures/*', __DIR__.'/_ide_helper.php'])
+    ->withSkip([
+        LogicalToBooleanRector::class,
+        NewlineBetweenClassLikeStmtsRector::class,
+        PreferPHPUnitThisCallRector::class,
+        SplitDoubleAssignRector::class,
+    ])
+    ->withSkip([
+        // ArrayToArrGetRector::class,
+        // DispatchToHelperFunctionsRector::class,
+        // EmptyToBlankAndFilledFuncRector::class,
+        // HelperFuncCallToFacadeClassRector::class,
+        // RequestStaticValidateToInjectRector::class,
+        // ThrowIfRector::class,
+        // ValidationRuleArrayStringValueToArrayRector::class,
+    ])
+    ->withSkip([
+        RenameParamToMatchTypeRector::class => [
+            __DIR__.'/tests/Pest.php',
+        ],
+        SortAssociativeArrayByKeyRector::class => [
+            // __DIR__.'/config/',
+        ],
+    ])
     ->withCache(__DIR__.'/.build/rector/')
     // ->withoutParallel()
     ->withParallel()
-    ->withImportNames(importDocBlockNames: false, importShortClasses: false)
-    // ->withImportNames(importNames: false)
-    // ->withEditorUrl()
+    ->withImportNames(importDocBlockNames: false, importShortClasses: false, removeUnusedImports: false)
+    // ->withImportNames(true, false, false, false)
+    ->reportUnusedSkips()
     ->withFluentCallNewLine()
     ->withTreatClassesAsFinal()
+    ->withTypeGuardedClasses([])
     ->withAttributesSets(phpunit: true, all: true)
     ->withComposerBased(phpunit: true, laravel: true)
-    ->withSetProviders(LaravelSetProvider::class)
     ->withPhpVersion(PhpVersion::PHP_85)
     // ->withDowngradeSets(php85: true)
     ->withPhpSets(php85: true)
@@ -82,26 +93,16 @@ return RectorConfig::configure()
         typeDeclarationDocblocks: true,
         privatization: true,
         naming: true,
-        instanceOf: true,
-        earlyReturn: true,
-        // strictBooleans: true,
+        // namedArgs: true,
         carbon: true,
         rectorPreset: true,
         phpunitCodeQuality: true,
+        phpunitNarrowAsserts: true,
+        phpunitMockToStub: true,
     )
     ->withSets([
         SetList::ALL,
-        PestLevelSetList::UP_TO_PEST_30,
-        PestSetList::PEST_CODE_QUALITY,
-    ])
-    ->withRules([
-        ArraySpreadInsteadOfArrayMergeRector::class,
-        EnumCaseToPascalCaseRector::class,
-        GeneratorPropertyFetchToMethodCallRector::class,
-        JsonThrowOnErrorRector::class,
-        SortAssociativeArrayByKeyRector::class,
-        StaticArrowFunctionRector::class,
-        StaticClosureRector::class,
+        PestSetList::CODING_STYLE,
     ])
     ->withConfiguredRule(AddNoinspectionDocblockToFileFirstStmtRector::class, [
         '*/tests/*' => [
@@ -118,53 +119,9 @@ return RectorConfig::configure()
     ])
     ->registerDecoratingNodeVisitor(ParentConnectingVisitor::class)
     ->withConfiguredRule(RenameToConventionalCaseNameRector::class, ['afterEach', 'beforeEach', 'MIT', 'PDO'])
-    ->withConfiguredRule(ReferenceNamespacedSymbolsRelativeToNamespacePrefixRector::class, [
-        // 'namespacePrefixes' => ['Guanguans\\PackageSkeleton'],
-    ])
     ->withConfiguredRule(
         RenameFunctionRector::class,
         collect(['env_explode', 'make'])
             ->mapWithKeys(static fn (string $func): array => [$func => "Guanguans\\PackageSkeleton\\Support\\$func"])
             ->all()
-    )
-    ->withSkip([
-        AddSensitiveParameterAttributeRector::class,
-        ChangeOrIfContinueToMultiContinueRector::class,
-        DisallowedEmptyRuleFixerRector::class,
-        EncapsedStringsToSprintfRector::class,
-        ExplicitBoolCompareRector::class,
-        LogicalToBooleanRector::class,
-        NewlineBetweenClassLikeStmtsRector::class,
-        PreferPHPUnitThisCallRector::class,
-        ReturnBinaryOrToEarlyReturnRector::class,
-        WrapEncapsedVariableInCurlyBracesRector::class,
-    ])
-    ->withSkip([
-        FillablePropertyToFillableAttributeRector::class,
-        HiddenPropertyToHiddenAttributeRector::class,
-
-        ArrayToArrGetRector::class,
-        DispatchToHelperFunctionsRector::class,
-        EmptyToBlankAndFilledFuncRector::class,
-        HelperFuncCallToFacadeClassRector::class,
-        ThrowIfRector::class,
-    ])
-    ->withSkip([
-        JsonThrowOnErrorRector::class => [
-            __DIR__.'/tests/Pest.php',
-        ],
-        RenameParamToMatchTypeRector::class => [
-            __DIR__.'/tests/Pest.php',
-        ],
-        SortAssociativeArrayByKeyRector::class => [
-            // __DIR__.'/config/',
-            __DIR__.'/src/',
-            __DIR__.'/tests/',
-            // __DIR__.'/workbench/',
-        ],
-        StaticArrowFunctionRector::class => $staticClosureSkipPaths = [
-            __DIR__.'/tests/*Test.php',
-            __DIR__.'/tests/Pest.php',
-        ],
-        StaticClosureRector::class => $staticClosureSkipPaths,
-    ]);
+    );

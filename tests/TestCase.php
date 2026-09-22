@@ -25,13 +25,11 @@ declare(strict_types=1);
 namespace Guanguans\PackageSkeletonTests;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use phpmock\phpunit\PHPMock;
 use Symfony\Component\VarDumper\Test\VarDumperTestTrait;
 
 class TestCase extends \PHPUnit\Framework\TestCase
 {
     use MockeryPHPUnitIntegration;
-    use PHPMock;
     use VarDumperTestTrait;
 
     /**

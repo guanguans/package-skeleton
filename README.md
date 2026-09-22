@@ -44,6 +44,7 @@ composer require guanguans/package-skeleton --ansi -v
 ```shell
 composer checks:required
 composer php-cs-fixer:fix
+composer ecs:fix
 composer test
 ```
 
